@@ -98,7 +98,7 @@ img {
   color: #f0dde0;
 }
 .section--band {
-  background-color: #F6EFE2;
+  background-color: var(--color-ivory) !important;
 }
 
 /* Eyebrow */

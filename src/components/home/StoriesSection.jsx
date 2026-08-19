@@ -1,35 +1,55 @@
-import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
-import Grid from '../ui/Grid';
-import Eyebrow from '../ui/Eyebrow';
-import ImgPlaceholder from '../ui/ImgPlaceholder';
+import sectionImg from '../../assets/images/section-img.webp';
 
 const StoriesSection = () => {
   return (
-    <section className="section">
+    <section className="section relative overflow-hidden">
+      {/* Full Width Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${sectionImg})` }}
+      ></div>
+
       <Container>
-        <Grid cols={2} className="items-center">
-          <ImgPlaceholder minHeight="260px">
-            Photo: young person smiling, looking upward
-          </ImgPlaceholder>
-          <div>
-            <Eyebrow>Stories of Strength</Eyebrow>
-            <h2 className="mb-4">Real People. Real Change.</h2>
-            <p className="italic mb-4">
-              &ldquo;Resilient Minds Foundation gave me tools and encouragement when I needed them most. I feel stronger, more hopeful, and ready for what&rsquo;s next.&rdquo;
-            </p>
-            <p className="text-sm font-bold text-ink mb-6">&mdash; Youth Program Participant</p>
-            <div className="flex flex-wrap gap-3.5">
-              <Button variant="primary" to="/impact">
-                Read More Stories →
-              </Button>
-              <Button variant="outline" to="/contact">
-                Share Your Story
-              </Button>
+        <div className="relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[400px] md:min-h-[450px] items-center">
+            {/* Left Side - Empty (image visible) */}
+            <div></div>
+
+            {/* Right Side - White Overlay with Content */}
+            <div className="  p-8 md:p-12 lg:p-16  my-6 md:my-0">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="h-px w-6 bg-gold"></span>
+                <span className="font-body font-bold text-xs tracking-[0.12em] uppercase text-gold">
+                  Stories of Strength
+                </span>
+                <span className="h-px w-6 bg-gold"></span>
+              </div>
+              
+              <h2 className="mb-4 text-burgundy text-3xl md:text-4xl font-bold">
+                Real People. Real Change.
+              </h2>
+              
+              <p className="italic mb-4 text-ink/80 text-lg">
+                &ldquo;Resilient Minds Foundation gave me tools and encouragement when I needed them most. I feel stronger, more hopeful, and ready for what&rsquo;s next.&rdquo;
+              </p>
+              
+              <p className="text-sm font-bold text-ink/70 mb-8">
+                &mdash; Youth Program Participant
+              </p>
+              
+              <div className="flex flex-wrap gap-3.5">
+                <Button variant="primary" to="/impact">
+                  Read More Stories →
+                </Button>
+                <Button variant="outline" to="/contact">
+                  Share Your Story
+                </Button>
+              </div>
             </div>
           </div>
-        </Grid>
+        </div>
       </Container>
     </section>
   );

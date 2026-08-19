@@ -15,7 +15,7 @@ const AboutHero = () => {
       }}
     >
       <Container className="relative z-10">
-        <div className="max-w-2xl text-left">
+        <div className="max-w-2xl text-left w-1/3">
           <h1 className="mb-3 md:mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg">
             About Us
           </h1>

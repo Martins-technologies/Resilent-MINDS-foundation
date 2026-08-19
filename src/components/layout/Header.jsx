@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.webp';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,24 +21,24 @@ const Header = () => {
   }, [isOpen]);
 
   const navLinks = [
-    { to: '/', label: 'Home' },
+   
     { to: '/about', label: 'About Us' },
     { to: '/programs', label: 'Programs' },
     { to: '/who-we-help', label: 'Who We Help' },
     { to: '/impact', label: 'Impact' },
     { to: '/resources', label: 'Resources' },
     { to: '/get-involved', label: 'Get Involved' },
-    { to: '/contact', label: 'Contact Us' },
+    { to: '/contact', label: 'Contact' },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-ivory border-b border-line shadow-sm">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4 md:py-5 gap-6">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-6">
+        <div className="flex items-center justify-between py-4 md:py-5 gap-4">
           
           {/* Logo - Left Side */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src={logo} alt="Resilient Minds Foundation" className="h-12 w-auto" />
+            <img src={logo} alt="Resilient Minds Foundation" className="h-20 w-50 object-cover" />
           </Link>
 
           {/* Navigation - Center */}
@@ -58,8 +58,25 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Right Side - Only Mobile Menu Button (No Buttons) */}
+          {/* Right Side - Buttons (Desktop) + Mobile Menu Button */}
           <div className="flex items-center gap-3">
+            
+            {/* ✅ DESKTOP BUTTONS (Hidden on small screens) */}
+            <div className="hidden lg:flex items-center gap-3">
+              <Link 
+                to="/contact" 
+                className="px-5 py-2.5 text-sm font-semibold border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white transition-all duration-200 rounded-full"
+              >
+                Get Support
+              </Link>
+              <Link 
+                to="/get-involved"
+                className="px-5 py-2.5 text-sm font-semibold bg-gold text-forest-dark hover:bg-[#B8973A] transition-all duration-200 rounded-full shadow-md"
+              >
+                Donate
+              </Link>
+            </div>
+
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2 hover:bg-line rounded-lg transition-colors"
@@ -72,7 +89,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu - Buttons at Bottom */}
+        {/* Mobile Menu - Buttons at Bottom (Only Mobile) */}
         {isOpen && (
           <nav className="lg:hidden py-4 border-t border-line bg-ivory">
             <div className="flex flex-col gap-1">
@@ -92,7 +109,7 @@ const Header = () => {
                 </NavLink>
               ))}
               
-              {/* Buttons at Bottom - Only in Mobile */}
+              {/* ✅ MOBILE BUTTONS (Only inside the mobile menu) */}
               <div className="mt-4 pt-4 border-t border-line flex flex-col gap-3 px-4">
                 <Link 
                   to="/contact" 
