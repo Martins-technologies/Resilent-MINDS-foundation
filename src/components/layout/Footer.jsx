@@ -37,17 +37,17 @@ const Footer = () => {
 
   return (
     <footer className="bg-forest-dark text-[#dfe8e2] pt-14 pb-6">
-      <div className="container">
+      <div className="container text-white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-white/15">
           {/* Brand */}
           <div className="lg:col-span-1.5">
             <Link to="/" className="flex items-center gap-2.5">
               <img src={logo} alt="Resilient Minds Foundation logo" className="h-20 w-50 object-cover rounded-lg bg-white p-1" />
-             
+
             </Link>
-            <p className="text-[#c9d6cf] text-sm mt-3 max-w-sm">
+            <div className="text-[#c9d6cf] text-sm mt-3 max-w-sm">
               Empowering individuals and communities with the support, education, and resources to build resilience and create hopeful futures.
-            </p>
+            </div>
             <div className="flex gap-3 mt-4">
               {socialLinks.map((social) => (
                 <a
@@ -64,7 +64,7 @@ const Footer = () => {
 
           {/* Foundation Links */}
           <div>
-            <h4 className="font-body text-sm tracking-[0.06em] uppercase text-gold mb-3.5">Foundation</h4>
+            <h4 className="fyont-bod text-sm  uppercase text-white mb-3.5">Foundation</h4>
             <ul className="space-y-2.5">
               {footerLinks.foundation.map((link) => (
                 <li key={link.label}>
@@ -78,7 +78,7 @@ const Footer = () => {
 
           {/* Programs Links */}
           <div>
-            <h4 className="font-body text-sm tracking-[0.06em] uppercase text-gold mb-3.5">Programs</h4>
+            <h4 className="font-body text-sm tracking-[0.06em] uppercase text-white mb-3.5">Programs</h4>
             <ul className="space-y-2.5">
               {footerLinks.programs.map((link) => (
                 <li key={link.label}>
@@ -106,18 +106,31 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h4 className="font-body text-sm tracking-[0.06em] uppercase text-gold mb-3.5">Stay Connected</h4>
-            <p className="text-[#c9d6cf] text-sm">Get updates on programs, resources, and ways to help.</p>
-            <form className="flex mt-2.5 rounded-full overflow-hidden bg-white/10" aria-label="Newsletter signup">
-              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+            <h4 className="font-body text-sm tracking-[0.06em] uppercase text-gold mb-3.5">
+              Stay Connected
+            </h4>
+            <div className="text-[#c9d6cf] text-sm">
+              Get updates on programs, resources, and ways to help.
+            </div>
+            <form
+              className="flex items-center mt-2.5 rounded-full overflow-hidden bg-white/10"
+              aria-label="Newsletter signup"
+            >
+              <label htmlFor="newsletter-email" className="sr-only">
+                Email address
+              </label>
               <input
                 id="newsletter-email"
                 type="email"
                 placeholder="Your email address"
                 required
-                className="flex-1 border-none bg-transparent px-4 py-3 text-white text-sm placeholder-[#a9baaf] focus:outline-none"
+                className="flex-1 min-w-0 border-none bg-transparent px-4 py-3 text-white text-sm placeholder-[#a9baaf] focus:outline-none"
               />
-              <button type="submit" aria-label="Subscribe" className="border-none bg-gold text-forest-dark px-4 font-bold cursor-pointer">
+              <button
+                type="submit"
+                aria-label="Subscribe"
+                className="flex-shrink-0 border-none bg-gold text-forest-dark px-4 py-3 font-bold cursor-pointer hover:bg-amber-500 transition-colors"
+              >
                 →
               </button>
             </form>
@@ -125,8 +138,8 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between gap-2 pt-5 text-sm text-[#a9baaf]">
-          <p>&copy; 2026 Resilient Minds Foundation. All rights reserved.</p>
-          <p>Stronger Minds. Brighter Futures.</p>
+          <div>&copy; 2026 Resilient Minds Foundation. All rights reserved.</div>
+          <div>Stronger Minds. Brighter Futures.</div>
         </div>
       </div>
     </footer>

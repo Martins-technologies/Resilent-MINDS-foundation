@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 import Grid from '../ui/Grid';
-import ImgPlaceholder from '../ui/ImgPlaceholder';
 
 const CTASection = () => {
   return (
@@ -21,26 +20,17 @@ const CTASection = () => {
           </div>
 
           {/* Right Column (Image with Overlay) */}
-          <div className="relative w-full overflow-hidden">
-            {/* 
-              OVERLAY: Tailwind absolute + gradient
-              "from-[#6E2839]" = Start color (aapka burgundy)
-              "via-[#6E2839]" = Color continue hota hai
-              "to-transparent" = Fade out ho jata hai right side par
-              
-              "left-[-100%]" => Overlay ko left mein bahar khichega, taaki left column bhi cover ho jaye
-              "w-[200%]" => Isko width double kar diya taaki left bahar tak chala jaye
-              "opacity-90" => thoda transparent rakhe taaki text dikhe (optional)
-            */}
+          <div className="relative w-full overflow-hidden rounded-lg">
+            {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#6E2839] via-[#6E2839] to-transparent left-[-100%] w-[200%] h-full pointer-events-none z-10 opacity-90" />
 
-            {/* Image / Placeholder */}
-            <ImgPlaceholder
-              minHeight="220px"
-              className="bg-gradient-to-br from-[#8a3346] to-[#6E2839] text-white relative z-0"
-            >
-              Photo: hands cupping a small seedling
-            </ImgPlaceholder>
+            {/* Image */}
+            <img 
+              src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Hands cupping a small seedling - symbol of hope and growth"
+              className="w-full h-[220px] sm:h-[260px] md:h-[300px] object-cover relative z-0"
+              loading="lazy"
+            />
           </div>
         </Grid>
       </Container>
