@@ -43,7 +43,6 @@ const Footer = () => {
           <div className="lg:col-span-1.5">
             <Link to="/" className="flex items-center gap-2.5">
               <img src={logo} alt="Resilient Minds Foundation logo" className="h-20 w-50 object-cover rounded-lg bg-white p-1" />
-
             </Link>
             <div className="text-[#c9d6cf] text-sm mt-3 max-w-sm">
               Empowering individuals and communities with the support, education, and resources to build resilience and create hopeful futures.
@@ -64,7 +63,9 @@ const Footer = () => {
 
           {/* Foundation Links */}
           <div>
-            <h4 className="fyont-bod text-sm  uppercase text-white mb-3.5">Foundation</h4>
+            <div className="font-body text-sm tracking-[0.06em] uppercase text-white mb-3.5">
+              Foundation
+            </div>
             <ul className="space-y-2.5">
               {footerLinks.foundation.map((link) => (
                 <li key={link.label}>
@@ -78,7 +79,9 @@ const Footer = () => {
 
           {/* Programs Links */}
           <div>
-            <h4 className="font-body text-sm tracking-[0.06em] uppercase text-white mb-3.5">Programs</h4>
+            <div className="font-body text-sm tracking-[0.06em] uppercase text-white mb-3.5">
+              Programs
+            </div>
             <ul className="space-y-2.5">
               {footerLinks.programs.map((link) => (
                 <li key={link.label}>
@@ -92,7 +95,9 @@ const Footer = () => {
 
           {/* Get Involved Links */}
           <div>
-            <h4 className="font-body text-sm tracking-[0.06em] uppercase text-gold mb-3.5">Get Involved</h4>
+            <div className="font-body text-sm tracking-[0.06em] uppercase text-white mb-3.5">
+              Get Involved
+            </div>
             <ul className="space-y-2.5">
               {footerLinks.getInvolved.map((link) => (
                 <li key={link.label}>
@@ -104,11 +109,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h4 className="font-body text-sm tracking-[0.06em] uppercase text-gold mb-3.5">
+          {/* Newsletter - Now with proper border and rounded corners */}
+          <div className="border-2 border-gold rounded-2xl p-5 bg-white/5">
+            <div className="font-body text-sm tracking-[0.06em] uppercase text-white mb-3.5">
               Stay Connected
-            </h4>
+            </div>
             <div className="text-[#c9d6cf] text-sm">
               Get updates on programs, resources, and ways to help.
             </div>
@@ -129,7 +134,7 @@ const Footer = () => {
               <button
                 type="submit"
                 aria-label="Subscribe"
-                className="flex-shrink-0 border-none bg-gold text-forest-dark px-4 py-3 font-bold cursor-pointer hover:bg-amber-500 transition-colors"
+                className="flex-shrink-0 border-none bg-gold text-forest-dark px-4 py-3 font-bold cursor-pointer hover:bg-amber-500 transition-colors rounded-full"
               >
                 →
               </button>
