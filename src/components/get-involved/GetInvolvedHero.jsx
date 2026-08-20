@@ -5,7 +5,7 @@ import Eyebrow from '../ui/Eyebrow';
 const GetInvolvedHero = () => {
   return (
     <section 
-      className="py-16 md:py-24 relative bg-cover bg-center bg-no-repeat"
+      className="py-20 md:py-28 relative bg-cover bg-center bg-no-repeat"
       style={{ 
         // Background Image: Volunteers/Community Service (Content se related)
         backgroundImage: `url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')` 

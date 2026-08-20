@@ -15,7 +15,7 @@ const ProgramsList = () => {
     {
       icon: FaGraduationCap,
       title: 'Resilient Minds Academy',
-      desc: 'Educational programs focused on emotional intelligence, confidence, stress management, and positive mindset development.',
+      desc: 'Education for emotional intelligence, confidence and wellbeing.',
       color: 'text-burgundy',
       bgColor: '#6E2839',
       image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
@@ -24,7 +24,7 @@ const ProgramsList = () => {
     {
       icon: FaUsers,
       title: 'Youth Strong Program',
-      desc: 'Mentorship, leadership development, mental wellness education, and career confidence for young people.',
+      desc: 'Mentorship and skills for a brighter tomorrow.',
       color: 'text-forest',
       bgColor: '#2E5D49',
       image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
@@ -33,7 +33,7 @@ const ProgramsList = () => {
     {
       icon: FaHands,
       title: 'Community Healing Circles',
-      desc: 'Safe spaces where people can connect, share experiences, receive encouragement, and build supportive relationships.',
+      desc: 'Safe spaces to connect, share and grow together.',
       color: 'text-gold',
       bgColor: '#C79949',
       image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
@@ -42,7 +42,7 @@ const ProgramsList = () => {
     {
       icon: FaBriefcase,
       title: 'Workplace Wellness Initiative',
-      desc: 'Helping organizations promote employee wellbeing, reduce stress, and build healthier, more resilient workplace cultures.',
+      desc: 'Healthier, more resilient workplaces and teams.',
       color: 'text-forest',
       bgColor: '#2E5D49',
       image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
@@ -51,7 +51,7 @@ const ProgramsList = () => {
     {
       icon: FaBookOpen,
       title: 'Hope Resource Hub',
-      desc: 'A digital collection of wellness guides, educational materials, tools, and community resources available anytime.',
+      desc: 'Guides, tools and resources for everyday resilience.',
       color: 'text-burgundy',
       bgColor: '#6E2839',
       image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
@@ -71,35 +71,33 @@ const ProgramsList = () => {
           {programs.map((program, index) => {
             const IconComponent = program.icon;
             return (
-              <Card key={index} className="overflow-hidden flex flex-col h-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-0">
+              <Card key={index} className="overflow-hidden flex flex-col h-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 !p-0">
 
-                {/* Image & Icon Wrapper - IMPORTANT CHANGE YAHAN HAI */}
                 <div className="relative w-full">
                   <img
                     src={program.image}
                     alt={program.title}
                     loading="lazy"
-                    className="w-full h-56 object-cover block"
+                    className="w-full h-50 object-cover block"
                     onError={(e) => {
                       e.target.src = `https://via.placeholder.com/600x400/FEF9F2/2E5D49?text=${encodeURIComponent(program.title)}`;
                     }}
                   />
 
-                  {/* Icon Overlay - Ab yeh 'absolute' hai aur image ke upar hai */}
-                  <div className="absolute -bottom-6 left-3 z-10">
+                  {/* Icon at Bottom Left */}
+                  <div className="absolute bottom-0 left-2 z-10">
                     <IconCircle
                       bgColor={program.bgColor}
                       textColor="#FFFFFF"
-                      className="w-14 h-14 shadow-md"
+                      className="w-12 h-12 shadow-md"
                     >
-                      <IconComponent size={24} />
+                      <IconComponent size={20} />
                     </IconCircle>
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6 flex flex-col flex-grow pt-8">
-                
+                {/* Text Content */}
+                <div className="p-6 flex flex-col flex-grow">
                   <h4 className="font-body text-[18px] font-semibold mb-2 text-start" style={{ color: '#2E5D49' }}>
                     {program.title}
                   </h4>

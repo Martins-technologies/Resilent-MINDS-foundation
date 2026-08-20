@@ -1,3 +1,4 @@
+import Container from '../ui/Container';
 import Card from '../ui/Card';
 import Eyebrow from '../ui/Eyebrow';
 import FAQItem from '../ui/FAQItem';
@@ -27,14 +28,33 @@ const FAQSection = () => {
   ];
 
   return (
-    <Card className="mt-6">
-      <Eyebrow>Frequently Asked Questions</Eyebrow>
-      <div className="mt-2.5">
-        {faqs.map((faq, index) => (
-          <FAQItem key={index} question={faq.question} answer={faq.answer} />
-        ))}
-      </div>
-    </Card>
+    <section className="section py-12 bg-[#FEF9F2]">
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          
+          {/* Left Side: FAQ Content */}
+          <Card className="mt-0 p-6 md:p-8 shadow-sm">
+            <Eyebrow>Frequently Asked Questions</Eyebrow>
+            <div className="mt-2.5">
+              {faqs.map((faq, index) => (
+                <FAQItem key={index} question={faq.question} answer={faq.answer} />
+              ))}
+            </div>
+          </Card>
+
+          {/* Right Side: Rounded Unsplash Image */}
+          <div className="w-full h-full min-h-[350px] md:min-h-[400px] rounded-2xl overflow-hidden shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="People supporting each other in a circle"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+        </div>
+      </Container>
+    </section>
   );
 };
 

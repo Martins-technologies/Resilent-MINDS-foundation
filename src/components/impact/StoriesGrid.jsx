@@ -7,7 +7,7 @@ const StoriesGrid = () => {
     <section className="section">
       <Container>
         <div className="mb-10">
-          <Eyebrow>Real Stories. Real Change.</Eyebrow>
+          <Eyebrow>Real Stories</Eyebrow>
           <h2 className="mb-0">Real Stories. Real Change.</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -26,7 +26,7 @@ const StoriesGrid = () => {
                 src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&h=300&fit=crop&crop=center&auto=format"
                 alt="Two friends talking on a sofa"
                 loading="lazy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>
@@ -38,7 +38,7 @@ const StoriesGrid = () => {
                 src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop&crop=center&auto=format"
                 alt="Two women in warm conversation"
                 loading="lazy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="card border-0" style={{ backgroundColor: '#F1E6D2' }}>
@@ -64,7 +64,7 @@ const StoriesGrid = () => {
                 src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=300&fit=crop&crop=center&auto=format"
                 alt="Small group seated in a support circle"
                 loading="lazy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>

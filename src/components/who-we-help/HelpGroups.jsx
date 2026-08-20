@@ -62,10 +62,9 @@ const HelpGroups = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {groups.map((group, index) => (
-            <div key={index} className="card overflow-hidden p-0 flex flex-col h-full">
+            <div key={index} className="card overflow-hidden !p-0 flex flex-col h-full">
               
-              {/* Image Container */}
-              <div className="relative w-full h-48 overflow-hidden p-0 m-0 bg-[#f0f0f0]">
+              <div className="relative w-full h-48 overflow-hidden bg-[#f0f0f0]">
                 <img 
                   src={group.image} 
                   alt={group.title}
@@ -73,7 +72,7 @@ const HelpGroups = () => {
                   className="w-full h-full object-cover block"
                 />
                 
-                {/* Icon - Left Bottom */}
+                {/* Icon - Left Bottom (Now inside the image, at the edge) */}
                 <div className="absolute bottom-0 left-0 p-3">
                   <div
                     className="w-[52px] h-[52px] rounded-full flex items-center justify-center text-xl shadow-md"

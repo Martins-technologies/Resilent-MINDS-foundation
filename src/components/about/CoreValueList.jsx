@@ -60,7 +60,7 @@ const CoreValuesList = () => {
             <div 
               key={index} 
               className={`px-4 py-6 text-center ${
-                index < values.length - 1 ? 'border-r border-line' : ''
+                index < values.length - 1 ? 'lg:border-r border-line' : ''
               }`}
             >
               <div className="w-14 h-14 rounded-full bg-[#F1E6D2] flex items-center justify-center mx-auto mb-3">

@@ -9,12 +9,12 @@ const CTASection = () => {
       <Container>
         <Grid cols={2} className="items-center">
           {/* Left Column (Text & Button) */}
-          <div>
+          <div className='flex flex-col text-center'>
             <h2 className="mt-0 text-white mb-4">Your Support Creates Hope</h2>
-            <p className="text-[#f0dde0] mb-6">
+            <p className="text-[#f0dde0] mb-6 text-center">
               Help us reach more people, expand programs and deliver resources where they&rsquo;re needed most.
             </p>
-            <Button variant="gold" to="/get-involved">
+            <Button variant="gold" to="/get-involved" className='text-center mx-auto rounded-xl'>
               ♥ Give Hope Today →
             </Button>
           </div>

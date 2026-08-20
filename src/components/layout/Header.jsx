@@ -21,8 +21,8 @@ const Header = () => {
   }, [isOpen]);
 
   const navLinks = [
-   
-    { to: '/about', label: 'About Us' },
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
     { to: '/programs', label: 'Programs' },
     { to: '/who-we-help', label: 'Who We Help' },
     { to: '/impact', label: 'Impact' },
@@ -32,13 +32,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-ivory border-b border-line shadow-sm">
+    <header className="fixed top-0 left-0 w-full z-50 bg-ivory border-b border-line shadow-sm">
       <div className="container mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between py-4 md:py-5 gap-4">
           
           {/* Logo - Left Side */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src={logo} alt="Resilient Minds Foundation" className="h-20 w-50 object-cover" />
+            <img src={logo} alt="Resilient Minds Foundation" className="h-14 w-35 object-cover" />
           </Link>
 
           {/* Navigation - Center */}
@@ -61,17 +61,16 @@ const Header = () => {
           {/* Right Side - Buttons (Desktop) + Mobile Menu Button */}
           <div className="flex items-center gap-3">
             
-            {/* ✅ DESKTOP BUTTONS (Hidden on small screens) */}
             <div className="hidden lg:flex items-center gap-3">
               <Link 
                 to="/contact" 
-                className="px-5 py-2.5 text-sm font-semibold border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white transition-all duration-200 rounded-full"
+                className="px-2 py-2 text-sm font-semibold border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white transition-all duration-200 rounded-xl"
               >
-                Get Support
+               Get Support
               </Link>
               <Link 
                 to="/get-involved"
-                className="px-5 py-2.5 text-sm font-semibold bg-gold text-forest-dark hover:bg-[#B8973A] transition-all duration-200 rounded-full shadow-md"
+                className="px-5 py-2.5 text-sm font-semibold bg-gold text-forest-dark hover:bg-[#B8973A] transition-all duration-200 rounded-xl shadow-md"
               >
                 Donate
               </Link>
@@ -91,7 +90,7 @@ const Header = () => {
 
         {/* Mobile Menu - Buttons at Bottom (Only Mobile) */}
         {isOpen && (
-          <nav className="lg:hidden py-4 border-t border-line bg-ivory">
+          <nav className="lg:hidden py-4 border-t border-line bg-ivory relative z-50">
             <div className="flex flex-col gap-1">
               {/* Navigation Links */}
               {navLinks.map((link) => (
@@ -109,14 +108,13 @@ const Header = () => {
                 </NavLink>
               ))}
               
-              {/* ✅ MOBILE BUTTONS (Only inside the mobile menu) */}
               <div className="mt-4 pt-4 border-t border-line flex flex-col gap-3 px-4">
                 <Link 
                   to="/contact" 
-                  className="w-full text-center px-5 py-3 text-sm font-semibold border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white transition-all duration-200 rounded-full"
+                  className="w-full text-center px-2 py-1 text-sm font-bold border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white transition-all duration-200 rounded-full"
                   onClick={closeMenu}
                 >
-                  Get Support
+                   Support
                 </Link>
                 <Link 
                   to="/get-involved"

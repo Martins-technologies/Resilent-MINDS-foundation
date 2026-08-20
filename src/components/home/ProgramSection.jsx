@@ -41,8 +41,8 @@ const ProgramsSection = () => {
     <section className="section section--band">
       <Container>
         <div className="max-w-[640px] mx-auto mb-10 text-center">
-          <Eyebrow>Our Programs</Eyebrow>
-          <h2 className="mb-2">Creating Real Change in Our Communities</h2>
+          <Eyebrow>Our Programs---</Eyebrow>
+          <h3 className="mb-2">Creating Real Change in Our Communities</h3>
           <p>Practical support. Meaningful connection. Lasting impact.</p>
         </div>
         

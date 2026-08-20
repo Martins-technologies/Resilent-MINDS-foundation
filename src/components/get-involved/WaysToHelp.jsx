@@ -1,4 +1,5 @@
 import Container from '../ui/Container';
+import { Link } from 'react-router-dom';
 import {
   FaHandHoldingHeart,
   FaUserFriends,
@@ -60,9 +61,15 @@ const WaysToHelp = () => {
             Whether you give your time, share your expertise, or make a donation, you help us create lasting impact in the lives of those who need it most.
           </p>
         </div>
-        <div className="card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        
+        <div className="card bg-[#FEF9F2] involved-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 relative">
           {ways.map((way, index) => (
-            <div key={index}>
+            <div key={index} className="relative px-4 py-6 lg:py-8 flex flex-col h-full">
+              
+              {index !== 0 && (
+                <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-80 bg-[#C79949] opacity-20"></div>
+              )}
+
               <div
                 className="w-14 h-14 rounded-full flex items-center justify-center mb-3.5"
                 style={{ backgroundColor: way.color }}
@@ -71,7 +78,7 @@ const WaysToHelp = () => {
               </div>
               <h4 className="mb-2 text-forest">{way.title}</h4>
               <p className="text-sm mb-3">{way.desc}</p>
-              <ul className="space-y-1.5 mb-3">
+              <ul className="space-y-1.5 mb-3 flex-grow">
                 {way.points.map((point, i) => (
                   <li key={i} className="text-xs text-ink-soft flex items-start gap-2">
                     <span className="text-gold mt-0.5">&bull;</span>
@@ -79,7 +86,13 @@ const WaysToHelp = () => {
                   </li>
                 ))}
               </ul>
-              <span className="text-xs font-bold text-burgundy">{way.link}</span>
+              
+              <Link 
+                to="/contact" 
+                className="text-xs font-bold text-burgundy hover:opacity-70 transition-opacity inline-block mt-auto"
+              >
+                {way.link}
+              </Link>
             </div>
           ))}
         </div>

@@ -20,12 +20,12 @@ const CommunityImpact = () => {
           {items.map((item, index) => (
             <div key={index} className="card text-center">
               <div
-                className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
+                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"
                 style={{ backgroundColor: item.color }}
               >
-                <item.icon className="text-white text-xl" />
+                <item.icon className="text-white text-2xl" />
               </div>
-              <h4 className="text-sm mb-0">{item.label}</h4>
+              <h5 className="text-sm mb-0 text-bold">{item.label}</h5>
             </div>
           ))}
         </div>

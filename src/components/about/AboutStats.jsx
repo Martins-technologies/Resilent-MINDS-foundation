@@ -11,7 +11,7 @@ const AboutStats = () => {
   ];
 
   return (
-    <section className="section section--band py-12 md:py-16">
+    <section className="section section--band py-8 md:py-10 ">
       <Container>
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           {/* Left Side - Heading and Button */}
@@ -19,13 +19,13 @@ const AboutStats = () => {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-forest mb-6">
               We are committed to building resilient minds and stronger communities every day.
             </h2>
-            <Button variant="primary" to="/get-involved">
+            <Button variant="primary" to="/get-involved" className='rounded-xl'>
               Join Our Movement →
             </Button>
           </div>
 
           {/* Right Side - Stats with Vertical Dividers Only */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 ">
             <Eyebrow>Our Impact</Eyebrow>
             <div className="grid grid-cols-4 gap-0 mt-4">
               {stats.map((stat, index) => (
@@ -47,7 +47,7 @@ const AboutStats = () => {
                 </div>
               ))}
             </div>
-            <p className="text-sm text-ink-soft mt-6 text-center">
+            <p className="text-sm text-ink-soft mt-6 text-start max-w-10/12">
               These numbers represent our growing impact and the communities we are privileged to serve.
             </p>
           </div>
