@@ -1,0 +1,140 @@
+.section {
+  position: relative;
+  background: var(--rm-ivory);
+  padding-bottom: 80px;
+}
+
+.topWave {
+  position: relative;
+  height: 90px;
+  overflow: hidden;
+}
+
+.topWave svg {
+  display: block;
+  width: 100%;
+  height: 90px;
+}
+
+.leaf {
+  position: absolute;
+  left: 0;
+  top: -20px;
+  width: 180px;
+  height: 120px;
+  pointer-events: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  align-items: center;
+  min-height: 560px;
+}
+
+.media {
+  position: relative;
+  min-height: 560px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  object-fit: cover;
+  object-position: center 20%;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    #000 68%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to right, #000 68%, transparent 100%);
+}
+
+.content {
+  padding: 40px 80px 40px 40px;
+  max-width: 640px;
+}
+
+.heading {
+  margin: 16px 0 0;
+  font-family: var(--rm-font-heading);
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--rm-forest);
+}
+
+.quote {
+  margin: 24px 0 0;
+  font-family: var(--rm-font-body);
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--rm-text-body);
+}
+
+.attr {
+  margin: 8px 0 0;
+  font-family: var(--rm-font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--rm-text-body);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .media,
+  .image {
+    min-height: 420px;
+    height: 420px;
+    -webkit-mask-image: linear-gradient(#000 78%, transparent);
+    mask-image: linear-gradient(#000 78%, transparent);
+  }
+
+  .content {
+    padding: 24px 40px 40px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 16px 24px 40px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .quote {
+    font-size: 18px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .media,
+  .image {
+    min-height: 320px;
+    height: 320px;
+  }
+}
