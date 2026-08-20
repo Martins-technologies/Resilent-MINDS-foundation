@@ -48,7 +48,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit} noValidate>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-3.5">
           <div className="form-field">
-            <label htmlFor="first-name" className="block text-sm font-semibold text-[#2E5D49] mb-1.5">
+            <label htmlFor="first-name" className="block text-xs font-semibold text-[#2E5D49] mb-1">
               First Name
             </label>
             <input
@@ -57,11 +57,11 @@ const ContactForm = () => {
               type="text"
               autoComplete="given-name"
               required
-              className="w-full px-3.5 py-3 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
             />
           </div>
           <div className="form-field">
-            <label htmlFor="last-name" className="block text-sm font-semibold text-[#2E5D49] mb-1.5">
+            <label htmlFor="last-name" className="block text-xs font-semibold text-[#2E5D49] mb-1">
               Last Name
             </label>
             <input
@@ -70,13 +70,13 @@ const ContactForm = () => {
               type="text"
               autoComplete="family-name"
               required
-              className="w-full px-3.5 py-3 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
             />
           </div>
         </div>
         
         <div className="form-field mb-3.5">
-          <label htmlFor="email" className="block text-sm font-semibold text-[#2E5D49] mb-1.5">
+          <label htmlFor="email" className="block text-xs font-semibold text-[#2E5D49] mb-1">
             Email Address
           </label>
           <input
@@ -85,12 +85,12 @@ const ContactForm = () => {
             type="email"
             autoComplete="email"
             required
-            className="w-full px-3.5 py-3 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
           />
         </div>
         
         <div className="form-field mb-3.5">
-          <label htmlFor="phone" className="block text-sm font-semibold text-[#2E5D49] mb-1.5">
+          <label htmlFor="phone" className="block text-xs font-semibold text-[#2E5D49] mb-1">
             Phone Number (Optional)
           </label>
           <input
@@ -98,24 +98,30 @@ const ContactForm = () => {
             name="phone"
             type="tel"
             autoComplete="tel"
-            className="w-full px-3.5 py-3 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
           />
         </div>
         
         <div className="form-field mb-4">
-          <label htmlFor="message" className="block text-sm font-semibold text-[#2E5D49] mb-1.5">
+          <label htmlFor="message" className="block text-xs font-semibold text-[#2E5D49] mb-1">
             How can we help you?
           </label>
           <textarea
             id="message"
             name="message"
-            rows={4}
+            rows={3}
             required
-            className="w-full px-3.5 py-3 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949] resize-vertical"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg font-body text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949] resize-vertical"
           />
         </div>
         
-        <Button variant="primary" type="submit" disabled={isSubmitting} className={isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}>
+        {/* Button with rounded-xl and smaller size */}
+        <Button 
+          variant="primary" 
+          type="submit" 
+          disabled={isSubmitting} 
+          className={`rounded-xl py-2.5 px-6 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+        >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </Button>
         

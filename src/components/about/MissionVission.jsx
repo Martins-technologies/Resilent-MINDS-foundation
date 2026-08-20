@@ -5,7 +5,7 @@ const MissionVision = () => {
     <div className="grid grid-cols-1 md:grid-cols-2">
 
       {/* Mission - Left */}
-      <div className="bg-[#2E5D49] text-white text-[#ffffff] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="bg-[#2E5D49] text-white text-[#ffffff] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-6 md:py-10 lg:py-14">
         <div className="flex items-start gap-4">
           {/* Icon */}
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
@@ -24,7 +24,7 @@ const MissionVision = () => {
       </div>
 
       {/* Vision - Right */}
-      <div className="bg-[#6E2839] text-white text-[#ffffff] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="bg-[#6E2839] text-white text-[#ffffff] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-6 md:py-10 lg:py-14">
         <div className="flex items-start gap-4">
           {/* Icon */}
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">

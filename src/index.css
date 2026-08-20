@@ -63,7 +63,9 @@ img {
   margin: 0 auto;
   padding: 0 24px;
 }
-
+.involved-card{
+  background-color: var(--color-ivory) !important;
+}
 /* Sections */
 .section {
   padding: 64px 0;

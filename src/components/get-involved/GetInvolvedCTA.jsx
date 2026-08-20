@@ -6,6 +6,7 @@ import {
   FaBullhorn,
   FaHandshake,
   FaGift,
+  FaTree,
 } from 'react-icons/fa';
 
 const GetInvolvedCTA = () => {
@@ -45,13 +46,37 @@ const GetInvolvedCTA = () => {
       <section className="section section--burgundy py-8">
         <Container>
           <div className="flex flex-col md:flex-row justify-between items-center gap-5">
-            <div>
-              <h3 className="text-white mb-1">Every action counts. Every person matters.</h3>
-              <p className="mb-0">Together, we can build stronger minds and stronger communities.</p>
+
+            {/* Left Side: Icon + Text */}
+            <div className="flex items-center gap-4">
+              {/* Gold Icon */}
+              <div className="w-12 h-12 rounded-full bg-[#C79949] flex items-center justify-center text-white shadow-md flex-shrink-0">
+                <FaTree size={20} />
+              </div>
+
+              {/* Text */}
+              <div>
+                <h4 className="text-white mb-1">Every action counts. Every person matters.</h4>
+              </div>
             </div>
-            <Button variant="outlineLight" to="/contact">
-              Donate Now →
-            </Button>
+            <div className="hidden md:block w-[1px] h-12 bg-white/30"></div>
+
+            <div>
+              <p className="mb-0 text-white/90">Together, we can build stronger minds and stronger communities.</p>
+            </div>
+
+            {/* Vertical Line (Desktop only) */}
+
+            {/* Right Side: Button */}
+            <a
+              href="/contact"
+              className="rounded-xl bg-transparent border-2 border-white hover:bg-white hover:text-[#6E2839] transition-colors px-5 py-2 inline-block"
+            >
+              <span className="flex items-center gap-1 whitespace-nowrap">
+                Donate Now
+                <span>→</span>
+              </span>
+            </a>
           </div>
         </Container>
       </section>

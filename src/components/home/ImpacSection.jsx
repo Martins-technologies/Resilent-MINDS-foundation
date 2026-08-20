@@ -41,13 +41,13 @@ const ImpactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left Side */}
           <div>
-            <span className="inline-block text-gold font-bold text-sm tracking-widest uppercase mb-3">
+            <span className="inline-block text-white font-bold text-xl text-center tracking-widest uppercase mb-3">
               Our Impact
             </span>
-            <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+            <div className="text-white  text-sm md:text-xl lg:text-2xl  mb-4 ">
               Stronger support creates stronger families and stronger communities.
-            </h2>
-            <Link to="/impact" className="inline-flex items-center gap-2 bg-gold text-forest-dark px-6 py-3 rounded-full font-bold hover:bg-[#b8873a] transition-colors">
+            </div>
+            <Link to="/impact" className="inline-flex items-center gap-2 bg-white text-forest-dark px-6 py-3 rounded-xl font-bold hover:bg-[#b8873a] transition-colors">
               See Our Impact →
             </Link>
           </div>

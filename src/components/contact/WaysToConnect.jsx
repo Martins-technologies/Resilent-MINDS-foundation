@@ -5,7 +5,11 @@ import {
   FaPhone, 
   FaMapMarkerAlt, 
   FaHeadset, 
-  FaShareAlt 
+  FaShareAlt,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube
 } from 'react-icons/fa';
 
 const WaysToConnect = () => {
@@ -14,31 +18,31 @@ const WaysToConnect = () => {
       icon: FaEnvelope, 
       title: 'Email Us', 
       desc: 'info@resilientmindsfoundation.ca\nWe typically respond within 1–2 business days.', 
-      bg: 'bg-[#2E5D49]' // Forest Green
+      bg: 'bg-[#2E5D49]' 
     },
     { 
       icon: FaPhone, 
       title: 'Call Us', 
       desc: '403-404-9380\nMon–Fri, 9:00 AM – 5:00 PM ', 
-      bg: 'bg-[#6E2839]' // Burgundy
+      bg: 'bg-[#6E2839]' 
     },
     { 
       icon: FaMapMarkerAlt, 
       title: 'Visit Us', 
       desc: '1220 N. Market Street\nWilmington, DE 19801, USA\nBy appointment only', 
-      bg: 'bg-[#C79949]' // Antique Gold
+      bg: 'bg-[#C79949]' 
     },
     { 
       icon: FaHeadset, 
       title: 'Get Support', 
       desc: 'If you or someone you know needs support, we\'re here to help.', 
-      bg: 'bg-[#2E5D49]' // Forest Green
+      bg: 'bg-[#2E5D49]' 
     },
     { 
       icon: FaShareAlt, 
       title: 'Stay Connected', 
       desc: 'Follow us on social media for updates, resources, and inspiration.', 
-      bg: 'bg-[#6E2839]' // Burgundy
+      bg: 'bg-[#6E2839]' 
     },
   ];
 
@@ -49,25 +53,43 @@ const WaysToConnect = () => {
           <Eyebrow>Ways to Connect</Eyebrow>
         </div>
         
-        {/* Grid: 1 col mobile, 2 cols tablet, 5 cols desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-0 relative">
           {ways.map((way, index) => (
-            <div key={index} className="text-center flex flex-col items-center">
+            <div key={index} className="relative text-center flex flex-col items-center px-3 py-4 md:py-0">
               
-              {/* Icon Circle */}
+              {index !== 0 && (
+                <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-20 bg-[#C79949] opacity-20"></div>
+              )}
+
               <div className={`w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3 ${way.bg} shadow-md`}>
                 <way.icon className="text-white text-xl" />
               </div>
               
-              {/* Title */}
               <h4 className="font-body text-sm font-bold text-[#2E5D49] mb-1">
                 {way.title}
               </h4>
               
-              {/* Description - whitespace-pre-line handles new lines (\n) */}
-              <p className="text-xs text-gray-600 whitespace-pre-line leading-relaxed">
+              <p className="text-xs text-gray-600 whitespace-pre-line leading-relaxed mb-3">
                 {way.desc}
               </p>
+
+              {/* Social Icons (Only for Stay Connected) */}
+              {way.title === 'Stay Connected' && (
+                <div className="flex items-center gap-3 mt-1">
+                  <a href="#" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
+                    <FaFacebook />
+                  </a>
+                  <a href="#" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
+                    <FaInstagram />
+                  </a>
+                  <a href="#" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
+                    <FaLinkedin />
+                  </a>
+                  <a href="#" className="text-burgundy hover:text-[#C79949] transition-colors text-lg">
+                    <FaYoutube />
+                  </a>
+                </div>
+              )}
               
             </div>
           ))}

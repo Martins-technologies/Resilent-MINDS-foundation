@@ -1,5 +1,6 @@
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
+import { FaStar } from 'react-icons/fa'; // Icon add kiya
 
 const FeaturedResources = () => {
   const resources = [
@@ -49,10 +50,10 @@ const FeaturedResources = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {resources.map((res, index) => (
-            <div key={index} className="card overflow-hidden p-0 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+            <div key={index} className="card overflow-hidden !p-0 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               
-              {/* Image */}
-              <div className="w-full">
+              {/* Image Wrapper - Full Width */}
+              <div className="relative w-full">
                 <img 
                   src={res.image} 
                   alt={res.title}
@@ -62,6 +63,12 @@ const FeaturedResources = () => {
                     e.target.src = `https://via.placeholder.com/400x160/FEF9F2/2E5D49?text=${encodeURIComponent(res.title)}`;
                   }}
                 />
+                
+                <div className="absolute bottom-3 left-3 z-10">
+                  <div className="w-10 h-10 rounded-full bg-[#C79949] flex items-center justify-center text-white shadow-md">
+                    <FaStar size={16} />
+                  </div>
+                </div>
               </div>
               
               {/* Content */}
@@ -69,9 +76,9 @@ const FeaturedResources = () => {
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#C79949]">
                   {res.tag}
                 </span>
-                <h4 className="text-sm mt-1 mb-1.5 font-semibold text-[#0f4c3a]">
+                <h5 className="text-sm mt-1 mb-1.5 font-semibold text-[#0f4c3a]">
                   {res.title}
-                </h4>
+                </h5>
                 <p className="text-xs text-gray-600 mb-3 flex-grow leading-relaxed">
                   {res.desc}
                 </p>

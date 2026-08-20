@@ -15,7 +15,7 @@ const Button = ({
 
   const variants = {
     primary: 'bg-burgundy text-white hover:bg-burgundy-dark',
-    outline: 'bg-transparent text-forest border-forest hover:bg-forest hover:text-white',
+    outline: 'bg-transparent text-forest border-forest outline-green-900 hover:bg-forest hover:text-white',
     outlineLight: 'bg-transparent text-white border-white/60 hover:bg-white/15',
     gold: 'bg-gold text-forest-dark hover:bg-[#b8873a]',
   };

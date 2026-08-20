@@ -28,7 +28,7 @@ const WhyWeExist = () => {
               this, people continue to seek out ways of coping through various 
               methods, including building bridges or connecting with support.
             </p>
-            <Button variant="gold" to="/about" className="mt-2">
+            <Button variant="gold" to="/about" className="mt-2 rounded-xl">
               Learn more for more →
             </Button>
           </div>

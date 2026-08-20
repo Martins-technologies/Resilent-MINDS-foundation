@@ -25,7 +25,7 @@ const TogetherSection = () => {
               <p className="mb-5">
                 Through education, outreach, and compassion, we are building communities where resilience can grow.
               </p>
-              <Button variant="primary" to="/get-involved">
+              <Button variant="primary" to="/get-involved" className='rounded-xl'>
                 Join Our Movement
               </Button>
             </div>
