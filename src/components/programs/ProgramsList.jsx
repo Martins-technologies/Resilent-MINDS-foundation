@@ -19,7 +19,7 @@ const ProgramsList = () => {
       color: 'text-burgundy',
       bgColor: '#6E2839',
       image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      link: '/academy'
+      link: '/contact'
     },
     {
       icon: FaUsers,
@@ -28,7 +28,7 @@ const ProgramsList = () => {
       color: 'text-forest',
       bgColor: '#2E5D49',
       image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      link: '/youth-strong'
+      link: '/contact'
     },
     {
       icon: FaHands,
@@ -37,7 +37,7 @@ const ProgramsList = () => {
       color: 'text-gold',
       bgColor: '#C79949',
       image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      link: '/healing-circles'
+      link: '/contact'
     },
     {
       icon: FaBriefcase,
@@ -46,7 +46,7 @@ const ProgramsList = () => {
       color: 'text-forest',
       bgColor: '#2E5D49',
       image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      link: '/workplace'
+      link: '/contact'
     },
     {
       icon: FaBookOpen,
@@ -54,7 +54,7 @@ const ProgramsList = () => {
       desc: 'Guides, tools and resources for everyday resilience.',
       color: 'text-burgundy',
       bgColor: '#6E2839',
-      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       link: '/resources'
     },
   ];

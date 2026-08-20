@@ -9,7 +9,7 @@ const WhoWeHelpHero = () => {
         backgroundImage: `url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')` 
       }}
     >
-      <div className="absolute inset-0 bg-[#FEF9F2] opacity-70 z-0"></div>
+      <div className="absolute inset-0 bg-[#FEF9F2] opacity-50 z-0"></div>
 
       <Container>
         <div className="relative z-20 w-full md:w-3/5 lg:w-1/2 text-start md:text-left">

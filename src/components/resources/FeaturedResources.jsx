@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
-import { FaStar } from 'react-icons/fa'; // Icon add kiya
+import { FaStar } from 'react-icons/fa';
 
 const FeaturedResources = () => {
   const resources = [
@@ -8,36 +9,41 @@ const FeaturedResources = () => {
       tag: 'Article', 
       title: 'Building Emotional Resilience', 
       desc: 'Simple steps to strengthen your mind and navigate stress with confidence.', 
-      link: 'Read More →', 
+      link: 'Read More →',
+      to: '/contact',
       image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
     },
     { 
       tag: 'Guide', 
       title: 'Self-Care Guide', 
       desc: 'A practical guide to daily habits that support your mental and emotional well-being.', 
-      link: 'Download Guide →', 
+      link: 'Download Guide →',
+      to: '/contact',
       image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
     },
     { 
       tag: 'Tool', 
       title: 'Mindfulness Worksheet', 
       desc: 'A simple worksheet to help you stay present, manage anxiety, and reduce overwhelm.', 
-      link: 'Use Worksheet →', 
+      link: 'Use Worksheet →',
+      to: '/contact',
       image: 'https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
     },
     { 
       tag: 'Video', 
       title: 'Understanding Stress & How to Manage It', 
       desc: 'Watch our expert-led webinar on understanding stress and building coping skills.', 
-      link: 'Watch Now →', 
-      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      link: 'Watch Now →',
+      to: '/contact',
+      image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
     },
     { 
       tag: 'Support', 
       title: 'Where to Get Help', 
-      desc: 'A list of trusted hotlines, organizations, and local resources for support.', 
-      link: 'View Resources →', 
-      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      desc: 'A list of trusted hotlines, organizations, and local services for support.', 
+      link: 'View Resources →',
+      to: '/contact',
+      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
     },
   ];
 
@@ -82,9 +88,12 @@ const FeaturedResources = () => {
                 <p className="text-xs text-gray-600 mb-3 flex-grow leading-relaxed">
                   {res.desc}
                 </p>
-                <span className="text-xs font-bold text-[#5c1a2e] hover:opacity-70 transition-opacity cursor-pointer">
+                <Link
+                  to={res.to}
+                  className="text-xs font-bold text-[#5c1a2e] hover:opacity-70 transition-opacity"
+                >
                   {res.link}
-                </span>
+                </Link>
               </div>
               
             </div>

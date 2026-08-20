@@ -3,29 +3,25 @@ import IconLeafDecor from '../icons/IconLeafDecor';
 import SectionLabel from '../SectionLabel/SectionLabel';
 import styles from './StoriesOfStrength.module.css';
 
-const STORY_IMAGE = 'https://picsum.photos/id/838/700/800';
-
 const StoriesOfStrength = () => {
   return (
     <section className={styles.section} aria-labelledby="stories-heading">
       <div className={styles.topWave} aria-hidden="true">
-        <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <svg viewBox="0 0 1440 72" preserveAspectRatio="none">
           <path
             fill="#2E5D49"
-            d="M0,0 H1440 V20 C1200,80 900,10 720,40 C480,76 240,8 0,50 Z"
+            d="M0,0 H1440 V18 C1180,72 920,8 720,32 C480,58 220,6 0,40 Z"
           />
         </svg>
-        <IconLeafDecor className={styles.leaf} color="#FEF9F2" opacity={0.18} />
+        <IconLeafDecor className={styles.leaf} color="#FEF9F2" opacity={0.16} />
       </div>
 
       <div className={styles.layout}>
         <div className={styles.media}>
           <img
-            src={STORY_IMAGE}
-            alt="Placeholder — young person smiling and looking upward"
+            src="/child.jpeg"
+            alt="Young child smiling and looking upward"
             className={styles.image}
-            width={700}
-            height={800}
           />
         </div>
 
@@ -44,7 +40,7 @@ const StoriesOfStrength = () => {
             <Button to="/impact" variant="primary" size="md" arrow>
               Read More Stories
             </Button>
-            <Button to="/contact" variant="outline" size="md">
+            <Button to="/contact" variant="outline" size="md" className={styles.shareBtn}>
               Share Your Story
             </Button>
           </div>

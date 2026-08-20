@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
 
@@ -7,14 +6,14 @@ const ProgramsHero = () => {
     <section
       className="py-20 md:py-28 lg:py-30 overflow-hidden relative min-h-[400px] md:min-h-[450px] lg:min-h-[500px] flex items-center"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
+        backgroundImage: `url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
     >
       {/* Ivory Overlay for light theme */}
-      <div className="absolute inset-0 bg-[#FFFFF0]/85"></div>
+      <div className="absolute inset-0 bg-[#FFFFF0]/60"></div>
 
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-5" style={{
@@ -37,13 +36,12 @@ const ProgramsHero = () => {
             <div className="mb-6 text-gray-700 drop-shadow-sm leading-relaxed">
               We create educational, emotional, and community-based programs that help individuals strengthen their mental wellness, build life skills, and thrive.
             </div>
-            <Button
-              variant="primary"
-              to="#programs-list"
-              className="bg-burgundy hover:bg-burgundy/80 text-white border-none rounded-xl px-6 md:px-8 py-2.5 md:py-3 shadow-md hover:shadow-lg transition-all duration-300"
+            <a
+              href="#programs-list"
+              className="inline-flex items-center justify-center gap-2 bg-[#6E2839] hover:bg-[#5a1f2e] text-white border-none rounded-xl px-6 md:px-8 py-2.5 md:py-3 shadow-md hover:shadow-lg transition-all duration-300 font-semibold text-sm md:text-base"
             >
               Explore Our Programs →
-            </Button>
+            </a>
           </div>
 
 

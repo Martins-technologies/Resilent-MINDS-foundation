@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
 
@@ -12,7 +11,7 @@ const GetInvolvedHero = () => {
       }}
     >
       {/* Overlay - Text ko readable banane ke liye (Contrast) */}
-      <div className="absolute inset-0 bg-white/80"></div>
+      <div className="absolute inset-0 bg-white/60"></div>
 
       <Container>
         {/* Content - Left Aligned */}
@@ -28,9 +27,12 @@ const GetInvolvedHero = () => {
             Your time, skills, and generosity help us empower individuals and communities to overcome challenges, grow stronger, and create brighter futures.
           </p>
           
-          <Button variant="primary" to="#ways-to-help" className="shadow-md">
+          <a
+            href="#ways-to-help"
+            className="inline-flex items-center justify-center gap-2 bg-[#6E2839] hover:bg-[#5a1f2e] text-white rounded-full px-6 py-3 font-semibold text-sm md:text-base shadow-md hover:shadow-lg transition-all duration-300"
+          >
             Find Your Way to Get Involved →
-          </Button>
+          </a>
           
         </div>
       </Container>

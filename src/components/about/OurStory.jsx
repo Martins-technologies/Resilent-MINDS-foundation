@@ -37,7 +37,7 @@ const OurStory = () => {
               className="w-full h-[150px] object-cover rounded-xl"
             />
             <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop&crop=center"
+              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=300&fit=crop&crop=center"
               alt="People in conversation"
               className="w-full h-[150px] object-cover rounded-xl"
             />

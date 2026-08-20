@@ -49,10 +49,10 @@ const COLUMNS = [
 ];
 
 const SOCIAL = [
-  { label: 'Facebook', Icon: IconFacebook },
-  { label: 'Instagram', Icon: IconInstagram },
-  { label: 'LinkedIn', Icon: IconLinkedIn },
-  { label: 'YouTube', Icon: IconYouTube },
+  { label: 'Facebook', Icon: IconFacebook, href: 'https://www.facebook.com/' },
+  { label: 'Instagram', Icon: IconInstagram, href: 'https://www.instagram.com/' },
+  { label: 'LinkedIn', Icon: IconLinkedIn, href: 'https://www.linkedin.com/' },
+  { label: 'YouTube', Icon: IconYouTube, href: 'https://www.youtube.com/' },
 ];
 
 const Footer = () => {
@@ -77,7 +77,9 @@ const Footer = () => {
             {SOCIAL.map((item) => (
               <a
                 key={item.label}
-                href="#"
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={styles.socialBtn}
                 aria-label={item.label}
               >

@@ -18,6 +18,8 @@ const Button = ({
     outline: 'bg-transparent text-forest border-forest outline-green-900 hover:bg-forest hover:text-white',
     outlineLight: 'bg-transparent text-white border-white/60 hover:bg-white/15',
     gold: 'bg-gold text-forest-dark hover:bg-[#b8873a]',
+    burgundy: 'bg-[#6E2839] text-white border-[#6E2839] hover:bg-[#5a1f2e]',
+    white: 'bg-white text-[#6E2839] border-white hover:bg-gray-100',
   };
 
   const sizes = {

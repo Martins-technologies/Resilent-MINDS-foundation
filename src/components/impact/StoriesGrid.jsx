@@ -23,7 +23,7 @@ const StoriesGrid = () => {
             </div>
             <div className="w-full h-[140px] overflow-hidden rounded-lg">
               <img 
-                src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&h=300&fit=crop&crop=center&auto=format"
+                src="https://images.unsplash.com/photo-1543269664-7eef42226a21?w=600&h=300&fit=crop&crop=center&auto=format"
                 alt="Two friends talking on a sofa"
                 loading="lazy"
                 className="w-full h-full object-cover object-center"
@@ -61,7 +61,7 @@ const StoriesGrid = () => {
             </div>
             <div className="w-full h-[140px] overflow-hidden rounded-lg">
               <img 
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=300&fit=crop&crop=center&auto=format"
+                src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=300&fit=crop&crop=center&auto=format"
                 alt="Small group seated in a support circle"
                 loading="lazy"
                 className="w-full h-full object-cover object-center"

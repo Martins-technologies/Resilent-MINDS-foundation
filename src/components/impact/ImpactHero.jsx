@@ -10,7 +10,7 @@ const ImpactHero = () => {
         backgroundImage: `url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`
       }}
     >
-      <div className="absolute inset-0 bg-[#FEF9F2]/80"></div>
+      <div className="absolute inset-0 bg-[#FEF9F2]/55"></div>
 
       <Container>
         <div className="relative z-10 w-full md:w-3/5 lg:w-1/2 text-left">

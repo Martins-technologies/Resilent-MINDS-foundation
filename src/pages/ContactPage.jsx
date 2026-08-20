@@ -13,7 +13,7 @@ const ContactPage = () => {
     <>
       <ContactHero />
       <WaysToConnect />
-      <section className="section">
+      <section id="contact-form" className="section">
         <Container>
           <Grid cols={2} className="items-start">
             <ContactForm />

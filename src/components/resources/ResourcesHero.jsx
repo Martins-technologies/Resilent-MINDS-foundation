@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
 
@@ -12,7 +11,7 @@ const ResourcesHero = () => {
       }}
     >
       {/* Overlay - Text ko readable banane ke liye */}
-      <div className="absolute inset-0 bg-white/80"></div>
+      <div className="absolute inset-0 bg-white/60"></div>
 
       <Container>
         {/* Content - Center aligned */}
@@ -33,9 +32,12 @@ const ResourcesHero = () => {
             Explore our library of resources designed to educate, empower, and support individuals, families, and communities on their journey toward mental wellness and resilience.
           </span>
           
-          <Button variant="primary" to="#featured-resources" className='rounded-xl my-4'>
+          <a
+            href="#featured-resources"
+            className="inline-flex items-center justify-center gap-2 bg-[#6E2839] hover:bg-[#5a1f2e] text-white rounded-full px-6 py-3 font-semibold text-sm md:text-base shadow-md hover:shadow-lg transition-all duration-300 my-4"
+          >
             Browse All Resources →
-          </Button>
+          </a>
           
         </div>
       </Container>

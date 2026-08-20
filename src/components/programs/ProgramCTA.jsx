@@ -12,8 +12,8 @@ const ProgramsCTA = () => {
           {/* Image - Height aur width chhoti kar di */}
           <div className="w-full md:w-1/5 flex-shrink-0">
             <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Community Impact"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Team working together for community impact"
               className="w-full h-32 md:h-36 object-cover rounded-xl shadow-md"
             />
           </div>
@@ -101,8 +101,8 @@ const ProgramsCTA = () => {
               {/* White Button */}
               <div className="flex justify-start">
                 <Button
-                  variant="white" // Assuming your Button component handles a 'white' variant. If not, use className override below.
-                  to="/donate"
+                  variant="white"
+                  to="/get-involved"
                   className="whitespace-nowrap rounded-xl bg-white text-[#6E2839] font-semibold px-4 py-1.5 hover:bg-gray-100 transition-colors"
                 >
                   Donate Today →

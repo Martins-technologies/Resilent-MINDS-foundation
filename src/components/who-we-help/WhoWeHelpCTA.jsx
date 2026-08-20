@@ -63,7 +63,7 @@ const WhoWeHelpCTA = () => {
               <div className="hidden md:block w-[1px] h-10 bg-white opacity-40"></div>
 
               <div className="flex flex-wrap gap-3.5"> 
-                <Button  to="/contact " variant='burgundy' className='rounded-xl outline bg-white text-burgundy'>
+                <Button to="/contact" variant="burgundy" className="rounded-xl">
                   Get Support →
                 </Button>
                 <Button variant="outlineLight" to="/programs" className='rounded-xl'>

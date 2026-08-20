@@ -1,8 +1,8 @@
 import Button from '../Button/Button';
-import SectionLabel from '../SectionLabel/SectionLabel';
 import styles from './WhyWeExist.module.css';
 
-const MISSION_IMAGE = 'https://picsum.photos/id/1012/900/700';
+const MISSION_IMAGE =
+  'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&h=800&q=80';
 
 const WhyWeExist = () => {
   return (
@@ -10,30 +10,47 @@ const WhyWeExist = () => {
       <div className={styles.media}>
         <img
           src={MISSION_IMAGE}
-          alt="Placeholder — diverse group standing together outdoors with arms around one another"
+          alt="Young people standing together with arms around each other, looking toward the landscape"
           className={styles.image}
-          width={900}
-          height={700}
+          width={792}
+          height={392}
         />
+        <svg
+          className={styles.edgeWave}
+          viewBox="0 0 220 392"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            fill="#FDFBF7"
+            d="M220 0H96C48 48 168 92 84 156C12 216 150 268 72 332C36 360 88 380 70 392H220V0Z"
+          />
+          <path
+            d="M96 0C48 48 168 92 84 156C12 216 150 268 72 332C36 360 88 380 70 392"
+            fill="none"
+            stroke="rgba(209,209,209,0.9)"
+            strokeWidth="1.75"
+          />
+        </svg>
       </div>
 
       <div className={styles.content}>
-        <SectionLabel lined={false}>
-          <span className={styles.labelRow}>
-            <span className={styles.tick} aria-hidden="true" />
-            Why We Exist
-          </span>
-        </SectionLabel>
+        <div className={styles.labelRow}>
+          <span className={styles.tick} aria-hidden="true" />
+          <span className={styles.label}>Why We Exist</span>
+        </div>
         <h2 id="why-we-exist-heading" className={styles.heading}>
-          Because No One Should Face Life&rsquo;s Challenges Alone.
+          Because No One Should Face Life&rsquo;s
+          <br />
+          Challenges Alone.
         </h2>
         <p className={styles.body}>
-          Life can bring stress, loss, isolation, and uncertainty. We create
-          pathways of hope by offering education, community programs, emotional
-          wellness resources, and resilience-building support — so people feel
-          heard, supported, and empowered to move forward.
+          Life can bring stress, loss, trauma, isolation and uncertainty.
+          Resilient Minds Foundation creates pathways of hope through mental
+          wellness education, resilience-building programs and compassionate
+          support.
         </p>
-        <Button to="/about" variant="gold" size="md" arrow>
+        <Button to="/about" variant="gold" size="sm" arrow>
           Learn About Our Mission
         </Button>
       </div>

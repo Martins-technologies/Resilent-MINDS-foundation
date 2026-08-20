@@ -2,7 +2,7 @@ import Button from '../Button/Button';
 import IconLeafDecor from '../icons/IconLeafDecor';
 import styles from './SupportBanner.module.css';
 
-const SUPPORT_IMAGE = 'https://picsum.photos/id/106/800/600';
+const SUPPORT_IMAGE = 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&h=600&q=80';
 
 const SupportBanner = () => {
   return (
@@ -33,7 +33,7 @@ const SupportBanner = () => {
         <div className={styles.media}>
           <img
             src={SUPPORT_IMAGE}
-            alt="Placeholder — hands cupping a small green plant"
+            alt="Hands joined in community support and hope"
             className={styles.image}
             width={800}
             height={600}

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
@@ -14,7 +13,7 @@ const AboutHero = () => {
       }}
     >
       {/* Ivory overlay - light and warm */}
-      <div className="absolute inset-0 bg-[#FFFFF0]/85"></div>
+      <div className="absolute inset-0 bg-[#FFFFF0]/60"></div>
 
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-10" style={{

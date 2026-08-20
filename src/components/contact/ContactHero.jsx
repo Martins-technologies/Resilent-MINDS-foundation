@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
 
@@ -12,7 +11,7 @@ const ContactHero = () => {
       }}
     >
       {/* Overlay - Text ko readable banane ke liye */}
-      <div className="absolute inset-0 bg-white/80"></div>
+      <div className="absolute inset-0 bg-white/60"></div>
 
       <Container>
         {/* Content - Left Aligned */}
@@ -29,9 +28,12 @@ const ContactHero = () => {
             Have a question, need support, or want to learn more about our programs? Reach out to us — we would love to hear from you.
           </div>
           
-          <Button variant="primary" to="#contact-form" className="shadow-md rounded-xl" >
+          <a
+            href="#contact-form"
+            className="inline-flex items-center justify-center gap-2 bg-[#6E2839] hover:bg-[#5a1f2e] text-white rounded-xl px-6 py-3 font-semibold text-sm md:text-base shadow-md hover:shadow-lg transition-all duration-300"
+          >
             Get in Touch →
-          </Button>
+          </a>
           
         </div>
       </Container>

@@ -76,16 +76,16 @@ const WaysToConnect = () => {
               {/* Social Icons (Only for Stay Connected) */}
               {way.title === 'Stay Connected' && (
                 <div className="flex items-center gap-3 mt-1">
-                  <a href="#" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
+                  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
                     <FaFacebook />
                   </a>
-                  <a href="#" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
                     <FaInstagram />
                   </a>
-                  <a href="#" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
                     <FaLinkedin />
                   </a>
-                  <a href="#" className="text-burgundy hover:text-[#C79949] transition-colors text-lg">
+                  <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-[#C79949] transition-colors text-lg">
                     <FaYoutube />
                   </a>
                 </div>

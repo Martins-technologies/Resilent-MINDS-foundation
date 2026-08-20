@@ -18,8 +18,8 @@ const InvolvementImpact = () => {
           {/* Left Side - Real Image */}
           <div className="w-full rounded-xl overflow-hidden shadow-lg border-2 border-white/20">
             <img 
-              src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="Hands cupped together holding a small heart"
+              src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Person in a peaceful, hopeful moment"
               className="w-full h-full object-cover aspect-square md:aspect-[4/3]"
               loading="lazy"
             />

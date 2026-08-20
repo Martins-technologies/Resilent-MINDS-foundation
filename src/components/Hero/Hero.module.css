@@ -1,45 +1,80 @@
+/* ─── Hero: Full-bleed background with left gradient overlay ─── */
+
 .hero {
   position: relative;
-  min-height: 468px;
+  height: 600px;
+  min-height: 600px;
   overflow: hidden;
-  background: var(--rm-ivory);
+  background: #f5ede0;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 58% 42%;
-  min-height: 468px;
+/* ─── Background image fills entire section ─── */
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
 }
 
-.content {
+/* ─── Gradient overlay: warm ivory left → transparent right ─── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(254, 249, 242, 0.97) 0%,
+    rgba(254, 249, 242, 0.92) 25%,
+    rgba(254, 249, 242, 0.72) 45%,
+    rgba(254, 249, 242, 0.25) 65%,
+    rgba(254, 249, 242, 0.0) 80%
+  );
+}
+
+/* ─── Main content container ─── */
+.inner {
   position: relative;
+  z-index: 2;
+  height: 100%;
   display: flex;
   align-items: center;
-  padding: 36px 48px 72px 64px;
+  padding: 48px 80px 88px 80px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
+/* ─── Leaf decoration ─── */
 .leaf {
   position: absolute;
-  left: -40px;
-  bottom: 16px;
+  left: 48px;
+  top: 40px;
   width: 220px;
-  height: 280px;
+  height: 300px;
   pointer-events: none;
+  opacity: 0.9;
 }
 
+/* ─── Text block — left side only ─── */
 .copy {
   position: relative;
   z-index: 1;
-  max-width: 560px;
+  max-width: 520px;
 }
 
 .heading {
   margin: 0;
   font-family: var(--rm-font-heading);
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 700;
-  line-height: 1.12;
-  color: var(--rm-forest);
+  line-height: 1.1;
+  color: #1b3b31;
+}
+
+.phrase {
+  white-space: nowrap;
 }
 
 .accent {
@@ -50,51 +85,38 @@
 }
 
 .body {
-  margin: 16px 0 0;
-  max-width: 480px;
+  margin: 22px 0 0;
+  max-width: 460px;
   font-family: var(--rm-font-body);
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.6;
-  color: var(--rm-forest);
+  line-height: 1.65;
+  color: #3d5247;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 24px;
+  margin-top: 32px;
 }
 
-.visual {
-  position: relative;
-  min-height: 468px;
-}
-
-.image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
-}
-
+/* ─── Script text — bottom right, over the photo ─── */
 .script {
   position: absolute;
-  z-index: 1;
-  right: 28px;
-  bottom: 88px;
+  z-index: 3;
+  right: 80px;
+  bottom: 108px;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   font-family: var(--rm-font-script);
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1.15;
   color: #ffffff;
   text-align: right;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.32);
   pointer-events: none;
 }
 
@@ -108,93 +130,152 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 88%;
+  width: 86%;
   height: 2px;
   background: var(--rm-gold);
 }
 
-.waves {
+/* ─── Bottom wave divider ─── */
+.divider {
   position: absolute;
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 84px;
+  height: 88px;
   pointer-events: none;
-  z-index: 3;
+  z-index: 4;
 }
 
-.waveBack,
-.waveFront {
+.waveFill,
+.waveAccent {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 84px;
+  height: 88px;
 }
 
-.waveFront {
-  height: 72px;
-}
-
+/* ─── Tablet (≤ 1024px) ─── */
 @media (max-width: 1024px) {
-  .hero,
-  .grid,
-  .visual {
-    min-height: 0;
+  .hero {
+    height: 520px;
+    min-height: 520px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .inner {
+    padding: 40px 48px 80px 48px;
   }
 
-  .content {
-    padding: 32px 40px 28px;
+  .leaf {
+    left: 24px;
+    width: 180px;
+    height: 250px;
   }
 
   .heading {
-    font-size: 40px;
+    font-size: 42px;
   }
 
-  .visual {
-    height: 320px;
+  .copy {
+    max-width: 480px;
   }
 
   .script {
-    bottom: 64px;
-    font-size: 26px;
+    right: 40px;
+    bottom: 96px;
+    font-size: 28px;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      to right,
+      rgba(254, 249, 242, 0.97) 0%,
+      rgba(254, 249, 242, 0.90) 30%,
+      rgba(254, 249, 242, 0.65) 55%,
+      rgba(254, 249, 242, 0.15) 75%,
+      rgba(254, 249, 242, 0.0) 90%
+    );
   }
 }
 
+/* ─── Mobile (≤ 768px) ─── */
 @media (max-width: 768px) {
-  .content {
-    padding: 24px 24px 20px;
+  .hero {
+    height: auto;
+    min-height: 0;
+  }
+
+  .bg {
+    object-position: 70% center;
+  }
+
+  /* On mobile: near-solid overlay so text is fully readable */
+  .overlay {
+    background: rgba(254, 249, 242, 0.88);
+  }
+
+  .inner {
+    padding: 48px 24px 96px 24px;
+    align-items: flex-start;
+  }
+
+  .leaf {
+    left: 0;
+    top: 24px;
+    width: 160px;
+    height: 220px;
+  }
+
+  .copy {
+    max-width: 100%;
   }
 
   .heading {
-    font-size: 30px;
+    font-size: 32px;
+  }
+
+  .phrase {
+    white-space: normal;
   }
 
   .body {
     font-size: 15px;
+    margin-top: 16px;
+    max-width: 100%;
   }
 
   .actions {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
-  }
-
-  .visual {
-    height: 260px;
+    margin-top: 24px;
   }
 
   .script {
-    right: 16px;
-    bottom: 56px;
+    right: 20px;
+    bottom: 72px;
     font-size: 22px;
   }
 
-  .waves {
+  .divider {
     height: 56px;
+  }
+
+  .waveFill,
+  .waveAccent {
+    height: 56px;
+  }
+}
+
+/* ─── Small mobile (≤ 480px) ─── */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .script {
+    font-size: 18px;
+    right: 16px;
+    bottom: 60px;
   }
 }
