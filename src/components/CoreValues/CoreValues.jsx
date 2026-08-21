@@ -1,30 +1,36 @@
 import styles from './CoreValues.module.css';
+import Eyebrow from '../ui/Eyebrow';
 
 const VALUES = [
   {
     title: 'Compassion',
-    desc: 'We meet people where they are with empathy.',
+    desc: 'We meet people where they are with empathy, kindness, and understanding.',
     logo: '/compasion.jfif',
   },
   {
     title: 'Resilience',
-    desc: 'We believe every person can recover and grow.',
+    desc: 'We believe every person has the ability to recover, adapt, and grow through adversity.',
     logo: '/Resilliance.jfif',
   },
   {
     title: 'Empowerment',
-    desc: 'We provide tools for a healthier, stronger future.',
-    logo: '/empowerment.webp',
+    desc: 'We provide tools, education, and opportunities that help people take control of their wellbeing.',
+    logo: '/empowerment1.webp',
   },
   {
     title: 'Inclusion',
-    desc: 'Everyone is valued, respected and supported.',
-    logo: '/icons-04.svg',
+    desc: 'We create safe spaces where everyone feels valued, respected, and supported.',
+    logo: '/empowerment.webp',
   },
   {
     title: 'Hope',
-    desc: 'Hope is the foundation for healing and change.',
-    logo: '/icons-05.svg',
+    desc: 'We believe hope is the foundation for healing, transformation, and positive change.',
+    logo: '/hope.webp',
+  },
+  {
+    title: 'Community',
+    desc: 'We strengthen connections because no one should face life\'s challenges alone.',
+    logo: '/community.webp',
   },
 ];
 
@@ -32,6 +38,9 @@ const CoreValues = () => {
   return (
     <section className={styles.section} aria-label="Core values">
       <div className="rm-container">
+        <div className={styles.header}>
+          <Eyebrow>Our Core Values</Eyebrow>
+        </div>
         <ul className={styles.row}>
           {VALUES.map((value, index) => (
             <li key={value.title} className={styles.item}>

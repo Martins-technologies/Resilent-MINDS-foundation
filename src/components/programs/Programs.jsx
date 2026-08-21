@@ -9,7 +9,7 @@ const PROGRAMS = [
     desc: 'Education for emotional intelligence, confidence and wellbeing.',
     to: '/programs',
     cta: 'Learn More',
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400&h=300&q=80',
+    image: '/PROGRAME updated/mind.webp',
     alt: 'Students engaged in a classroom learning session',
   },
   {
@@ -17,7 +17,7 @@ const PROGRAMS = [
     desc: 'Mentorship and skills for a brighter tomorrow.',
     to: '/programs',
     cta: 'Learn More',
-    image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=400&h=300&q=80',
+    image: '/PROGRAME updated/youth.webp',
     alt: 'Young people together mentoring outdoors',
   },
   {
@@ -25,7 +25,7 @@ const PROGRAMS = [
     desc: 'Safe spaces to connect, share and grow together.',
     to: '/programs',
     cta: 'Learn More',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&h=300&q=80',
+    image: '/PROGRAME updated/community.webp',
     alt: 'People gathered in a healing circle conversation',
   },
   {
@@ -33,7 +33,7 @@ const PROGRAMS = [
     desc: 'Healthier, more resilient workplaces and teams.',
     to: '/programs',
     cta: 'Learn More',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=400&h=300&q=80',
+    image: '/PROGRAME updated/workspace.webp',
     alt: 'Colleagues collaborating in a healthy workplace',
   },
   {
@@ -41,7 +41,7 @@ const PROGRAMS = [
     desc: 'Guides, tools and resources for everyday resilience.',
     to: '/resources',
     cta: 'Explore Resources',
-    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&h=300&q=80',
+    image: '/hope.webp',
     alt: 'Books and resources for mental wellness',
   },
 ];

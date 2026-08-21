@@ -4,64 +4,7 @@ import { FaHands, FaHeart } from 'react-icons/fa';
 
 const ProgramsCTA = () => {
   return (
-    <>    <section className="section section--forest py-2 my-5 mx-8 rounded-4xl">
-      {/* Container ki padding aur bhi kam kar di (px-4 py-3) */}
-      <Container className="px-4">
-        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-10 text-start md:text-left">
-
-          {/* Image - Height aur width chhoti kar di */}
-          <div className="w-full md:w-1/5 flex-shrink-0">
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Team working together for community impact"
-              className="w-full h-32 md:h-36 object-cover rounded-xl shadow-md"
-            />
-          </div>
-
-          {/* Text aur Right Side ka Wrapper - Gap kam kar diya */}
-          <div className="flex flex-col md:flex-row justify-between items-start w-full gap-2 md:gap-5">
-
-            {/* Left Text - Font aur margin chhota */}
-            <div className="max-w-xl md:pr-4">
-              <h3 className="mt-0 text-white mb-0.5 font-bold text-lg md:text-xl">
-                Together, we build stronger minds and stronger communities.
-              </h3>
-              <p className="text-[#d9e6df] text-[11px] md:text-xs leading-relaxed mb-0">
-                Every program we create builds hope, skills, and resilience for communities to thrive.
-              </p>
-            </div>
-
-            {/* Vertical Divider - Height chhoti */}
-            <div className="hidden md:block w-[1px] h-14 bg-white opacity-40"></div>
-
-            {/* Right Side - Gap aur sizes chhote */}
-            <div className="flex flex-col items-center justify-center gap-1.5">
-              <div className="flex items-center gap-2 mt-0">
-                <div className="w-9 h-9 rounded-full bg-[#C79949] flex items-center justify-center text-white shadow-md flex-shrink-0">
-                  <FaHands size={16} />
-                </div>
-                <div className="desc text-white text-[11px] font-medium leading-snug text-left max-w-[110px]">
-                  Our Impact grows When we work together
-                </div>
-              </div>
-              <div className="flex justify-start w-full">
-                <Button
-                  variant="gold"
-                  to="/get-involved"
-                  className="whitespace-nowrap rounded-xl text-white text-[10px] "
-                >
-                  Join Movement →
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </Container>
-
-
-    </section>
-
+    <>
       <section className="section py-2 m  bg-[#6E2839] shadow-md">
         <Container className="px-2 py-2 md:py-2">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 text-center md:text-left">

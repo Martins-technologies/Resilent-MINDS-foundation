@@ -17,8 +17,12 @@ export default function IconVolunteer({
       className={className}
       aria-hidden="true"
     >
-      <path d="M24 22c-3.8-4-9.2-1.4-9.2 2.8 0 4.4 9.2 9.8 9.2 9.8s9.2-5.4 9.2-9.8c0-4.2-5.4-6.8-9.2-2.8z" />
-      <path d="M14 32c-4 2-8 6-6 10h32c2-4-2-8-6-10" />
+      {/* Head */}
+      <circle cx="24" cy="14" r="5" />
+      {/* Body */}
+      <path d="M14 42v-8c0-5.5 4.5-10 10-10s10 4.5 10 10v8" />
+      {/* Arms open/welcoming */}
+      <path d="M14 28l-6 4M34 28l6 4" />
     </svg>
   );
 }

@@ -1,82 +1,110 @@
+import { FaUsers, FaChalkboardTeacher, FaHandsHelping, FaHeart } from 'react-icons/fa';
 import Button from '../Button/Button';
-import styles from './WhyWeExist.module.css';
+
+const STATS = [
+  { icon: FaUsers,              number: '1,000+',    label: 'People\nReached' },
+  { icon: FaChalkboardTeacher,  number: '100+',      label: 'Workshops\nDelivered' },
+  { icon: FaHandsHelping,       number: '50+',       label: 'Community\nVolunteers' },
+  { icon: FaHeart,              number: 'Countless', label: 'Lives\nEncouraged' },
+];
 
 const WhyWeExist = () => {
   return (
-    <section className={styles.section} aria-labelledby="why-we-exist-heading">
-      {/* Soft extra waves that sit on the photo — not a solid cream band */}
-      <div className={styles.merge} aria-hidden="true">
-        <svg
-          className={styles.mergeSvg}
-          viewBox="0 0 1440 88"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="rgba(255,255,255,0.28)"
-            d="M0 42C210 8 360 76 540 54C760 28 920 6 1120 32C1260 50 1360 72 1440 48V62C1260 74 1120 40 920 22C760 40 540 70 360 88C210 20 80 56 0 56V42Z"
-          />
-          <path
-            d="M0 42C210 8 360 76 540 54C760 28 920 6 1120 32C1260 50 1360 72 1440 48"
-            fill="none"
-            stroke="rgba(255,255,255,0.55)"
-            strokeWidth="1.75"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
+    <section className="flex w-full min-h-[200px] overflow-hidden">
 
-      <div className={styles.media}>
+      {/* ── Left: Cream panel ── */}
+      <div
+        className="relative flex flex-col justify-center px-10 py-8 z-10"
+        style={{ width: '38%', background: '#F8F4ED', flexShrink: 0 }}
+      >
+        {/* Leaf decoration */}
         <img
-          src="/group.jpeg"
-          alt="People sitting together in a supportive group conversation"
-          className={styles.image}
-          width={960}
-          height={520}
-        />
-        <div className={styles.mediaFade} aria-hidden="true" />
-        <svg
-          className={styles.curveBlend}
-          viewBox="0 0 280 520"
-          preserveAspectRatio="none"
+          src="/GREEN VECTOR.webp"
+          alt=""
           aria-hidden="true"
-        >
-          <defs>
-            <linearGradient id="whyExistBlend" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#FEF9F2" stopOpacity="0" />
-              <stop offset="28%" stopColor="#FEF9F2" stopOpacity="0.35" />
-              <stop offset="62%" stopColor="#FEF9F2" stopOpacity="0.82" />
-              <stop offset="100%" stopColor="#FEF9F2" stopOpacity="1" />
-            </linearGradient>
-          </defs>
-          <path
-            fill="url(#whyExistBlend)"
-            d="M96 0C58 70 128 130 72 200C18 268 118 330 64 400C36 440 78 480 52 520H280V0H96Z"
-          />
-        </svg>
-      </div>
+          className="absolute top-0 left-0 w-16 h-auto opacity-30 pointer-events-none select-none"
+        />
 
-      <div className={styles.content}>
-        <div className={styles.labelRow}>
-          <span className={styles.tick} aria-hidden="true" />
-          <span className={styles.label}>Why We Exist</span>
-        </div>
-        <h2 id="why-we-exist-heading" className={styles.heading}>
-          Because No One Should Face
-          <br />
-          Life&rsquo;s Challenges
-          <br />
-          Alone.
+        <h2 className="font-heading font-bold text-[#1a2c28] leading-snug mb-4"
+            style={{ fontSize: 'clamp(16px, 2vw, 26px)', maxWidth: '340px' }}>
+          We are committed to building resilient minds and stronger communities every day.
         </h2>
-        <p className={styles.body}>
-          Life can bring stress, loss, trauma, isolation and uncertainty.
-          Resilient Minds Foundation creates pathways of hope through mental
-          wellness education, resilience-building programs and compassionate
-          support.
-        </p>
-        <Button to="/about" variant="gold" arrow className={styles.cta}>
-          Learn About Our Mission
+
+        <Button to="/about" variant="primary" arrow className="self-start text-sm">
+          Join Our Movement
         </Button>
       </div>
+
+      {/* ── Center: Circular green image ── */}
+      <div
+        className="relative flex-shrink-0 flex items-center justify-center z-20"
+        style={{ width: '26%' }}
+      >
+        {/* Gold ring behind circle */}
+        <div
+          className="absolute rounded-full"
+          style={{
+            width: '90%',
+            paddingBottom: '90%',
+            border: '3px solid #C79949',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+        {/* Image circle */}
+        <div
+          className="relative rounded-full overflow-hidden shadow-lg"
+          style={{ width: '84%', paddingBottom: '84%' }}
+        >
+          <img
+            src="/green.webp"
+            alt="A seedling growing from soil — symbolising growth and resilience"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      {/* ── Right: Dark green stats panel ── */}
+      <div
+        className="flex flex-col justify-center px-8 py-8 flex-1"
+        style={{ background: '#2E5D49' }}
+      >
+        {/* Label */}
+        <span
+          className="font-bold tracking-widest uppercase mb-5 block"
+          style={{ fontSize: '11px', color: '#C79949' }}
+        >
+          Our Impact
+        </span>
+
+        {/* Stats row */}
+        <div className="grid grid-cols-4 gap-4 mb-4">
+          {STATS.map(({ icon: Icon, number, label }) => (
+            <div key={label} className="flex flex-col items-start gap-1">
+              <Icon className="mb-1" style={{ color: '#C79949', fontSize: '22px' }} />
+              <span
+                className="font-heading font-bold text-white leading-none"
+                style={{ fontSize: 'clamp(18px, 2vw, 28px)' }}
+              >
+                {number}
+              </span>
+              <span
+                className="text-white/70 leading-snug whitespace-pre-line"
+                style={{ fontSize: '12px' }}
+              >
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Footnote */}
+        <p className="text-white/50 mt-1" style={{ fontSize: '11px', maxWidth: '420px' }}>
+          These numbers represent our growing impact and the communities we are privileged to serve.
+        </p>
+      </div>
+
     </section>
   );
 };

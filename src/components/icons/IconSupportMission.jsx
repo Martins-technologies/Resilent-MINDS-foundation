@@ -17,9 +17,12 @@ export default function IconSupportMission({
       className={className}
       aria-hidden="true"
     >
-      <path d="M24 20c-3.2-3.4-8-1.2-8 2.4 0 3.8 8 8.6 8 8.6s8-4.8 8-8.6c0-3.6-4.8-5.8-8-2.4z" />
-      <path d="M12 28c-4 3-6 8-4 12h32c2-4 0-9-4-12" />
-      <path d="M10 24c-2-4 0-10 6-12M38 24c2-4 0-10-6-12" />
+      {/* Head */}
+      <circle cx="24" cy="12" r="4.5" />
+      {/* Small heart on chest */}
+      <path d="M24 22c-1.6-1.8-4-0.6-4 1.4 0 2 4 4.6 4 4.6s4-2.6 4-4.6c0-2-2.4-3.2-4-1.4z" />
+      {/* Body / torso */}
+      <path d="M14 44v-8c0-5.5 4.5-10 10-10s10 4.5 10 10v8" />
     </svg>
   );
 }

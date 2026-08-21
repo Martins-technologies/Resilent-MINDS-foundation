@@ -2,7 +2,7 @@ import { FaBullseye, FaEye } from 'react-icons/fa';
 
 const MissionVision = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
+    <div className="relative grid grid-cols-1 md:grid-cols-2">
 
       {/* Mission - Left */}
       <div className="bg-[#2E5D49] text-white text-[#ffffff] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-6 md:py-10 lg:py-14">
@@ -21,6 +21,19 @@ const MissionVision = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Flower divider icon — centered between panels */}
+      <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full bg-[#C79949] items-center justify-center shadow-lg overflow-hidden">
+        <img
+          src="/flowericon.jpeg"
+          alt="Flower icon"
+          className="w-full h-full object-cover rounded-full"
+          style={{
+            mixBlendMode: 'multiply',
+            filter: 'brightness(4) saturate(0)',
+          }}
+        />
       </div>
 
       {/* Vision - Right */}

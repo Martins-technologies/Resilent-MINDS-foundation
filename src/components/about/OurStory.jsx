@@ -1,54 +1,45 @@
-import Container from '../ui/Container';
-import Grid from '../ui/Grid';
 import Eyebrow from '../ui/Eyebrow';
-import { FaHeart } from 'react-icons/fa'
+import { FaHeart } from 'react-icons/fa';
+
 const OurStory = () => {
   return (
-    <section className="section section--band">
-      <Container>
-        <Grid cols={2} className="items-center">
-          {/* Left Side - Content */}
-          <div>
-            <Eyebrow>Our Story</Eyebrow>
-            <h3 className="mb-2">
-              Every journey has moments of struggle. But with the right support, people can rebuild, recover, and rise stronger.
-            </h3>
-            <p className="mb-4">
-              Our foundation works to create pathways of hope by offering education, community programs, emotional wellness resources, and resilience-building initiatives.
-            </p>
-            <p className="mb-4">
-              We are committed to creating environments where people feel heard, supported, and empowered to move forward.
-            </p>
-            <div className="disc flex items-center gap-8">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-burgundy flex items-center justify-center text-burgundy">
-                <FaHeart className="text-sm" />
-              </div>
-              <p className="font-bold text-2xl text-burgundy ">
-                Because resilient minds create stronger individuals, stronger families, and stronger communities.
-              </p>
+    <section
+      className="relative w-full min-h-[364px] flex items-center overflow-hidden"
+      style={{ background: '#F8F4ED' }}
+    >
+      {/* Content — left half */}
+      <div className="w-full max-w-[52%] min-h-[364px] flex items-center px-12 py-10">
+        <div className="max-w-[560px]">
+          <Eyebrow>Our Story</Eyebrow>
+          <h3 className="mb-4 mt-2 text-forest leading-snug">
+            Every journey has moments of struggle. But with the right support, people can rebuild, recover, and rise stronger.
+          </h3>
+          <p className="mb-4 text-gray-700">
+            Our foundation works to create pathways of hope by offering education, community programs, emotional wellness resources, and resilience-building initiatives.
+          </p>
+          <p className="mb-5 text-gray-700">
+            We are committed to creating environments where people feel heard, supported, and empowered to move forward.
+          </p>
+          <div className="flex items-center gap-4">
+            <div className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-burgundy flex items-center justify-center text-burgundy">
+              <FaHeart className="text-sm" />
             </div>
+            <p className="font-bold text-xl text-burgundy leading-snug">
+              Because resilient minds create stronger individuals, stronger families, and stronger communities.
+            </p>
           </div>
+        </div>
+      </div>
 
-          {/* Right Side - Images Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=400&h=300&fit=crop&crop=center"
-              alt="Support group meeting"
-              className="w-full h-[150px] object-cover rounded-xl"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=300&fit=crop&crop=center"
-              alt="People in conversation"
-              className="w-full h-[150px] object-cover rounded-xl"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=300&fit=crop&crop=center"
-              alt="Community support hands"
-              className="w-full h-[150px] object-cover rounded-xl col-span-2"
-            />
-          </div>
-        </Grid>
-      </Container>
+      {/* Right half — background image, no box overlays */}
+      <div
+        className="absolute top-0 right-0 w-[50%] h-full"
+        style={{
+          backgroundImage: "url('/aboutourstory.jpeg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
     </section>
   );
 };

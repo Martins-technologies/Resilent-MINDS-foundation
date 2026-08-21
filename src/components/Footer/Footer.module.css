@@ -12,9 +12,10 @@
 }
 
 .logo {
-  width: 180px;
-  height: 80px;
+  width: 220px;
+  height: 88px;
   object-fit: contain;
+  object-position: left center;
 }
 
 .logoLink {

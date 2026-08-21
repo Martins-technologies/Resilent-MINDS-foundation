@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import logoPlaceholder from '../../assets/logo-placeholder.svg';
 import IconFacebook from '../icons/IconFacebook';
 import IconInstagram from '../icons/IconInstagram';
 import IconLinkedIn from '../icons/IconLinkedIn';
@@ -66,11 +65,11 @@ const Footer = () => {
         <div className={styles.brand}>
           <Link to="/" className={styles.logoLink}>
             <img
-              src={logoPlaceholder}
+              src="/finallogo.webp"
               alt="Resilient Minds Foundation"
               className={styles.logo}
-              width={180}
-              height={80}
+              width={220}
+              height={88}
             />
           </Link>
           <div className={styles.social}>

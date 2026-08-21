@@ -18,7 +18,7 @@ const ProgramsList = () => {
       desc: 'Education for emotional intelligence, confidence and wellbeing.',
       color: 'text-burgundy',
       bgColor: '#6E2839',
-      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/PROGRAME updated/mind.webp',
       link: '/contact'
     },
     {
@@ -27,7 +27,7 @@ const ProgramsList = () => {
       desc: 'Mentorship and skills for a brighter tomorrow.',
       color: 'text-forest',
       bgColor: '#2E5D49',
-      image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/PROGRAME updated/youth.webp',
       link: '/contact'
     },
     {
@@ -36,7 +36,7 @@ const ProgramsList = () => {
       desc: 'Safe spaces to connect, share and grow together.',
       color: 'text-gold',
       bgColor: '#C79949',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/PROGRAME updated/community.webp',
       link: '/contact'
     },
     {
@@ -45,7 +45,7 @@ const ProgramsList = () => {
       desc: 'Healthier, more resilient workplaces and teams.',
       color: 'text-forest',
       bgColor: '#2E5D49',
-      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/PROGRAME updated/workspace.webp',
       link: '/contact'
     },
     {
@@ -54,7 +54,7 @@ const ProgramsList = () => {
       desc: 'Guides, tools and resources for everyday resilience.',
       color: 'text-burgundy',
       bgColor: '#6E2839',
-      image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/hope.webp',
       link: '/resources'
     },
   ];

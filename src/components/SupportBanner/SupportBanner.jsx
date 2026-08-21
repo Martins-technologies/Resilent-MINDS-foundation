@@ -2,7 +2,7 @@ import Button from '../Button/Button';
 import IconLeafDecor from '../icons/IconLeafDecor';
 import styles from './SupportBanner.module.css';
 
-const SUPPORT_IMAGE = 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&h=600&q=80';
+const SUPPORT_IMAGE = '/bottom.webp';
 
 const SupportBanner = () => {
   return (
@@ -30,15 +30,12 @@ const SupportBanner = () => {
             Give Hope Today
           </Button>
         </div>
-        <div className={styles.media}>
-          <img
-            src={SUPPORT_IMAGE}
-            alt="Hands joined in community support and hope"
-            className={styles.image}
-            width={800}
-            height={600}
-          />
-        </div>
+        <div
+          className={styles.media}
+          style={{ backgroundImage: `url(${SUPPORT_IMAGE})` }}
+          role="img"
+          aria-label="Hands holding a seedling, a symbol of hope and growth"
+        />
       </div>
     </section>
   );

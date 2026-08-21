@@ -1,18 +1,13 @@
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
-import IconHandshake from '../icons/IconHandshake';
-import IconMentor from '../icons/IconMentor';
-import IconSponsor from '../icons/IconSponsor';
-import IconSupportMission from '../icons/IconSupportMission';
-import IconVolunteer from '../icons/IconVolunteer';
 import styles from './GetInvolved.module.css';
 
 const WAYS = [
-  { label: 'Volunteer', to: '/get-involved', Icon: IconVolunteer },
-  { label: 'Become a Mentor', to: '/get-involved', Icon: IconMentor },
-  { label: 'Partner With Us', to: '/get-involved', Icon: IconHandshake },
-  { label: 'Sponsor a Program', to: '/get-involved', Icon: IconSponsor },
-  { label: 'Support Our Mission', to: '/get-involved', Icon: IconSupportMission },
+  { label: 'Volunteer',          to: '/get-involved', icon: '/volunteer.svg' },
+  { label: 'Become a Mentor',    to: '/get-involved', icon: '/becomea mentor.svg' },
+  { label: 'Partner With Us',    to: '/get-involved', icon: '/partnerwithus.svg' },
+  { label: 'Sponsor a Program',  to: '/get-involved', icon: '/sponsoraprogram.svg' },
+  { label: 'Support Our Mission',to: '/get-involved', icon: '/supportourmission.svg' },
 ];
 
 const GetInvolved = () => {
@@ -34,11 +29,12 @@ const GetInvolved = () => {
         </div>
 
         <ul className={styles.row}>
-          {WAYS.map((way) => (
-            <li key={way.label}>
+          {WAYS.map((way, i) => (
+            <li key={way.label} className={styles.cell}>
+              {i > 0 && <span className={styles.divider} aria-hidden="true" />}
               <Link to={way.to} className={styles.item}>
                 <span className={styles.icon}>
-                  <way.Icon size={48} color="#2E5D49" />
+                  <img src={way.icon} alt="" aria-hidden="true" className={styles.iconImg} />
                 </span>
                 <span className={styles.label}>{way.label}</span>
               </Link>

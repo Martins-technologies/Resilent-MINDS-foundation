@@ -1,21 +1,10 @@
 import Button from '../Button/Button';
-import IconLeafDecor from '../icons/IconLeafDecor';
 import SectionLabel from '../SectionLabel/SectionLabel';
 import styles from './StoriesOfStrength.module.css';
 
 const StoriesOfStrength = () => {
   return (
     <section className={styles.section} aria-labelledby="stories-heading">
-      <div className={styles.topWave} aria-hidden="true">
-        <svg viewBox="0 0 1440 72" preserveAspectRatio="none">
-          <path
-            fill="#2E5D49"
-            d="M0,0 H1440 V18 C1180,72 920,8 720,32 C480,58 220,6 0,40 Z"
-          />
-        </svg>
-        <IconLeafDecor className={styles.leaf} color="#FEF9F2" opacity={0.16} />
-      </div>
-
       <div className={styles.layout}>
         <div className={styles.media}>
           <img

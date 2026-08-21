@@ -24,8 +24,8 @@
 }
 
 .logo {
-  width: 160px;
-  height: 64px;
+  width: 200px;
+  height: 72px;
   object-fit: contain;
   object-position: left center;
 }
@@ -102,7 +102,7 @@
   }
 
   .logo {
-    width: 130px;
+    width: 160px;
     height: 64px;
   }
 

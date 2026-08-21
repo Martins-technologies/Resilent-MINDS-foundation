@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo from '../../assets/logo.webp';
+
+const LOGO_SRC = '/finallogo.webp';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ const Header = () => {
           
           {/* Logo - Left Side */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src={logo} alt="Resilient Minds Foundation" className="h-14 w-35 object-cover" />
+            <img src={LOGO_SRC} alt="Resilient Minds Foundation" className="h-16 w-auto object-contain" />
           </Link>
 
           {/* Navigation - Center */}

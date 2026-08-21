@@ -33,11 +33,11 @@ const Navbar = () => {
       <div className={styles.inner}>
         <Link to="/" className={styles.logoLink} onClick={close}>
           <img
-            src="/logo.jpeg"
+            src="/finallogo.webp"
             alt="Resilient Minds Foundation"
             className={styles.logo}
-            width={160}
-            height={80}
+            width={220}
+            height={88}
           />
         </Link>
 

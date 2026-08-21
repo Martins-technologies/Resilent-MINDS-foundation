@@ -1,42 +1,35 @@
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
 import IconCircle from '../ui/IconCircle';
-import { 
-  FaBrain,
-  FaHandsHelping,
-  FaStar,
-  FaHeart,
-  FaSeedling
-} from 'react-icons/fa';
 
 const FocusAreas = () => {
   const areas = [
     { 
-      icon: FaBrain, 
+      icon: '/PROGRAME updated/education.webp', 
       title: 'Education', 
       desc: 'Building knowledge and awareness for better mental wellness.',
       color: '#6E2839'
     },
     { 
-      icon: FaHandsHelping, 
+      icon: '/PROGRAME updated/connection.webp', 
       title: 'Connection', 
       desc: 'Creating supportive communities where no one has to face challenges alone.',
       color: '#2E5D49'
     },
     { 
-      icon: FaStar, 
+      icon: '/PROGRAME updated/empowerment.webp', 
       title: 'Empowerment', 
       desc: 'Equipping individuals with tools and skills to take control of their wellbeing.',
       color: '#C79949'
     },
     { 
-      icon: FaHeart, 
+      icon: '/PROGRAME updated/support.webp', 
       title: 'Support', 
       desc: 'Providing compassionate resources and guidance at every step.',
       color: '#2E5D49'
     },
     { 
-      icon: FaSeedling, 
+      icon: '/PROGRAME updated/resilience.webp', 
       title: 'Resilience', 
       desc: 'Helping individuals and communities thrive through every season.',
       color: '#6E2839'
@@ -52,16 +45,19 @@ const FocusAreas = () => {
         <div className="flex justify-center">
           <div className="flex flex-wrap justify-center items-stretch">
             {areas.map((area, index) => {
-              const IconComponent = area.icon;
               return (
                 <div key={index} className="flex items-stretch">
                   <div className="text-center px-4 py-2 w-[200px]">
                     <IconCircle 
                       bgColor={area.color} 
                       textColor="#FFFFFF" 
-                      className="mx-auto mb-3.5"
+                      className="mx-auto mb-3.5 isolate overflow-hidden"
                     >
-                      <IconComponent size={28} />
+                      <img
+                        src={area.icon}
+                        alt={area.title}
+                        className="w-9 h-9 object-contain invert contrast-200 mix-blend-screen"
+                      />
                     </IconCircle>
                     <h4 className="font-body text-sm mb-1" style={{ color: '#2E5D49' }}>
                       {area.title}
