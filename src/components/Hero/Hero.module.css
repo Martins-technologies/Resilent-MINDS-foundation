@@ -2,10 +2,12 @@
 
 .hero {
   position: relative;
+  z-index: 1;
   height: 620px;
   min-height: 620px;
   overflow: hidden;
   background: #f0e8d8;
+  margin-bottom: 0;
 }
 
 /* ─── Background image — natural fill, woman on right, face never clipped ─── */

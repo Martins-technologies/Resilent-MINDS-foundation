@@ -1,6 +1,6 @@
 .section {
   background: var(--rm-ivory);
-  padding: 40px 0 100px;
+  padding: 28px 0 64px;
 }
 
 .header {
@@ -99,7 +99,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 24px 0 60px;
+    padding: 16px 0 40px;
   }
 
   .heading {

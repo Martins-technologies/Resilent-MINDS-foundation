@@ -4,31 +4,53 @@ import styles from './WhyWeExist.module.css';
 const WhyWeExist = () => {
   return (
     <section className={styles.section} aria-labelledby="why-we-exist-heading">
+      {/* Soft extra waves that sit on the photo — not a solid cream band */}
+      <div className={styles.merge} aria-hidden="true">
+        <svg
+          className={styles.mergeSvg}
+          viewBox="0 0 1440 88"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="rgba(255,255,255,0.28)"
+            d="M0 42C210 8 360 76 540 54C760 28 920 6 1120 32C1260 50 1360 72 1440 48V62C1260 74 1120 40 920 22C760 40 540 70 360 88C210 20 80 56 0 56V42Z"
+          />
+          <path
+            d="M0 42C210 8 360 76 540 54C760 28 920 6 1120 32C1260 50 1360 72 1440 48"
+            fill="none"
+            stroke="rgba(255,255,255,0.55)"
+            strokeWidth="1.75"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+
       <div className={styles.media}>
         <img
           src="/group.jpeg"
-          alt="Group of people standing together with arms around each other"
+          alt="People sitting together in a supportive group conversation"
           className={styles.image}
-          width={792}
-          height={392}
+          width={960}
+          height={520}
         />
-        {/* Blur-to-transparent gradient edge blending into content */}
-        <div className={styles.blurGradient} aria-hidden="true" />
+        <div className={styles.mediaFade} aria-hidden="true" />
         <svg
-          className={styles.edgeWave}
-          viewBox="0 0 220 392"
+          className={styles.curveBlend}
+          viewBox="0 0 280 520"
           preserveAspectRatio="none"
           aria-hidden="true"
         >
+          <defs>
+            <linearGradient id="whyExistBlend" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#FEF9F2" stopOpacity="0" />
+              <stop offset="28%" stopColor="#FEF9F2" stopOpacity="0.35" />
+              <stop offset="62%" stopColor="#FEF9F2" stopOpacity="0.82" />
+              <stop offset="100%" stopColor="#FEF9F2" stopOpacity="1" />
+            </linearGradient>
+          </defs>
           <path
-            fill="#FEF9F2"
-            d="M220 0H96C48 48 168 92 84 156C12 216 150 268 72 332C36 360 88 380 70 392H220V0Z"
-          />
-          <path
-            d="M96 0C48 48 168 92 84 156C12 216 150 268 72 332C36 360 88 380 70 392"
-            fill="none"
-            stroke="rgba(209,209,209,0.9)"
-            strokeWidth="1.75"
+            fill="url(#whyExistBlend)"
+            d="M96 0C58 70 128 130 72 200C18 268 118 330 64 400C36 440 78 480 52 520H280V0H96Z"
           />
         </svg>
       </div>
@@ -39,9 +61,11 @@ const WhyWeExist = () => {
           <span className={styles.label}>Why We Exist</span>
         </div>
         <h2 id="why-we-exist-heading" className={styles.heading}>
-          Because No One Should Face Life&rsquo;s
+          Because No One Should Face
           <br />
-          Challenges Alone.
+          Life&rsquo;s Challenges
+          <br />
+          Alone.
         </h2>
         <p className={styles.body}>
           Life can bring stress, loss, trauma, isolation and uncertainty.
@@ -49,7 +73,7 @@ const WhyWeExist = () => {
           wellness education, resilience-building programs and compassionate
           support.
         </p>
-        <Button to="/about" variant="gold" size="sm" arrow className="!px-4 !py-2 !text-xs">
+        <Button to="/about" variant="gold" arrow className={styles.cta}>
           Learn About Our Mission
         </Button>
       </div>

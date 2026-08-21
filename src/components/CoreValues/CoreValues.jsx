@@ -1,35 +1,30 @@
-import IconCompassion from '../icons/IconCompassion';
-import IconEmpowerment from '../icons/IconEmpowerment';
-import IconHope from '../icons/IconHope';
-import IconInclusion from '../icons/IconInclusion';
-import IconResilience from '../icons/IconResilience';
 import styles from './CoreValues.module.css';
 
 const VALUES = [
   {
     title: 'Compassion',
     desc: 'We meet people where they are with empathy.',
-    Icon: IconCompassion,
+    logo: '/compasion.jfif',
   },
   {
     title: 'Resilience',
     desc: 'We believe every person can recover and grow.',
-    Icon: IconResilience,
+    logo: '/Resilliance.jfif',
   },
   {
     title: 'Empowerment',
     desc: 'We provide tools for a healthier, stronger future.',
-    Icon: IconEmpowerment,
+    logo: '/empowerment.webp',
   },
   {
     title: 'Inclusion',
     desc: 'Everyone is valued, respected and supported.',
-    Icon: IconInclusion,
+    logo: '/icons-04.svg',
   },
   {
     title: 'Hope',
     desc: 'Hope is the foundation for healing and change.',
-    Icon: IconHope,
+    logo: '/icons-05.svg',
   },
 ];
 
@@ -42,7 +37,11 @@ const CoreValues = () => {
             <li key={value.title} className={styles.item}>
               {index > 0 && <span className={styles.divider} aria-hidden="true" />}
               <div className={styles.iconWrap}>
-                <value.Icon size={48} color="#2E5D49" />
+                <img
+                  src={value.logo}
+                  alt={value.title}
+                  className={styles.logo}
+                />
               </div>
               <h3 className={styles.title}>{value.title}</h3>
               <p className={styles.desc}>{value.desc}</p>

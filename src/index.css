@@ -69,10 +69,10 @@ img {
 }
 /* Sections */
 .section {
-  padding: 64px 0;
+  padding: 48px 0;
 }
 .section--tight {
-  padding: 48px 0;
+  padding: 32px 0;
 }
 .section--forest {
   background-color: var(--color-forest);
