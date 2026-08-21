@@ -1,14 +1,33 @@
 import Container from '../ui/Container';
-import { FaUsers, FaChalkboardTeacher, FaHome, FaHandHoldingHeart } from 'react-icons/fa';
+import IconPeople from '../icons/IconPeople';
+import IconCalendar from '../icons/IconCalendar';
+import IconHandshake from '../icons/IconHandshake';
+import IconVolunteer from '../icons/IconVolunteer';
+
+const items = [
+  {
+    Icon: IconPeople,
+    bg: '#2E5D49',
+    label: 'People Supported',
+  },
+  {
+    Icon: IconCalendar,
+    bg: '#6E2839',
+    label: 'Workshops Delivered',
+  },
+  {
+    Icon: IconHandshake,
+    bg: '#C79949',
+    label: 'Communities Reached',
+  },
+  {
+    Icon: IconVolunteer,
+    bg: '#2E5D49',
+    label: 'Volunteers Engaged',
+  },
+];
 
 const CommunityImpact = () => {
-  const items = [
-    { icon: FaUsers, color: '#2E5D49', label: 'People Supported' },
-    { icon: FaChalkboardTeacher, color: '#6E2839', label: 'Workshops Delivered' },
-    { icon: FaHome, color: '#C79949', label: 'Communities Reached' },
-    { icon: FaHandHoldingHeart, color: '#2E5D49', label: 'Volunteers Engaged' },
-  ];
-
   return (
     <section className="section section--band pt-0">
       <Container>
@@ -17,15 +36,15 @@ const CommunityImpact = () => {
           <p className="mb-0">Measured across our programs and outreach.</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {items.map((item, index) => (
-            <div key={index} className="card text-center">
+          {items.map(({ Icon, bg, label }) => (
+            <div key={label} className="card text-center">
               <div
-                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"
-                style={{ backgroundColor: item.color }}
+                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                style={{ backgroundColor: bg }}
               >
-                <item.icon className="text-white text-2xl" />
+                <Icon size={28} color="#ffffff" strokeWidth={1.6} />
               </div>
-              <h5 className="text-sm mb-0 text-bold">{item.label}</h5>
+              <h5 className="text-sm mb-0 font-bold">{label}</h5>
             </div>
           ))}
         </div>

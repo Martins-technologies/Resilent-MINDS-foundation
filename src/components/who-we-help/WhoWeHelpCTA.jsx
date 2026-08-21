@@ -2,7 +2,8 @@ import Button from '../ui/Button';
 import Container from '../ui/Container';
 import Grid from '../ui/Grid';
 import img from '../../assets/images/hands-join.webp'
-import { FaHandsHelping, FaTree  } from 'react-icons/fa'; // Gold icon ke liye
+import { FaTree } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const WhoWeHelpCTA = () => {
   return (
@@ -44,31 +45,43 @@ const WhoWeHelpCTA = () => {
 
 
   
-        <section className="section section--burgundy py-4 mt-4">
+        <section className="section section--burgundy py-5 mt-4 overflow-hidden relative">
+          {/* decorative branch — bottom-right */}
+          <img
+            src="/whowehelp/who we help-01.svg"
+            alt=""
+            aria-hidden="true"
+            className="absolute bottom-0 right-6 h-full opacity-15 pointer-events-none select-none"
+          />
+
           <Container>
-            <div className="flex flex-col md:flex-row justify-between items-center gap-5">
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
 
-              {/* Left Side: Icon + Text */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#C79949] flex items-center justify-center text-white shadow-md flex-shrink-0">
-                  <FaHandsHelping size={20} />
-                </div>
-
-                {/* Text */}
-                <p className="text-white font-semibold mb-0 text-base md:text-lg leading-snug ">
-                  If you or someone you know could use support, we are here for you.
-                </p>
+              {/* ── Gold icon ── */}
+              <div className="w-[72px] h-[72px] rounded-full bg-[#C79949] flex items-center justify-center shadow-lg flex-shrink-0">
+                <img
+                  src="/whowehelp/heart.svg"
+                  alt="Heart icon"
+                  className="w-9 h-9 invert brightness-0 invert"
+                />
               </div>
 
-              <div className="hidden md:block w-[1px] h-10 bg-white opacity-40"></div>
+              {/* ── Text ── */}
+              <p className="text-white font-semibold text-base md:text-lg leading-snug text-center md:text-left max-w-md">
+                If you or someone you know could use support, we are here for you.
+              </p>
 
-              <div className="flex flex-wrap gap-3.5"> 
-                <Button to="/contact" variant="burgundy" className="rounded-xl">
-                  Get Support →
+              {/* ── Divider ── */}
+              <div className="hidden md:block w-[1px] h-12 bg-white/40 flex-shrink-0" />
+
+              {/* ── Buttons ── */}
+              <div className="flex flex-wrap items-center gap-5">
+                <Button to="/contact" variant="white" className="!rounded-xl font-semibold px-6">
+                  Get Support
                 </Button>
-                <Button variant="outlineLight" to="/programs" className='rounded-xl'>
+                <Link to="/programs" className="text-white font-medium text-sm md:text-base hover:opacity-75 transition-opacity">
                   Explore Programs →
-                </Button>
+                </Link>
               </div>
 
             </div>

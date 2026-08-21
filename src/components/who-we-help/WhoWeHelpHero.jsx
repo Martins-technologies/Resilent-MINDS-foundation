@@ -5,10 +5,8 @@ const WhoWeHelpHero = () => {
     <section
       className={styles.section}
       aria-label="Who We Help hero"
-      style={{ backgroundImage: "url('/whowehelpshero.jpeg')" }}
+      style={{ backgroundImage: "url('/whowehelpshero.png')" }}
     >
-      <div className={styles.overlay} />
-
       <div className={styles.inner}>
         <div className={styles.copy}>
           <span className="eyebrow block mb-5">

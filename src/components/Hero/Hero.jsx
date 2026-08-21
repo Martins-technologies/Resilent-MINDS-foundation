@@ -56,29 +56,26 @@ const Hero = () => {
         </p>
       </div>
 
-      {/* Bottom wave divider */}
+      {/* Double-layer cream wave — merges into Why We Exist */}
       <div className={styles.divider} aria-hidden="true">
         <svg
+          className={styles.waveBack}
+          viewBox="0 0 1440 140"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="rgba(254,249,242,0.55)"
+            d="M0 36C120 18 200 72 320 62C420 52 490 8 600 16C740 26 840 64 1020 52C1180 42 1300 28 1440 34V140H0Z"
+          />
+        </svg>
+        <svg
           className={styles.waveFill}
-          viewBox="0 0 1440 88"
+          viewBox="0 0 1440 140"
           preserveAspectRatio="none"
         >
           <path
             fill="#FEF9F2"
-            d="M0 42C210 8 360 76 540 54C760 28 920 6 1120 32C1260 50 1360 72 1440 48V88H0Z"
-          />
-        </svg>
-        <svg
-          className={styles.waveAccent}
-          viewBox="0 0 1440 88"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 54C150 22 280 70 430 48C560 30 640 16 760 28"
-            fill="none"
-            stroke="#D1D1D1"
-            strokeWidth="1.75"
-            strokeLinecap="round"
+            d="M0 52C120 34 200 88 320 78C420 68 490 24 600 32C740 42 840 80 1020 68C1180 58 1300 44 1440 50V140H0Z"
           />
         </svg>
       </div>

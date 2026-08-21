@@ -1,3 +1,4 @@
+import CommittedSection from '../components/CommittedSection/CommittedSection';
 import AboutHero from '../components/about/AboutHero';
 import OurStory from '../components/about/OurStory';
 import MissionVision from '../components/about/MissionVission';
@@ -12,6 +13,7 @@ const AboutPage = () => {
       <MissionVision />
       <CoreValuesList />
       <AboutStats />
+      <CommittedSection />
     </>
   );
 };

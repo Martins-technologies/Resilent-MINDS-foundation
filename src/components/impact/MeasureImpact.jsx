@@ -46,20 +46,38 @@ const MeasureImpact = () => {
         </Container>
       </section>
 
-      <section className="section section--burgundy py-4">
-        <Container>
-          <div className="flex flex-col md:flex-row  items-center ">
-            <div className="flex items-center gap-4">
-              <FaShieldAlt className="text-gold text-5xl flex-shrink-0" />
+      <section
+        className="section section--burgundy py-4 relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/PROGRAME%20updated/f1.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center right',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Burgundy overlay so text stays readable over the image */}
+        <div className="absolute inset-0 bg-burgundy/85 z-0" />
+
+        <Container className="relative z-10">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex items-center gap-5">
+              {/* Circular gold medallion icon */}
+              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gold flex items-center justify-center shadow-lg ring-4 ring-gold/30">
+                <FaShieldAlt className="text-white text-2xl" />
+              </div>
               <div>
                 <h3 className="text-white mb-1">Transparency builds trust.</h3>
-                <p className="mb-0 w-3/4">
+                <p className="mb-0 md:w-3/4">
                   We are committed to reporting our program outcomes and the impact of your support with honesty and clarity.
                 </p>
               </div>
             </div>
-            <Button variant="outlineLight" to="/about" className='rounded-xl'>
-              Learn More →
+            <Button
+              variant="outlineLight"
+              to="/about"
+              className="!rounded-xl !px-7 !py-3 !font-semibold !border-2 hover:!bg-white hover:!text-burgundy transition-colors duration-200 whitespace-nowrap flex-shrink-0"
+            >
+              Learn More &rarr;
             </Button>
           </div>
         </Container>
