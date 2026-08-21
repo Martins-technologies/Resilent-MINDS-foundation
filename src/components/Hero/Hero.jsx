@@ -27,7 +27,7 @@ const Hero = () => {
 
         <div className={styles.copy}>
           <h1 className={styles.heading}>
-            Building Stronger Minds.
+            Building Minds Stronger.
             <br />
             Creating{' '}
             <span className={styles.phrase}>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logoPlaceholder from '../../assets/logo-placeholder.svg';
 import Button from '../Button/Button';
 import IconClose from '../icons/IconClose';
 import IconMenu from '../icons/IconMenu';
@@ -33,9 +32,8 @@ const Navbar = () => {
     <header className={styles.header}>
       <div className={styles.inner}>
         <Link to="/" className={styles.logoLink} onClick={close}>
-          {/* SWAP: replace logo-placeholder.svg with the original logo asset */}
           <img
-            src={logoPlaceholder}
+            src="/logo.jpeg"
             alt="Resilient Minds Foundation"
             className={styles.logo}
             width={160}

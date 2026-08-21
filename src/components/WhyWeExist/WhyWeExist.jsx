@@ -1,20 +1,19 @@
 import Button from '../Button/Button';
 import styles from './WhyWeExist.module.css';
 
-const MISSION_IMAGE =
-  'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&h=800&q=80';
-
 const WhyWeExist = () => {
   return (
     <section className={styles.section} aria-labelledby="why-we-exist-heading">
       <div className={styles.media}>
         <img
-          src={MISSION_IMAGE}
-          alt="Young people standing together with arms around each other, looking toward the landscape"
+          src="/group.jpeg"
+          alt="Group of people standing together with arms around each other"
           className={styles.image}
           width={792}
           height={392}
         />
+        {/* Blur-to-transparent gradient edge blending into content */}
+        <div className={styles.blurGradient} aria-hidden="true" />
         <svg
           className={styles.edgeWave}
           viewBox="0 0 220 392"
@@ -22,7 +21,7 @@ const WhyWeExist = () => {
           aria-hidden="true"
         >
           <path
-            fill="#FDFBF7"
+            fill="#FEF9F2"
             d="M220 0H96C48 48 168 92 84 156C12 216 150 268 72 332C36 360 88 380 70 392H220V0Z"
           />
           <path
@@ -50,7 +49,7 @@ const WhyWeExist = () => {
           wellness education, resilience-building programs and compassionate
           support.
         </p>
-        <Button to="/about" variant="gold" size="sm" arrow>
+        <Button to="/about" variant="gold" size="sm" arrow className="!px-4 !py-2 !text-xs">
           Learn About Our Mission
         </Button>
       </div>

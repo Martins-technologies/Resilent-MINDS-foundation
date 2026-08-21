@@ -1,26 +1,49 @@
 .section {
   position: relative;
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 50% 50%;
   align-items: stretch;
-  height: 392px;
-  min-height: 392px;
-  background: #fdfbf7;
+  height: 420px;
+  min-height: 420px;
+  background: #FEF9F2;
   overflow: hidden;
+  margin-top: 0;
 }
 
 .media {
   position: relative;
-  height: 392px;
+  height: 420px;
   overflow: hidden;
 }
 
 .image {
   display: block;
   width: 100%;
-  height: 392px;
+  height: 420px;
   object-fit: cover;
-  object-position: center 45%;
+  object-position: center 30%;
+  filter: brightness(0.95);
+}
+
+/* Blur + fade gradient on the right edge of the image */
+.blurGradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(254, 249, 242, 0.35) 45%,
+    rgba(254, 249, 242, 0.75) 70%,
+    rgba(254, 249, 242, 0.96) 90%,
+    #FEF9F2 100%
+  );
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+  z-index: 3;
 }
 
 .edgeWave {
@@ -30,14 +53,14 @@
   width: 180px;
   height: 100%;
   pointer-events: none;
-  z-index: 2;
+  z-index: 4;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 28px 72px 28px 28px;
+  padding: 36px 72px 36px 40px;
 }
 
 .labelRow {
@@ -90,7 +113,11 @@
 
   .media,
   .image {
-    height: 280px;
+    height: 300px;
+  }
+
+  .blurGradient {
+    width: 160px;
   }
 
   .edgeWave {
@@ -98,7 +125,7 @@
   }
 
   .content {
-    padding: 28px 40px 40px;
+    padding: 32px 40px 40px;
   }
 
   .heading {
@@ -109,7 +136,11 @@
 @media (max-width: 768px) {
   .media,
   .image {
-    height: 220px;
+    height: 240px;
+  }
+
+  .blurGradient {
+    width: 120px;
   }
 
   .content {
