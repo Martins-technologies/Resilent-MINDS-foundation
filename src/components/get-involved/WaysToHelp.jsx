@@ -5,6 +5,7 @@ import {
   FaHandHoldingHeart,
   FaUsers,
 } from 'react-icons/fa';
+import { Users } from 'lucide-react';
 
 const WaysToHelp = () => {
   const ways = [
@@ -26,7 +27,8 @@ const WaysToHelp = () => {
     },
     {
       icon: '/get%20involved/community.svg',
-      color: '#C79949',
+      iconComponent: Users,
+      color: '#2E5D49',
       title: 'Community Ambassador',
       desc: 'Help raise awareness and connect us with individuals, organizations, and resources.',
       points: ['Spread awareness', 'Share resources', 'Build partnerships', 'Host conversations'],
@@ -50,6 +52,37 @@ const WaysToHelp = () => {
     },
   ];
 
+  const actionLinks = [
+    {
+      icon: '/get%20involved/volunterr.svg',
+      title: 'Volunteer',
+      subtitle: 'Give your time',
+      to: '/contact',
+    },
+    {
+      icon: '/get%20involved/becomeamentor.svg',
+      title: 'Become a Mentor',
+      to: '/contact',
+    },
+    {
+      icon: '/get%20involved/community.svg',
+      iconComponent: Users,
+      color: '#2E5D49',
+      title: 'Be a Community Ambassador',
+      to: '/contact',
+    },
+    {
+      icon: '/get%20involved/partner.svg',
+      title: 'Partner With Us',
+      to: '/contact',
+    },
+    {
+      icon: '/get%20involved/donate.svg',
+      title: 'Donate Today',
+      to: '/contact',
+    },
+  ];
+
   return (
     <section id="ways-to-help" className="section">
       <Container>
@@ -60,8 +93,52 @@ const WaysToHelp = () => {
           </p>
         </div>
 
+        <div className="card bg-[#FEF9F2] involved-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 relative">
+          {ways.map((way, index) => (
+            <div key={index} className="relative px-4 py-6 lg:py-8 flex flex-col h-full">
+              
+              {index !== 0 && (
+                <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-80 bg-[#C79949] opacity-20"></div>
+              )}
+
+              {way.iconComponent ? (
+                <div
+                  className="mb-4 flex h-14 w-14 items-center justify-center rounded-full"
+                  style={{ backgroundColor: way.color }}
+                >
+                  <way.iconComponent className="h-7 w-7 text-white" aria-hidden="true" />
+                </div>
+              ) : (
+                <img
+                  src={way.icon}
+                  alt=""
+                  aria-hidden="true"
+                  className="mb-4 h-20 w-20 object-contain"
+                />
+              )}
+              <h4 className="mb-2 text-forest">{way.title}</h4>
+              <p className="text-sm mb-3">{way.desc}</p>
+              <ul className="space-y-1.5 mb-3 flex-grow">
+                {way.points.map((point, i) => (
+                  <li key={i} className="text-xs text-ink-soft flex items-start gap-2">
+                    <span className="text-gold mt-0.5">&bull;</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <Link 
+                to="/contact" 
+                className="text-xs font-bold text-burgundy hover:opacity-70 transition-opacity inline-block mt-auto"
+              >
+                {way.link}
+              </Link>
+            </div>
+          ))}
+        </div>
+
         <div
-          className="w-full rounded-2xl mb-10 overflow-hidden px-5 py-7 sm:pl-[29%] sm:pr-8"
+          className="mt-10 w-full overflow-hidden rounded-2xl px-5 py-7 sm:pl-[29%] sm:pr-8"
           style={{
             backgroundImage: "url('/get%20involved/banner.webp')",
             backgroundSize: 'cover',
@@ -69,7 +146,7 @@ const WaysToHelp = () => {
             minHeight: '220px',
           }}
         >
-          <h3 className="mb-5 text-center text-xl font-bold leading-tight text-white sm:text-left md:text-2xl">
+          <h3 className="mb-5 text-center text-xl font-bold leading-tight !text-white sm:text-left md:text-2xl">
             Your involvement creates real change.
             <br />
             Stronger minds. Brighter futures.
@@ -97,40 +174,45 @@ const WaysToHelp = () => {
             ))}
           </div>
         </div>
-        
-        <div className="card bg-[#FEF9F2] involved-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 relative">
-          {ways.map((way, index) => (
-            <div key={index} className="relative px-4 py-6 lg:py-8 flex flex-col h-full">
-              
-              {index !== 0 && (
-                <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-80 bg-[#C79949] opacity-20"></div>
-              )}
 
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center mb-3.5"
-                style={{ backgroundColor: way.color }}
+        <div className="mt-10 text-center">
+          <h2 className="mb-2">Ready to make a difference?</h2>
+          <p className="mb-7">
+            Choose the way that&rsquo;s right for you and start making an impact today.
+          </p>
+
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {actionLinks.map((action) => (
+              <Link
+                key={action.title}
+                to={action.to}
+                className="flex min-h-28 items-center gap-3 rounded-xl border border-[#C79949]/25 bg-[#FEF9F2] px-4 py-4 text-left no-underline shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
-                <img src={way.icon} alt="" aria-hidden="true" className="w-7 h-7 object-contain" />
-              </div>
-              <h4 className="mb-2 text-forest">{way.title}</h4>
-              <p className="text-sm mb-3">{way.desc}</p>
-              <ul className="space-y-1.5 mb-3 flex-grow">
-                {way.points.map((point, i) => (
-                  <li key={i} className="text-xs text-ink-soft flex items-start gap-2">
-                    <span className="text-gold mt-0.5">&bull;</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <Link 
-                to="/contact" 
-                className="text-xs font-bold text-burgundy hover:opacity-70 transition-opacity inline-block mt-auto"
-              >
-                {way.link}
+                {action.iconComponent ? (
+                  <span
+                    className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full"
+                    style={{ backgroundColor: action.color }}
+                  >
+                    <action.iconComponent className="h-5 w-5 text-white" aria-hidden="true" />
+                  </span>
+                ) : (
+                  <img
+                    src={action.icon}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-16 w-16 flex-shrink-0 object-contain"
+                  />
+                )}
+                <span className="flex min-w-0 flex-col">
+                  <strong className="text-sm leading-snug text-forest">{action.title}</strong>
+                  {action.subtitle && (
+                    <span className="mt-1 text-sm text-forest">{action.subtitle}</span>
+                  )}
+                  <span className="mt-1 font-bold text-forest" aria-hidden="true">→</span>
+                </span>
               </Link>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Container>
     </section>

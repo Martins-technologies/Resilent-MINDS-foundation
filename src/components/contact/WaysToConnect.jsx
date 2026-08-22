@@ -75,6 +75,16 @@ const WaysToConnect = () => {
                 {way.desc}
               </p>
 
+              {way.title === 'Get Support' && (
+                <a
+                  href="#contact-form"
+                  className="mt-1 inline-flex items-center gap-2 text-sm font-bold text-[#2E5D49] hover:text-[#6E2839] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C79949] transition-colors"
+                  aria-label="Get support through our contact form"
+                >
+                  Get Support <span aria-hidden="true">→</span>
+                </a>
+              )}
+
               {/* Social Icons (Only for Stay Connected) */}
               {way.title === 'Stay Connected' && (
                 <div className="flex items-center gap-3 mt-1">

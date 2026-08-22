@@ -24,18 +24,34 @@ const Layout = () => {
             minHeight: '200px',
           }}
         >
-          <div className="container relative z-10 flex flex-col items-center justify-center text-center py-12 px-6 max-w-xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-4xl text-white font-bold mb-3 leading-tight">
-              Your Support Creates Hope
-            </h2>
-            <p className="text-white/85 text-base md:text-lg mb-7 leading-relaxed">
-              Help us reach more people, expand programs and deliver resources where they're needed most.
+          <div className="rm-container relative z-10 flex w-full flex-col items-center gap-6 py-8 md:flex-row md:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-[#C79949]">
+                <img
+                  src="/get%20involved/action.svg"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-9 w-9 object-contain"
+                />
+              </div>
+              <h2 className="mb-0 font-heading text-2xl font-bold leading-tight !text-white">
+                Every action counts.
+                <br />
+                Every person matters.
+              </h2>
+            </div>
+
+            <div className="hidden h-16 w-px bg-white/40 md:block" aria-hidden="true" />
+
+            <p className="mb-0 max-w-sm text-center text-base leading-relaxed !text-white md:text-left">
+              Together, we can build stronger minds and stronger communities.
             </p>
+
             <Link
               to="/get-involved"
-              className="inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-amber-500 text-white font-semibold text-base px-8 py-3.5 rounded-full transition-colors shadow-md"
+              className="inline-flex items-center gap-3 rounded-lg bg-white px-7 py-3 font-semibold text-[#6E2839] shadow-md transition-colors hover:bg-[#FEF9F2]"
             >
-              <span>♡</span> Give Hope Today <span>→</span>
+              Donate Now <span aria-hidden="true">→</span>
             </Link>
           </div>
         </section>
