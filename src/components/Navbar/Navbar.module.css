@@ -1,0 +1,148 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--rm-ivory);
+  height: 88px;
+}
+
+.inner {
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 200px;
+  height: 72px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  justify-content: center;
+}
+
+.link {
+  font-family: var(--rm-font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--rm-forest);
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 4px 0 8px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--rm-burgundy);
+}
+
+.active {
+  color: var(--rm-burgundy);
+  border-bottom-color: var(--rm-gold);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.navBtn {
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  font-weight: 700;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.mobilePanel {
+  display: none;
+}
+
+@media (max-width: 1179px) {
+  .header {
+    height: auto;
+    min-height: 80px;
+  }
+
+  .nav,
+  .actions {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inner {
+    padding: 8px 24px;
+    height: 80px;
+  }
+
+  .logo {
+    width: 160px;
+    height: 64px;
+  }
+
+  .mobilePanel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 24px 24px;
+    background: var(--rm-ivory);
+    border-top: 1px solid var(--rm-line);
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileLink {
+    font-family: var(--rm-font-body);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--rm-forest);
+    text-decoration: none;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rm-line);
+  }
+
+  .mobileActive {
+    color: var(--rm-burgundy);
+  }
+
+  .mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

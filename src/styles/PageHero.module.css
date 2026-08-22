@@ -1,0 +1,117 @@
+/* ─── Shared full-bleed page hero layout ─────────────────────────────────────
+   Usage:
+     <section
+       className={styles.section}
+       style={{ backgroundImage: "url('/your-image.jpeg')" }}
+     >
+       <div className={styles.overlay} />
+       <div className={styles.inner}>
+         <div className={styles.copy}>...content...</div>
+       </div>
+     </section>
+   ────────────────────────────────────────────────────────────────────────── */
+
+.section {
+  position: relative;
+  z-index: 1;
+  height: 580px;
+  min-height: 580px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FEF9F2; /* ivory fallback until image is added */
+}
+
+/* Left-to-right gradient — keeps left text readable, photo visible on right */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(254, 249, 242, 0.93) 0%,
+    rgba(254, 249, 242, 0.87) 22%,
+    rgba(254, 249, 242, 0.70) 42%,
+    rgba(254, 249, 242, 0.22) 58%,
+    rgba(254, 249, 242, 0.00) 70%
+  );
+}
+
+/* Content container — matches Hero padding + max-width */
+.inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 48px 40px 96px 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Text block — ~48% width so the right half of the photo stays uncovered */
+.copy {
+  position: relative;
+  z-index: 1;
+  width: 48%;
+  max-width: 560px;
+}
+
+/* ─── Tablet (≤ 1024px) ─── */
+@media (max-width: 1024px) {
+  .section {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .inner {
+    padding: 40px 40px 88px 40px;
+  }
+
+  .copy {
+    width: 56%;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      to right,
+      rgba(254, 249, 242, 0.94) 0%,
+      rgba(254, 249, 242, 0.88) 26%,
+      rgba(254, 249, 242, 0.70) 48%,
+      rgba(254, 249, 242, 0.22) 64%,
+      rgba(254, 249, 242, 0.00) 75%
+    );
+  }
+}
+
+/* ─── Mobile (≤ 768px) ─── */
+@media (max-width: 768px) {
+  .section {
+    height: auto;
+    min-height: 0;
+  }
+
+  /* Solid overlay so text reads on a compressed background */
+  .overlay {
+    background: rgba(254, 249, 242, 0.84);
+  }
+
+  .inner {
+    padding: 48px 20px 72px 20px;
+    align-items: flex-start;
+  }
+
+  .copy {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ─── Small mobile (≤ 480px) ─── */
+@media (max-width: 480px) {
+  .inner {
+    padding: 40px 16px 64px 16px;
+  }
+}

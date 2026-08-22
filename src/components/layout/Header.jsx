@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo from '../../assets/logo.webp';
+import { BRAND_LOGO_ALT, BRAND_LOGO_SRC } from '../../assets/brandLogo';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +38,7 @@ const Header = () => {
           
           {/* Logo - Left Side */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src={logo} alt="Resilient Minds Foundation" className="h-14 w-35 object-cover" />
+            <img src={BRAND_LOGO_SRC} alt={BRAND_LOGO_ALT} className="h-16 w-auto object-contain" />
           </Link>
 
           {/* Navigation - Center */}
@@ -61,16 +61,16 @@ const Header = () => {
           {/* Right Side - Buttons (Desktop) + Mobile Menu Button */}
           <div className="flex items-center gap-3">
             
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-4">
               <Link 
                 to="/contact" 
-                className="px-2 py-2 text-sm font-semibold border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white transition-all duration-200 rounded-xl"
+                className="px-5 py-2.5 text-sm font-bold border border-[#2E5D49] text-[#2E5D49] bg-transparent hover:bg-[#2E5D49] hover:text-white transition-all duration-200 rounded-lg"
               >
                Get Support
               </Link>
               <Link 
                 to="/get-involved"
-                className="px-5 py-2.5 text-sm font-semibold bg-gold text-forest-dark hover:bg-[#B8973A] transition-all duration-200 rounded-xl shadow-md"
+                className="px-5 py-2.5 text-sm font-bold bg-[#6E2839] text-white hover:bg-[#5a1f2e] transition-all duration-200 rounded-lg"
               >
                 Donate
               </Link>
@@ -111,14 +111,14 @@ const Header = () => {
               <div className="mt-4 pt-4 border-t border-line flex flex-col gap-3 px-4">
                 <Link 
                   to="/contact" 
-                  className="w-full text-center px-2 py-1 text-sm font-bold border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white transition-all duration-200 rounded-full"
+                  className="w-full text-center px-5 py-2.5 text-sm font-bold border border-[#2E5D49] text-[#2E5D49] bg-transparent hover:bg-[#2E5D49] hover:text-white transition-all duration-200 rounded-lg"
                   onClick={closeMenu}
                 >
-                   Support
+                   Get Support
                 </Link>
                 <Link 
                   to="/get-involved"
-                  className="w-full text-center px-5 py-3 text-sm font-semibold bg-gold text-forest-dark hover:bg-[#B8973A] transition-all duration-200 rounded-full shadow-md"
+                  className="w-full text-center px-5 py-2.5 text-sm font-bold bg-[#6E2839] text-white hover:bg-[#5a1f2e] transition-all duration-200 rounded-lg"
                   onClick={closeMenu}
                 >
                   Donate

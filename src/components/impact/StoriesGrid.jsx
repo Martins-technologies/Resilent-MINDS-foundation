@@ -23,8 +23,8 @@ const StoriesGrid = () => {
             </div>
             <div className="w-full h-[140px] overflow-hidden rounded-lg">
               <img 
-                src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&h=300&fit=crop&crop=center&auto=format"
-                alt="Two friends talking on a sofa"
+                src="/impact/3.webp"
+                alt="Community members standing together"
                 loading="lazy"
                 className="w-full h-full object-cover object-center"
               />
@@ -35,7 +35,7 @@ const StoriesGrid = () => {
           <div className="flex flex-col gap-6">
             <div className="w-full h-[220px] overflow-hidden rounded-lg">
               <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop&crop=center&auto=format"
+                src="/impact/2.webp"
                 alt="Two women in warm conversation"
                 loading="lazy"
                 className="w-full h-full object-cover object-center"
@@ -61,7 +61,7 @@ const StoriesGrid = () => {
             </div>
             <div className="w-full h-[140px] overflow-hidden rounded-lg">
               <img 
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=300&fit=crop&crop=center&auto=format"
+                src="/impact/4 (1).webp"
                 alt="Small group seated in a support circle"
                 loading="lazy"
                 className="w-full h-full object-cover object-center"

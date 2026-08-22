@@ -1,19 +1,13 @@
+import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
-import {
-  FaFileAlt,
-  FaBookOpen,
-  FaToolbox,
-  FaPlayCircle,
-  FaUserFriends,
-} from 'react-icons/fa';
 
 const ResourceTypes = () => {
   const types = [
-    { icon: FaFileAlt, color: '#6E2839', title: 'Articles', desc: 'Informative reads on mental health, resilience, and personal growth.', link: 'Explore Articles' },
-    { icon: FaBookOpen, color: '#2E5D49', title: 'Guides & Toolkits', desc: 'Practical guides and toolkits to help you navigate life\u2019s challenges.', link: 'View Guides' },
-    { icon: FaToolbox, color: '#C79949', title: 'Tools & Worksheets', desc: 'Self-help tools and worksheets to build skills and support well-being.', link: 'Access Tools' },
-    { icon: FaPlayCircle, color: '#2E5D49', title: 'Videos & Webinars', desc: 'Watch and learn from experts and real stories of hope.', link: 'Watch Now' },
-    { icon: FaUserFriends, color: '#6E2839', title: 'Support Resources', desc: 'Find help, hotlines, and local services when you need support.', link: 'Find Support' },
+    { icon: '/Resources/articles.svg', color: '#6E2839', title: 'Articles', desc: 'Informative reads on mental health, resilience, and personal growth.', link: 'Explore Articles', to: '/resources#featured-resources' },
+    { icon: '/Resources/guides.svg',   color: '#2E5D49', title: 'Guides & Toolkits', desc: 'Practical guides and toolkits to help you navigate life\u2019s challenges.', link: 'View Guides', to: '/resources#featured-resources' },
+    { icon: '/Resources/tools.svg',    color: '#C79949', title: 'Tools & Worksheets', desc: 'Self-help tools and worksheets to build skills and support well-being.', link: 'Access Tools', to: '/resources#featured-resources' },
+    { icon: '/Resources/video.svg',    color: '#2E5D49', title: 'Videos & Webinars', desc: 'Watch and learn from experts and real stories of hope.', link: 'Watch Now', to: '/resources#featured-resources' },
+    { icon: '/Resources/support.svg',  color: '#6E2839', title: 'Support Resources', desc: 'Find help, hotlines, and local services when you need support.', link: 'Find Support', to: '/contact' },
   ];
 
   return (
@@ -38,15 +32,18 @@ const ResourceTypes = () => {
                 className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3.5"
                 style={{ backgroundColor: type.color }}
               >
-                <type.icon className="text-white text-xl" />
+                <img src={type.icon} alt={type.title} className="w-9 h-9 object-contain" />
               </div>
               <h5 className="text-sm mb-1.5">{type.title}</h5>
               <p className="text-xs text-ink-soft mb-2 leading-relaxed min-h-[40px]">{type.desc}</p>
               
-              <span className="text-xs font-bold text-burgundy no-underline flex items-center gap-1 whitespace-nowrap">
+              <Link
+                to={type.to}
+                className="text-xs font-bold text-burgundy no-underline flex items-center gap-1 whitespace-nowrap hover:opacity-70 transition-opacity"
+              >
                 {type.link}
                 <span>→</span>
-              </span>
+              </Link>
             </div>
           ))}
         </div>

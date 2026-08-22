@@ -1,0 +1,296 @@
+/* ─── Hero: Full-bleed background image ─── */
+
+.hero {
+  position: relative;
+  z-index: 1;
+  height: 620px;
+  min-height: 620px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(248, 250, 252, 0.72) 0%,
+    rgba(245, 247, 250, 0.48) 28%,
+    rgba(240, 244, 248, 0.18) 48%,
+    transparent 72%
+  );
+}
+
+/* ─── Background image — natural fill, woman on right, face never clipped ─── */
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right 12%;
+  z-index: 0;
+  filter: saturate(0.88) brightness(1.03) contrast(1.02);
+}
+
+/* ─── Main content container — matches navbar max-width + padding ─── */
+.inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 60px 40px 120px 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ─── Leaf decoration ─── */
+.leaf {
+  position: absolute;
+  left: 80px;
+  top: 24px;
+  width: 260px;
+  height: 340px;
+  pointer-events: none;
+}
+
+/* ─── Text block — constrained to left ~55% so photo stays visible ─── */
+.copy {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  width: 55%;
+}
+
+/* ─── Heading — each phrase stays on exactly one line ─── */
+.heading {
+  margin: 0;
+  font-family: var(--rm-font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--rm-forest);
+  letter-spacing: -0.5px;
+}
+
+.line {
+  display: block;
+  white-space: nowrap;
+}
+
+/* ─── "Hopeful" — gold italic ─── */
+.accent {
+  font-family: var(--rm-font-heading);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--rm-gold);
+}
+
+/* ─── Body paragraph — own width cap for readable line length ─── */
+.body {
+  margin: 20px 0 0;
+  max-width: 520px;
+  font-family: var(--rm-font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--rm-forest);
+}
+
+/* ─── Button row ─── */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.actions > a:last-child {
+  background: var(--rm-ivory);
+  color: var(--rm-forest);
+}
+
+.actions > a:last-child:hover {
+  background: var(--rm-forest);
+  color: var(--rm-white);
+  border-color: var(--rm-forest);
+}
+
+/* ─── Script text — bottom right ─── */
+.script {
+  position: absolute;
+  z-index: 3;
+  right: 80px;
+  bottom: 128px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: var(--rm-font-script);
+  font-size: 36px;
+  line-height: 1.15;
+  color: #ffffff;
+  text-align: right;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.30);
+  pointer-events: none;
+}
+
+.scriptLine {
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.scriptLine::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 86%;
+  height: 2px;
+  background: var(--rm-gold);
+}
+
+/* ─── Double-layer wave divider ─── */
+.divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 140px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.waveBack,
+.waveFill {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 140px;
+}
+
+.waveBack {
+  bottom: 10px;
+}
+
+/* ─── Tablet (≤ 1024px) ─── */
+@media (max-width: 1024px) {
+  .hero {
+    height: 540px;
+    min-height: 540px;
+  }
+
+  .inner {
+    padding: 40px 40px 110px 48px;
+  }
+
+  .leaf {
+    left: 48px;
+    width: 200px;
+    height: 270px;
+  }
+
+  .copy {
+    width: 55%;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .script {
+    right: 36px;
+    bottom: 100px;
+    font-size: 28px;
+  }
+}
+
+/* ─── Mobile (≤ 768px) ─── */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+  }
+
+  /* On mobile */
+  .bg {
+    object-position: right 12%;
+  }
+
+  .inner {
+    padding: 48px 20px 112px 20px;
+    align-items: flex-start;
+  }
+
+  .leaf {
+    left: 0;
+    top: 20px;
+    width: 170px;
+    height: 230px;
+  }
+
+  .copy {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 34px;
+    letter-spacing: 0;
+  }
+
+  .line {
+    white-space: normal;
+  }
+
+  .phrase {
+    white-space: normal;
+  }
+
+  .body {
+    font-size: 15px;
+    margin-top: 16px;
+    max-width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  .script {
+    right: 16px;
+    bottom: 68px;
+    font-size: 22px;
+  }
+
+  .divider {
+    height: 88px;
+  }
+
+  .waveBack,
+  .waveFill {
+    height: 88px;
+  }
+}
+
+/* ─── Small mobile (≤ 480px) ─── */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .script {
+    font-size: 18px;
+    right: 14px;
+    bottom: 58px;
+  }
+}

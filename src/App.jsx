@@ -8,6 +8,7 @@ import ImpactPage from './pages/ImpactPage';
 import ResourcesPage from './pages/ResourcesPage';
 import GetInvolvedPage from './pages/GetInvolvedPage';
 import ContactPage from './pages/ContactPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="resources" element={<ResourcesPage />} />
           <Route path="get-involved" element={<GetInvolvedPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

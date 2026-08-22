@@ -1,14 +1,20 @@
-import { Outlet } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
+import { Outlet, useLocation } from 'react-router-dom';
+import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
+import SupportBanner from '../SupportBanner/SupportBanner';
 
 const Layout = () => {
+  const { pathname } = useLocation();
+  const showBottomBanner = !['/about', '/contact', '/impact', '/who-we-help', '/programs', '/resources'].includes(pathname);
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1" id="main">
+    <div>
+      <Navbar />
+      <main id="main">
         <Outlet />
       </main>
+
+      {showBottomBanner && <SupportBanner />}
       <Footer />
     </div>
   );

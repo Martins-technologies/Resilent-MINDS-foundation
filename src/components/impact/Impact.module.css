@@ -1,0 +1,144 @@
+.section {
+  background: var(--rm-ivory);
+  padding: 0;
+  overflow: hidden;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  background-image: url('/GREEN%20VECTOR.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 72px 0 80px;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.copy {
+  flex: 0 1 40%;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--rm-font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--rm-ivory);
+}
+
+.body {
+  margin: 16px 0 0;
+  max-width: 380px;
+  font-family: var(--rm-font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--rm-ivory);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.statsCol {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cta {
+  margin-top: 36px;
+}
+
+.stat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.rule {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60px;
+  background: rgba(199, 153, 73, 0.5);
+}
+
+.number {
+  font-family: var(--rm-font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--rm-ivory);
+}
+
+.label {
+  font-family: var(--rm-font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--rm-ivory);
+}
+
+@media (max-width: 1024px) {
+  .top {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .copy {
+    flex: none;
+  }
+
+  .body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 88px 0 96px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .rule {
+    display: none;
+  }
+
+  .cta {
+    text-align: center;
+    margin-top: 40px;
+  }
+}

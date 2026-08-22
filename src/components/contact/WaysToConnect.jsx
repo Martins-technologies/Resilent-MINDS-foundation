@@ -4,8 +4,8 @@ import {
   FaEnvelope, 
   FaPhone, 
   FaMapMarkerAlt, 
-  FaHeadset, 
-  FaShareAlt,
+  FaCommentDots,
+  FaUsers,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
@@ -33,13 +33,13 @@ const WaysToConnect = () => {
       bg: 'bg-[#C79949]' 
     },
     { 
-      icon: FaHeadset, 
+      icon: FaCommentDots, 
       title: 'Get Support', 
       desc: 'If you or someone you know needs support, we\'re here to help.', 
       bg: 'bg-[#2E5D49]' 
     },
     { 
-      icon: FaShareAlt, 
+      icon: FaUsers, 
       title: 'Stay Connected', 
       desc: 'Follow us on social media for updates, resources, and inspiration.', 
       bg: 'bg-[#6E2839]' 
@@ -49,8 +49,10 @@ const WaysToConnect = () => {
   return (
     <section className="section section--band pt-0 bg-[#FEF9F2] py-12">
       <Container>
-        <div className="max-w-[640px] mx-auto mb-10 text-center">
+        <div className="max-w-[640px] mx-auto mb-10 flex items-center justify-center gap-4 md:gap-8">
+          <span className="h-px w-16 md:w-32 bg-[#C79949]/60" aria-hidden="true" />
           <Eyebrow>Ways to Connect</Eyebrow>
+          <span className="h-px w-16 md:w-32 bg-[#C79949]/60" aria-hidden="true" />
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-0 relative">
@@ -73,19 +75,29 @@ const WaysToConnect = () => {
                 {way.desc}
               </p>
 
+              {way.title === 'Get Support' && (
+                <a
+                  href="#contact-form"
+                  className="mt-1 inline-flex items-center gap-2 text-sm font-bold text-[#2E5D49] hover:text-[#6E2839] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C79949] transition-colors"
+                  aria-label="Get support through our contact form"
+                >
+                  Get Support <span aria-hidden="true">→</span>
+                </a>
+              )}
+
               {/* Social Icons (Only for Stay Connected) */}
               {way.title === 'Stay Connected' && (
                 <div className="flex items-center gap-3 mt-1">
-                  <a href="#" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
+                  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
                     <FaFacebook />
                   </a>
-                  <a href="#" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
                     <FaInstagram />
                   </a>
-                  <a href="#" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-[#2E5D49] transition-colors text-lg">
                     <FaLinkedin />
                   </a>
-                  <a href="#" className="text-burgundy hover:text-[#C79949] transition-colors text-lg">
+                  <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-[#C79949] transition-colors text-lg">
                     <FaYoutube />
                   </a>
                 </div>

@@ -1,8 +1,9 @@
 import { FaBullseye, FaEye } from 'react-icons/fa';
+import IconPlantSprig from '../icons/IconPlantSprig';
 
 const MissionVision = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
+    <div className="relative grid grid-cols-1 md:grid-cols-2">
 
       {/* Mission - Left */}
       <div className="bg-[#2E5D49] text-white text-[#ffffff] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-6 md:py-10 lg:py-14">
@@ -21,6 +22,14 @@ const MissionVision = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Plant sprig — centered in the gold divider circle */}
+      <div
+        className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full bg-[#C79949] items-center justify-center shadow-lg"
+        aria-hidden="true"
+      >
+        <IconPlantSprig size={36} color="#ffffff" />
       </div>
 
       {/* Vision - Right */}

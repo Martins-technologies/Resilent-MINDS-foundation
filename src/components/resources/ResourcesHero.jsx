@@ -1,44 +1,39 @@
 import Button from '../ui/Button';
-import Container from '../ui/Container';
-import Eyebrow from '../ui/Eyebrow';
+import styles from '../../styles/PageHero.module.css';
 
 const ResourcesHero = () => {
   return (
-    <section 
-      className="py-20 md:py-28 relative bg-cover bg-center bg-no-repeat"
-      style={{ 
-        // Apni pasand ki background image yahan dalein
-        backgroundImage: `url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')` 
-      }}
+    <section
+      className={styles.section}
+      aria-label="Resources hero"
+      style={{ backgroundImage: "url('/Resources/hero.webp')" }}
     >
-      {/* Overlay - Text ko readable banane ke liye */}
-      <div className="absolute inset-0 bg-white/80"></div>
-
-      <Container>
-        {/* Content - Center aligned */}
-        <div className="relative z-10 max-w-2/3  text-start">
-          
-          <div className="inline-block">
-            <Eyebrow>Resources</Eyebrow>
-          </div>
-          
-          <h1 className="mb-4 text-[#0f4c3a] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            Knowledge. Tools. Support.
-            <span className='text-burgundy'> Empowering stronger
-              <br/>
-               minds and communities.</span>
-          </h1>
-          
-          <span className="mb-6 my-4 text-base md:text-lg leading-relaxed  max-w-2xl">
-            Explore our library of resources designed to educate, empower, and support individuals, families, and communities on their journey toward mental wellness and resilience.
+      <div className={styles.inner}>
+        <div className={styles.copy}>
+          <span className="eyebrow block mb-5">
+            Resources
           </span>
-          
-          <Button variant="primary" to="#featured-resources" className='rounded-xl my-4'>
+
+          <h1 className="mb-4 font-heading font-bold text-forest leading-tight text-4xl md:text-5xl lg:text-[3.25rem]">
+            Knowledge. Tools. Support.{' '}
+            <span className="text-burgundy">
+              Empowering stronger minds and communities.
+            </span>
+          </h1>
+
+          <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
+            Explore our library of resources designed to educate, empower, and support individuals, families, and communities on their journey toward mental wellness and resilience.
+          </p>
+
+          <Button
+            variant="primary"
+            href="#featured-resources"
+            className="!rounded-xl"
+          >
             Browse All Resources →
           </Button>
-          
         </div>
-      </Container>
+      </div>
     </section>
   );
 };

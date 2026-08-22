@@ -1,0 +1,44 @@
+/* Homepage / brand design tokens — sourced from homepage mockups */
+:root {
+  --rm-burgundy: #6e2839;
+  --rm-burgundy-dark: #591f2d;
+  --rm-forest: #2e5d49;
+  --rm-forest-dark: #234739;
+  --rm-gold: #c79949;
+  --rm-gold-dark: #b8873a;
+  --rm-ivory: #fef9f2;
+  --rm-white: #ffffff;
+  --rm-text-dark: #222222;
+  --rm-text-body: #333333;
+  --rm-text-muted: #4a4a4a;
+  --rm-text-light: #666666;
+  --rm-line: #e7dfd2;
+
+  --rm-font-heading: "Playfair Display", Georgia, serif;
+  --rm-font-body: "Inter", "Open Sans", sans-serif;
+  --rm-font-ui: "Montserrat", "Inter", sans-serif;
+  --rm-font-script: "Great Vibes", cursive;
+
+  --rm-container: 1280px;
+  --rm-gutter: 40px;
+  --rm-section-y: 100px;
+  --rm-radius-pill: 50px;
+  --rm-radius-card: 10px;
+  --rm-card-gap: 20px;
+  --rm-shadow-card: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --rm-shadow-btn: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.rm-container {
+  width: 100%;
+  max-width: var(--rm-container);
+  margin: 0 auto;
+  padding: 0 var(--rm-gutter);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --rm-gutter: 24px;
+    --rm-section-y: 60px;
+  }
+}

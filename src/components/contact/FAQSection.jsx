@@ -33,7 +33,7 @@ const FAQSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           
           {/* Left Side: FAQ Content */}
-          <Card className="mt-0 p-6 md:p-8 shadow-sm">
+          <Card className="mt-0 p-6 md:p-8 shadow-sm !bg-[#F7F3EA] border border-[#DED7C9]">
             <Eyebrow>Frequently Asked Questions</Eyebrow>
             <div className="mt-2.5">
               {faqs.map((faq, index) => (
@@ -42,13 +42,13 @@ const FAQSection = () => {
             </div>
           </Card>
 
-          {/* Right Side: Rounded Unsplash Image */}
-          <div className="w-full h-full min-h-[350px] md:min-h-[400px] rounded-2xl overflow-hidden shadow-sm">
+          {/* Right Side: Rounded contact image */}
+          <div className="w-full aspect-[813/427] rounded-2xl overflow-hidden shadow-sm border border-[#DED7C9]">
             <img
-              src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="People supporting each other in a circle"
+              src="/contact/cup.webp"
+              alt="A comforting cup representing care and support"
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain bg-[#F7F3EA]"
             />
           </div>
 

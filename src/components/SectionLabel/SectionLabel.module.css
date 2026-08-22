@@ -1,0 +1,41 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.label {
+  font-family: var(--rm-font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rm-gold);
+  line-height: 1;
+}
+
+.line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--rm-gold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .label {
+    font-size: 12px;
+  }
+
+  .line {
+    width: 28px;
+  }
+}

@@ -2,6 +2,7 @@ import ProgramsHero from '../components/programs/ProgramsHero';
 import { FaHandHoldingHeart } from 'react-icons/fa';
 import FocusAreas from '../components/programs/FocusAreas';
 import ProgramsList from '../components/programs/ProgramsList';
+import StrongerMindsBanner from '../components/programs/StrongerMindsBanner';
 import ProgramsCTA from '../components/programs/ProgramCTA';
 import Container from '../components/ui/Container';
 import Grid from '../components/ui/Grid';
@@ -42,6 +43,7 @@ const ProgramsPage = () => {
       </section>
       <FocusAreas />
       <ProgramsList />
+      <StrongerMindsBanner />
       <ProgramsCTA />
     </>
   );
