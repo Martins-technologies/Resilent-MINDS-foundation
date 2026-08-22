@@ -64,7 +64,7 @@
 }
 
 .outlineForest {
-  background: rgba(254, 249, 242, 0.72);
+  background: transparent;
   color: var(--rm-forest);
   border-color: var(--rm-forest);
 }

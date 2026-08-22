@@ -18,7 +18,7 @@ const ContactForm = () => {
 
     const formData = new FormData(e.target);
     const templateParams = {
-      from_name: formData.get('first-name') + ' ' + formData.get('last-name'),
+      from_name: formData.get('full-name'),
       from_email: formData.get('email'),
       phone: formData.get('phone'),
       message: formData.get('message'),
@@ -46,33 +46,19 @@ const ContactForm = () => {
       <p className="text-sm mb-4 text-gray-600">Fill out the form below and we will get back to you as soon as possible.</p>
       
       <form onSubmit={handleSubmit} noValidate>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-3.5">
-          <div className="form-field">
-            <label htmlFor="first-name" className="block text-xs font-semibold text-[#2E5D49] mb-1">
-              First Name
-            </label>
-            <input
-              id="first-name"
-              name="first-name"
-              type="text"
-              autoComplete="given-name"
-              required
-              className="w-full px-3 py-2 border border-[#D8D0C2] rounded-lg font-body text-sm bg-[#F7F3EA] focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="last-name" className="block text-xs font-semibold text-[#2E5D49] mb-1">
-              Last Name
-            </label>
-            <input
-              id="last-name"
-              name="last-name"
-              type="text"
-              autoComplete="family-name"
-              required
-              className="w-full px-3 py-2 border border-[#D8D0C2] rounded-lg font-body text-sm bg-[#F7F3EA] focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
-            />
-          </div>
+        <div className="form-field mb-3.5">
+          <label htmlFor="full-name" className="sr-only">
+            Full Name
+          </label>
+          <input
+            id="full-name"
+            name="full-name"
+            type="text"
+            autoComplete="name"
+            placeholder="Full Name"
+            required
+            className="w-full px-3 py-2 border border-[#D8D0C2] rounded-lg font-body text-sm bg-[#F7F3EA] placeholder:text-[#8A8172] focus:outline-none focus:ring-2 focus:ring-[#C79949] focus:border-[#C79949]"
+          />
         </div>
         
         <div className="form-field mb-3.5">

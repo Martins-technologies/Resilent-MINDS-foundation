@@ -1,5 +1,4 @@
 import styles from './CoreValues.module.css';
-import Eyebrow from '../ui/Eyebrow';
 
 const VALUES = [
   {
@@ -20,12 +19,12 @@ const VALUES = [
   {
     title: 'Inclusion',
     desc: 'We create safe spaces where everyone feels valued, respected, and supported.',
-    logo: '/empowerment.webp',
+    logo: '/empowermenet.svg',
   },
   {
     title: 'Hope',
     desc: 'We believe hope is the foundation for healing, transformation, and positive change.',
-    logo: '/hope.svg',
+    logo: '/star.jpeg',
   },
   {
     title: 'Community',
@@ -38,9 +37,6 @@ const CoreValues = () => {
   return (
     <section className={styles.section} aria-label="Core values">
       <div className="rm-container">
-        <div className={styles.header}>
-          <Eyebrow>Our Core Values</Eyebrow>
-        </div>
         <ul className={styles.row}>
           {VALUES.map((value, index) => (
             <li key={value.title} className={styles.item}>

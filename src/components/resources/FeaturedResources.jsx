@@ -78,10 +78,10 @@ const FeaturedResources = () => {
                 
                 <div className="absolute bottom-3 left-3 z-10">
                   <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center shadow-md"
+                    className="w-11 h-11 rounded-full flex items-center justify-center shadow-md"
                     style={{ backgroundColor: res.badgeColor }}
                   >
-                    <img src={res.badgeIcon} alt={res.tag} className="w-5 h-5 object-contain" />
+                    <img src={res.badgeIcon} alt={res.tag} className="w-7 h-7 object-contain" />
                   </div>
                 </div>
               </div>

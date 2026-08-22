@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-
-const LOGO_SRC = '/finallogo.webp';
+import { BRAND_LOGO_ALT, BRAND_LOGO_SRC } from '../../assets/brandLogo';
 
 const Footer = () => {
   const footerLinks = {
@@ -43,7 +42,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1.5">
             <Link to="/" className="flex items-center gap-2.5">
-              <img src={LOGO_SRC} alt="Resilient Minds Foundation logo" className="h-20 w-auto object-contain" />
+              <img src={BRAND_LOGO_SRC} alt={BRAND_LOGO_ALT} className="h-20 w-auto object-contain bg-[#FEF9F2] rounded-md p-1" />
             </Link>
             <div className="text-[#c9d6cf] text-sm mt-3 max-w-sm">
               Empowering individuals and communities with the support, education, and resources to build resilience and create hopeful futures.

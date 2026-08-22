@@ -32,8 +32,22 @@ const CommunityImpact = () => {
     <section className="section section--band pt-0">
       <Container>
         <div className="text-center mb-10">
-          <h2 className="mb-1">Community Impact</h2>
-          <p className="mb-0">Measured across our programs and outreach.</p>
+          <div className="flex items-center justify-center gap-4 mb-1">
+            <span
+              className="w-12 sm:w-20 h-[1px] bg-gold opacity-60"
+              aria-hidden="true"
+            />
+            <h2 className="mb-0 whitespace-nowrap text-2xl md:text-3xl">
+              Community Impact
+            </h2>
+            <span
+              className="w-12 sm:w-20 h-[1px] bg-gold opacity-60"
+              aria-hidden="true"
+            />
+          </div>
+          <p className="mb-0 text-sm">
+            Measured across our programs and outreach.
+          </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {items.map(({ Icon, bg, label }) => (

@@ -61,8 +61,9 @@ const WhoWeHelpCTA = () => {
               <div className="w-[72px] h-[72px] rounded-full bg-[#C79949] flex items-center justify-center shadow-lg flex-shrink-0">
                 <img
                   src="/whowehelp/heart.svg"
-                  alt="Heart icon"
-                  className="w-9 h-9 invert brightness-0 invert"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-12 w-12 object-contain"
                 />
               </div>
 

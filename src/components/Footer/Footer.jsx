@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { BRAND_LOGO_ALT, BRAND_LOGO_SRC } from '../../assets/brandLogo';
 import IconFacebook from '../icons/IconFacebook';
 import IconInstagram from '../icons/IconInstagram';
 import IconLinkedIn from '../icons/IconLinkedIn';
@@ -67,8 +68,8 @@ const Footer = () => {
         <div className={styles.brand}>
           <Link to="/" className={styles.logoLink} aria-label="Resilient Minds Foundation home">
             <img
-              src="/finallogo.webp"
-              alt="Resilient Minds Foundation"
+              src={BRAND_LOGO_SRC}
+              alt={BRAND_LOGO_ALT}
               className={styles.logo}
               width={220}
               height={88}

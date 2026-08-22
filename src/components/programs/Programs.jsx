@@ -41,8 +41,8 @@ const PROGRAMS = [
     desc: 'Guides, tools and resources for everyday resilience.',
     to: '/resources',
     cta: 'Explore Resources',
-    image: '/hope.svg',
-    alt: 'Hope Resource Hub icon',
+    image: '/test.webp',
+    alt: 'A small green sprout growing in soil during golden hour',
   },
 ];
 
@@ -69,7 +69,6 @@ const Programs = () => {
                 src={program.image}
                 alt={program.alt}
                 className={styles.image}
-                style={program.image.endsWith('.svg') ? { objectFit: 'contain', padding: '24px', background: '#fff' } : undefined}
                 width={400}
                 height={300}
               />

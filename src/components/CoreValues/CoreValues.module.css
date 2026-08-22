@@ -1,11 +1,6 @@
 .section {
   background: var(--rm-ivory);
-  padding: 40px 0 56px;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 36px;
+  padding: 5% 0 56px;
 }
 
 .row {
@@ -86,7 +81,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 28px 0 36px;
+    padding: 5% 0 36px;
   }
 
   .row {

@@ -23,16 +23,28 @@ const ResourcesCTA = () => {
           }}
         />
 
-        {/* Content centered inside the green (left) half */}
-        <div className="relative z-10 flex items-center justify-center h-full min-h-[220px] py-10 w-1/2 mx-0">
-          <div className="text-center px-8 md:px-12">
-            <h2 style={{ color: '#F5EFE4' }} className="font-bold text-2xl md:text-3xl lg:text-[2rem] leading-tight mb-3 drop-shadow-sm">
+        {/* Content left-aligned inside the green (left) half */}
+        <div className="relative z-10 flex items-center h-full min-h-[220px] py-10 w-full md:w-1/2">
+          <div className="text-left pl-16 pr-6 sm:pl-20 md:pl-24 lg:pl-28">
+            <h2
+              style={{ color: '#FFFFFF' }}
+              className="font-heading font-bold text-2xl md:text-3xl lg:text-[2.125rem] leading-tight mb-3 drop-shadow-sm"
+            >
               You are not alone.
             </h2>
-            <p style={{ color: '#EDE5D6' }} className="text-sm md:text-base leading-relaxed mb-6 max-w-[260px] mx-auto drop-shadow-sm">
-              Whether you&rsquo;re looking to learn, heal, or help someone else, these resources are here for you.
+            <p
+              style={{ color: '#FFFFFF' }}
+              className="text-sm md:text-[15px] leading-relaxed mb-6 drop-shadow-sm"
+            >
+              <span className="md:whitespace-nowrap">
+                Whether you&rsquo;re looking to learn, heal, or help
+              </span>
+              {' '}
+              <span className="md:block">
+                someone else, these resources are here for you.
+              </span>
             </p>
-            <Button variant="gold" to="/contact" className="rounded-xl">
+            <Button variant="gold" to="/contact" className="rounded-xl !text-white">
               Get Support Now →
             </Button>
           </div>

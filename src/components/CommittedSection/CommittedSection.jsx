@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import IconCalendar from '../icons/IconCalendar';
 import IconHeart from '../icons/IconHeart';
-import IconLeafDecor from '../icons/IconLeafDecor';
 import IconPeople from '../icons/IconPeople';
 import IconSupportMission from '../icons/IconSupportMission';
 import styles from './CommittedSection.module.css';
@@ -32,11 +31,15 @@ const STATS = [
 const CommittedSection = () => {
   return (
     <section className={styles.section} aria-label="Our commitment and impact">
-      <div className={styles.inner}>
+      <img
+        src="/about-committed.png"
+        alt=""
+        className={styles.bg}
+        aria-hidden="true"
+      />
 
-        {/* ── Left: cream panel ── */}
+      <div className={styles.inner}>
         <div className={styles.left}>
-          <IconLeafDecor className={styles.leaf} color="#2E5D49" opacity={0.12} />
           <div className={styles.leftContent}>
             <h2 className={styles.heading}>
               We are committed to building resilient minds and stronger
@@ -48,19 +51,8 @@ const CommittedSection = () => {
           </div>
         </div>
 
-        {/* ── Center: circular image with gold ring ── */}
-        <div className={styles.center} aria-hidden="true">
-          <div className={styles.ring} />
-          <div className={styles.circle}>
-            <img
-              src="/test.webp"
-              alt="A seedling growing from soil symbolising hope and growth"
-              className={styles.circleImg}
-            />
-          </div>
-        </div>
+        <div className={styles.center} aria-hidden="true" />
 
-        {/* ── Right: dark green impact panel ── */}
         <div className={styles.right}>
           <span className={styles.impactLabel}>Our Impact</span>
           <div className={styles.statsRow}>
@@ -77,7 +69,6 @@ const CommittedSection = () => {
             are privileged to serve.
           </p>
         </div>
-
       </div>
     </section>
   );

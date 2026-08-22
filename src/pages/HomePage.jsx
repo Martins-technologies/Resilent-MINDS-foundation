@@ -4,7 +4,6 @@ import Hero from '../components/Hero/Hero';
 import Impact from '../components/Impact/Impact';
 import Programs from '../components/Programs/Programs';
 import StoriesOfStrength from '../components/StoriesOfStrength/StoriesOfStrength';
-import SupportBanner from '../components/SupportBanner/SupportBanner';
 import WhyWeExist from '../components/WhyWeExist/WhyWeExist';
 
 const HomePage = () => {
@@ -17,7 +16,6 @@ const HomePage = () => {
       <Impact />
       <StoriesOfStrength />
       <GetInvolved />
-      <SupportBanner />
     </>
   );
 };

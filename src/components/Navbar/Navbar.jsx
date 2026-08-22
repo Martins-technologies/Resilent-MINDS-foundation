@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { BRAND_LOGO_ALT, BRAND_LOGO_SRC } from '../../assets/brandLogo';
 import Button from '../Button/Button';
 import IconClose from '../icons/IconClose';
 import IconMenu from '../icons/IconMenu';
@@ -33,8 +34,8 @@ const Navbar = () => {
       <div className={styles.inner}>
         <Link to="/" className={styles.logoLink} onClick={close}>
           <img
-            src="/finallogo.webp"
-            alt="Resilient Minds Foundation"
+            src={BRAND_LOGO_SRC}
+            alt={BRAND_LOGO_ALT}
             className={styles.logo}
             width={220}
             height={88}
@@ -57,10 +58,10 @@ const Navbar = () => {
         </nav>
 
         <div className={styles.actions}>
-          <Button to="/contact" variant="outline" size="sm">
+          <Button to="/contact" variant="outlineForest" size="sm" className={styles.navBtn}>
             Get Support
           </Button>
-          <Button to="/get-involved" variant="primary" size="sm" heart>
+          <Button to="/get-involved" variant="primary" size="sm" className={styles.navBtn}>
             Donate
           </Button>
         </div>
@@ -98,10 +99,10 @@ const Navbar = () => {
             ))}
           </nav>
           <div className={styles.mobileActions}>
-            <Button to="/contact" variant="outline" size="md" onClick={close}>
+            <Button to="/contact" variant="outlineForest" size="md" className={styles.navBtn} onClick={close}>
               Get Support
             </Button>
-            <Button to="/get-involved" variant="primary" size="md" heart onClick={close}>
+            <Button to="/get-involved" variant="primary" size="md" className={styles.navBtn} onClick={close}>
               Donate
             </Button>
           </div>

@@ -20,14 +20,14 @@ const Hero = () => {
 
       {/* Content layer */}
       <div className={styles.inner}>
-        <IconLeafDecor className={styles.leaf} color="#2E5D49" opacity={0.14} />
+        <IconLeafDecor className={styles.leaf} color="#FEF9F2" opacity={0.18} />
 
         <div className={styles.copy}>
           <h1 className={styles.heading}>
-            Building Minds Stronger.
-            <br />
-            Creating{' '}
-            <span className={styles.accent}>Hopeful</span> Futures.
+            <span className={styles.line}>Building Stronger Minds.</span>
+            <span className={styles.line}>
+              Creating <span className={styles.accent}>Hopeful</span> Futures.
+            </span>
           </h1>
           <p className={styles.body}>
             Every person has the ability to overcome challenges with the right

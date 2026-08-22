@@ -1,4 +1,5 @@
 import { FaBullseye, FaEye } from 'react-icons/fa';
+import IconPlantSprig from '../icons/IconPlantSprig';
 
 const MissionVision = () => {
   return (
@@ -23,17 +24,12 @@ const MissionVision = () => {
         </div>
       </div>
 
-      {/* Flower divider icon — centered between panels */}
-      <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full bg-[#C79949] items-center justify-center shadow-lg overflow-hidden">
-        <img
-          src="/flowericon.jpeg"
-          alt="Flower icon"
-          className="w-full h-full object-cover rounded-full"
-          style={{
-            mixBlendMode: 'multiply',
-            filter: 'brightness(4) saturate(0)',
-          }}
-        />
+      {/* Plant sprig — centered in the gold divider circle */}
+      <div
+        className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full bg-[#C79949] items-center justify-center shadow-lg"
+        aria-hidden="true"
+      >
+        <IconPlantSprig size={36} color="#ffffff" />
       </div>
 
       {/* Vision - Right */}

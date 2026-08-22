@@ -1,112 +1,109 @@
 .section {
-  background: var(--rm-ivory);
-}
-
-.wave {
-  height: 80px;
-  margin-bottom: -1px;
-}
-
-.wave svg {
-  display: block;
-  width: 100%;
-  height: 80px;
+  background: transparent;
 }
 
 .banner {
   position: relative;
-  display: grid;
-  grid-template-columns: 58% 42%;
-  align-items: stretch;
-  min-height: 140px;
-  background: var(--rm-burgundy);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 220px;
   overflow: hidden;
+  background-color: #6e2839;
+  background-image:
+    linear-gradient(
+      to right,
+      #6e2839 0%,
+      #6e2839 42%,
+      rgba(110, 40, 57, 0.78) 58%,
+      rgba(110, 40, 57, 0.28) 78%,
+      transparent 100%
+    ),
+    url('/bottom.webp');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
 .leaf {
   position: absolute;
-  left: -10px;
-  bottom: -20px;
-  width: 200px;
-  height: 240px;
+  left: -16px;
+  bottom: -28px;
+  width: 220px;
+  height: 260px;
   pointer-events: none;
 }
 
 .copy {
   position: relative;
   z-index: 1;
+  width: 58%;
+  margin-left: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 28px 40px 28px 56px;
+  align-items: flex-start;
+  text-align: left;
+  padding: 36px 24px 36px 0;
 }
 
 .heading {
   margin: 0;
   font-family: var(--rm-font-heading);
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--rm-ivory);
+  color: #ffffff;
 }
 
 .body {
-  margin: 10px 0 16px;
-  max-width: 480px;
+  margin: 12px 0 20px;
+  max-width: 460px;
   font-family: var(--rm-font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.55;
-  color: rgba(254, 249, 242, 0.85);
-}
-
-.media {
-  min-height: 140px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 22%);
-  mask-image: linear-gradient(to right, transparent 0%, #000 22%);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 @media (max-width: 1024px) {
   .banner {
-    grid-template-columns: 1fr;
-    min-height: 0;
+    min-height: 240px;
+    background-image:
+      linear-gradient(
+        to bottom,
+        #6e2839 0%,
+        #6e2839 48%,
+        rgba(110, 40, 57, 0.7) 68%,
+        rgba(110, 40, 57, 0.25) 88%,
+        transparent 100%
+      ),
+      url('/bottom.webp');
+    background-position: center bottom;
   }
 
   .copy {
-    padding: 36px 40px 28px;
+    width: 100%;
+    margin-left: 0;
+    align-items: center;
     text-align: center;
+    padding: 40px 32px 160px;
   }
 
   .heading {
-    font-size: 26px;
-  }
-
-  .body {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .media {
-    min-height: 180px;
-    height: 180px;
-    -webkit-mask-image: linear-gradient(transparent, #000 24%);
-    mask-image: linear-gradient(transparent, #000 24%);
+    font-size: 28px;
   }
 }
 
 @media (max-width: 768px) {
   .copy {
-    padding: 28px 24px 20px;
+    padding: 32px 20px 140px;
   }
 
   .heading {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .body {
-    font-size: 13px;
+    font-size: 14px;
   }
 }

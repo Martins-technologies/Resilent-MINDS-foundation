@@ -63,22 +63,10 @@ const MeasureImpact = () => {
     <>
       <section className="section pt-0 overflow-hidden">
         <Container>
-          <div className="flex flex-col lg:flex-row gap-10 items-stretch">
-
-            {/* Left — image panel */}
-            <div className="flex-shrink-0 w-full lg:w-64 xl:w-72 rounded-2xl overflow-hidden shadow-md min-h-[260px]">
-              <img
-                src="/impact/5 (2).webp"
-                alt="Community members in conversation"
-                loading="lazy"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-
-            {/* Right — heading + stat cards */}
-            <div className="flex-1 flex flex-col justify-center">
+          <div>
+            <div className="flex flex-col justify-center">
               {/* Section heading */}
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center justify-center gap-4 mb-8">
                 <div className="flex-shrink-0 w-10 h-[1px] bg-gold opacity-60" />
                 <h2 className="mb-0 whitespace-nowrap text-2xl md:text-3xl">
                   How We Measure Impact
@@ -86,20 +74,20 @@ const MeasureImpact = () => {
                 <div className="flex-shrink-0 w-10 h-[1px] bg-gold opacity-60" />
               </div>
 
-              {/* Stat cards — 2 cols on mobile, 3 on sm, 5 on lg */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+              {/* Horizontal stat cards — icon left, label right */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
                 {STATS.map(({ Icon, bg, iconColor, label }) => (
                   <div
                     key={label}
-                    className="card flex flex-col items-center text-center gap-3 py-5 px-3"
+                    className="card min-h-[112px] flex flex-row items-center gap-3 py-4 px-3 text-left"
                   >
                     <div
                       className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
                       style={{ backgroundColor: bg }}
                     >
-                      <Icon size={22} color={iconColor} strokeWidth={1.6} />
+                      <Icon size={25} color={iconColor} strokeWidth={1.6} />
                     </div>
-                    <p className="text-xs font-semibold text-ink leading-snug mb-0">
+                    <p className="flex-1 text-xs font-semibold text-ink leading-snug mb-0">
                       {label}
                     </p>
                   </div>

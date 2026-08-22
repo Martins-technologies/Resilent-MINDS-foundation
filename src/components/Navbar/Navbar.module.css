@@ -67,6 +67,12 @@
   flex-shrink: 0;
 }
 
+.navBtn {
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  font-weight: 700;
+}
+
 .menuBtn {
   display: none;
   background: none;
