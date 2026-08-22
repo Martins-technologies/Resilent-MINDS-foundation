@@ -1,5 +1,10 @@
 import Container from '../ui/Container';
 import { Link } from 'react-router-dom';
+import {
+  FaChalkboardTeacher,
+  FaHandHoldingHeart,
+  FaUsers,
+} from 'react-icons/fa';
 
 const WaysToHelp = () => {
   const ways = [
@@ -56,15 +61,42 @@ const WaysToHelp = () => {
         </div>
 
         <div
-          className="w-full rounded-2xl mb-10 overflow-hidden"
+          className="w-full rounded-2xl mb-10 overflow-hidden px-5 py-7 sm:pl-[29%] sm:pr-8"
           style={{
             backgroundImage: "url('/get%20involved/banner.webp')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            minHeight: '160px',
+            minHeight: '220px',
           }}
-          aria-hidden="true"
-        />
+        >
+          <h3 className="mb-5 text-center text-xl font-bold leading-tight text-white sm:text-left md:text-2xl">
+            Your involvement creates real change.
+            <br />
+            Stronger minds. Brighter futures.
+          </h3>
+
+          <div className="grid grid-cols-2 gap-y-5 sm:grid-cols-4 sm:gap-0">
+            {[
+              { icon: FaUsers, number: '1,000+', label: 'People Reached' },
+              { icon: FaChalkboardTeacher, number: '100+', label: 'Workshops Delivered' },
+              { icon: FaHandHoldingHeart, number: '50+', label: 'Community Volunteers' },
+              { icon: FaUsers, number: 'Countless', label: 'Lives Encouraged' },
+            ].map((stat, index) => (
+              <div
+                key={stat.label}
+                className={`flex flex-col items-center px-2 text-center ${
+                  index > 0 ? 'sm:border-l sm:border-white/30' : ''
+                }`}
+              >
+                <stat.icon className="mb-1 text-2xl text-[#C79949]" aria-hidden="true" />
+                <strong className="font-heading text-xl text-[#C79949] md:text-2xl">
+                  {stat.number}
+                </strong>
+                <span className="mt-1 text-xs leading-snug text-white">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
         
         <div className="card bg-[#FEF9F2] involved-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 relative">
           {ways.map((way, index) => (

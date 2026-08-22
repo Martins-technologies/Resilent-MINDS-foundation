@@ -8,8 +8,6 @@ const ContactHero = () => {
       aria-label="Contact Us hero"
       style={{ backgroundImage: "url('/contact/hero.webp')" }}
     >
-      <div className={styles.overlay} />
-
       <div className={styles.inner}>
         <div className={styles.copy}>
           <span className="eyebrow block mb-5">

@@ -8,8 +8,6 @@ const GetInvolvedHero = () => {
       aria-label="Get Involved hero"
       style={{ backgroundImage: "url('/get%20involved/hero.webp')" }}
     >
-      <div className={styles.overlay} />
-
       <div className={styles.inner}>
         <div className={styles.copy}>
           <span className="eyebrow block mb-5">

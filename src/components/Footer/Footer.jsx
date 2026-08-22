@@ -3,6 +3,7 @@ import IconFacebook from '../icons/IconFacebook';
 import IconInstagram from '../icons/IconInstagram';
 import IconLinkedIn from '../icons/IconLinkedIn';
 import IconYouTube from '../icons/IconYouTube';
+import IconLeafDecor from '../icons/IconLeafDecor';
 import styles from './Footer.module.css';
 
 const COLUMNS = [
@@ -27,7 +28,7 @@ const COLUMNS = [
     ],
   },
   {
-    title: 'Support',
+    title: 'Get Involved',
     links: [
       { to: '/get-involved', label: 'Volunteer' },
       { to: '/get-involved', label: 'Become a Mentor' },
@@ -37,12 +38,12 @@ const COLUMNS = [
     ],
   },
   {
-    title: 'Connect',
+    title: 'Support',
     links: [
-      { to: '/contact', label: 'Contact Us' },
-      { to: '/contact', label: 'Get Support' },
+      { to: '/contact', label: 'Find Support' },
       { to: '/resources', label: 'Resources' },
       { to: '/get-involved', label: 'Donate' },
+      { to: '/contact', label: 'Contact Us' },
     ],
   },
 ];
@@ -60,10 +61,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} aria-label="Site footer">
+      <IconLeafDecor className={styles.leaf} color="#C79949" opacity={0.16} />
       <div className={`rm-container ${styles.top}`}>
         <div className={styles.brand}>
-          <Link to="/" className={styles.logoLink}>
+          <Link to="/" className={styles.logoLink} aria-label="Resilient Minds Foundation home">
             <img
               src="/finallogo.webp"
               alt="Resilient Minds Foundation"
@@ -72,6 +74,9 @@ const Footer = () => {
               height={88}
             />
           </Link>
+          <p className={styles.brandBody}>
+            Empowering individuals and communities with the support, education, and resources to build resilience and create hopeful futures.
+          </p>
           <div className={styles.social}>
             {SOCIAL.map((item) => (
               <a
@@ -80,7 +85,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialBtn}
-                aria-label={item.label}
+                aria-label={`Visit Resilient Minds on ${item.label}`}
               >
                 <item.Icon size={16} color="#FFFFFF" />
               </a>
@@ -115,12 +120,14 @@ const Footer = () => {
             <input
               id="footer-email"
               type="email"
-              placeholder="Your email"
+              name="email"
+              autoComplete="email"
+              placeholder="Your email address"
               required
               className={styles.input}
             />
-            <button type="submit" className={styles.subscribe}>
-              Subscribe
+            <button type="submit" className={styles.subscribe} aria-label="Subscribe to newsletter">
+              <span aria-hidden="true">→</span>
             </button>
           </form>
         </div>
@@ -128,12 +135,10 @@ const Footer = () => {
 
       <div className={`rm-container ${styles.bottom}`}>
         <p className={styles.copy}>
-          &copy; 2026 Resilient Minds Foundation. All rights reserved.
+          &copy; 2026 Resilient Minds Foundation Charity. All rights reserved.
         </p>
         <p className={styles.tagline}>
-          <span>Stronger Minds</span>
-          <span className={styles.bar}> | </span>
-          <span className={styles.gold}>Brighter Futures</span>
+          <span>Stronger Minds. Brighter Futures.</span>
         </p>
       </div>
     </footer>

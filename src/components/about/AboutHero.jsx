@@ -8,8 +8,6 @@ const AboutHero = () => {
       aria-label="About Us hero"
       style={{ backgroundImage: "url('/abouthero.jpeg')" }}
     >
-      <div className={styles.overlay} />
-
       <div className={styles.inner}>
         <div className={styles.copy}>
           <h1 className="mb-2 font-heading font-bold text-forest leading-tight text-4xl md:text-5xl lg:text-[3.25rem]">

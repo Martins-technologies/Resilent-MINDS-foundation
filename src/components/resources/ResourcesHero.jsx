@@ -8,8 +8,6 @@ const ResourcesHero = () => {
       aria-label="Resources hero"
       style={{ backgroundImage: "url('/Resources/hero.webp')" }}
     >
-      <div className={styles.overlay} />
-
       <div className={styles.inner}>
         <div className={styles.copy}>
           <span className="eyebrow block mb-5">

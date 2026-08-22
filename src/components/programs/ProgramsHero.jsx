@@ -8,9 +8,6 @@ const ProgramsHero = () => {
       aria-label="Programs hero"
       style={{ backgroundImage: "url('/PROGRAME updated/programhero.jpeg')" }}
     >
-      {/* Image already includes the cream curve; overlay only on mobile for text contrast */}
-      <div className={`${styles.overlay} md:hidden`} />
-
       <div className={styles.inner}>
         <div className={styles.copy}>
           <span className="eyebrow block mb-5">

@@ -8,8 +8,6 @@ const ImpactHero = () => {
       aria-label="Impact hero"
       style={{ backgroundImage: "url('/impact/hero.webp')" }}
     >
-      <div className={styles.overlay} />
-
       <div className={styles.inner}>
         <div className={styles.copy}>
           <span className="eyebrow block mb-5">
