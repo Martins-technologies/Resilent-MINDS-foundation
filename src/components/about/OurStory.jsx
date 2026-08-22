@@ -1,5 +1,4 @@
 import Eyebrow from '../ui/Eyebrow';
-import { FaHeart } from 'react-icons/fa';
 
 const OurStory = () => {
   return (
@@ -20,14 +19,9 @@ const OurStory = () => {
           <p className="mb-5 text-gray-700">
             We are committed to creating environments where people feel heard, supported, and empowered to move forward.
           </p>
-          <div className="flex items-center gap-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-burgundy flex items-center justify-center text-burgundy">
-              <FaHeart className="text-sm" />
-            </div>
-            <p className="font-bold text-xl text-burgundy leading-snug">
-              Because resilient minds create stronger individuals, stronger families, and stronger communities.
-            </p>
-          </div>
+          <p className="font-bold text-xl text-burgundy leading-snug">
+            Because resilient minds create stronger individuals, stronger families, and stronger communities.
+          </p>
         </div>
       </div>
 
