@@ -1,79 +1,83 @@
 import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
-import {
-  FaHandHoldingHeart,
-  FaUserFriends,
-  FaBullhorn,
-  FaHandshake,
-  FaGift,
-  FaTree,
-} from 'react-icons/fa';
 
 const GetInvolvedCTA = () => {
-  const links = [
-    { icon: FaHandHoldingHeart, color: '#2E5D49', title: 'Volunteer', sub: 'Give your time', to: '/contact' },
-    { icon: FaUserFriends, color: '#6E2839', title: 'Become a Mentor', sub: '', to: '/contact' },
-    { icon: FaBullhorn, color: '#C79949', title: 'Be a Community Ambassador', sub: '', to: '/contact' },
-    { icon: FaHandshake, color: '#2E5D49', title: 'Partner With Us', sub: '', to: '/contact' },
-    { icon: FaGift, color: '#6E2839', title: 'Donate Today', sub: '', to: '/get-involved' },
-  ];
-
   return (
     <>
-      <section className="section">
+      {/* Your Support Creates Hope */}
+      <section className="relative overflow-hidden bg-[#6E2839] py-14 md:py-16">
+
+        {/* decorative leaf — left edge */}
+        <img
+          src="/GREEN VECTOR.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute left-0 top-0 h-full w-40 object-cover object-left opacity-20 pointer-events-none select-none"
+        />
+
         <Container>
-          <div className="text-center mb-10">
-            <h2 className="mb-1">Ready to make a difference?</h2>
-            <p className="mb-0">Choose the way that&rsquo;s right for you and start making an impact today.</p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {links.map((link, index) => (
+          <div className="relative flex flex-col md:flex-row items-center gap-10 md:gap-16">
+
+            {/* Left — text + CTA */}
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-white mb-3 text-3xl md:text-4xl font-bold leading-tight">
+                Your Support Creates Hope
+              </h2>
+              <p className="text-white/80 mb-8 text-base md:text-lg leading-relaxed">
+                Help us reach more people, expand programs and deliver resources where they're needed most.
+              </p>
               <Link
-                key={index}
-                to={link.to}
-                className="card text-center hover:shadow-lg transition-shadow duration-300 no-underline"
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-[#C79949] text-white font-semibold px-7 py-3 rounded-full hover:opacity-90 transition-opacity shadow-md"
               >
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2.5"
-                  style={{ backgroundColor: link.color }}
-                >
-                  <link.icon className="text-white text-base" />
-                </div>
-                <p className="text-xs font-semibold text-ink mb-0">{link.title}</p>
-                {link.sub && <p className="text-[10px] text-ink-soft mb-0">{link.sub}</p>}
+                <span aria-hidden="true">♡</span>
+                Give Hope Today →
               </Link>
-            ))}
+            </div>
+
+            {/* Right — image */}
+            <div className="w-full md:w-[380px] flex-shrink-0">
+              <img
+                src="/get%20involved/Untitled-2-01%20(1).webp"
+                alt="Hands holding a seedling — a symbol of hope and growth"
+                className="w-full h-64 md:h-72 object-cover rounded-2xl shadow-xl"
+              />
+            </div>
+
           </div>
         </Container>
       </section>
 
+      {/* Bottom action strip */}
       <section className="section section--burgundy py-8">
         <Container>
           <div className="flex flex-col md:flex-row justify-between items-center gap-5">
 
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#C79949] flex items-center justify-center text-white shadow-md flex-shrink-0">
-                <FaTree size={20} />
+              <div className="w-12 h-12 rounded-full bg-[#C79949] flex items-center justify-center shadow-md flex-shrink-0">
+                <img
+                  src="/get%20involved/action.svg"
+                  alt=""
+                  aria-hidden="true"
+                  className="w-6 h-6 object-contain"
+                />
               </div>
-              <div>
-                <h4 className="text-white mb-1">Every action counts. Every person matters.</h4>
-              </div>
+              <h4 className="text-white mb-0">Every action counts. Every person matters.</h4>
             </div>
-            <div className="hidden md:block w-[1px] h-12 bg-white/30"></div>
 
-            <div>
-              <p className="mb-0 text-white/90">Together, we can build stronger minds and stronger communities.</p>
-            </div>
+            <div className="hidden md:block w-[1px] h-12 bg-white/30" />
+
+            <p className="mb-0 text-white/90">
+              Together, we can build stronger minds and stronger communities.
+            </p>
 
             <Link
               to="/get-involved"
-              className="rounded-xl bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#6E2839] transition-colors px-5 py-2 inline-block font-semibold"
+              className="rounded-xl bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#6E2839] transition-colors px-5 py-2 inline-block font-semibold whitespace-nowrap"
             >
-              <span className="flex items-center gap-1 whitespace-nowrap">
-                Donate Now
-                <span>→</span>
-              </span>
+              Donate Now →
             </Link>
+
           </div>
         </Container>
       </section>

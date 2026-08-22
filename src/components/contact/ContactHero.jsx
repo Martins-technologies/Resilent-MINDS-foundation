@@ -6,7 +6,7 @@ const ContactHero = () => {
     <section
       className={styles.section}
       aria-label="Contact Us hero"
-      style={{ backgroundImage: "url('/contacthero.jpeg')" }}
+      style={{ backgroundImage: "url('/contact/hero.webp')" }}
     >
       <div className={styles.overlay} />
 

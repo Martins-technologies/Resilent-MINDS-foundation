@@ -6,7 +6,7 @@ const ResourcesHero = () => {
     <section
       className={styles.section}
       aria-label="Resources hero"
-      style={{ backgroundImage: "url('/resourceshero.jpeg')" }}
+      style={{ backgroundImage: "url('/Resources/hero.webp')" }}
     >
       <div className={styles.overlay} />
 

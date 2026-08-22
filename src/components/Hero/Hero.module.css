@@ -59,26 +59,24 @@
   pointer-events: none;
 }
 
-/* ─── Text block — width driven by content, not a fixed cap ─── */
+/* ─── Text block — constrained to left ~45% so photo stays visible ─── */
 .copy {
   position: relative;
   z-index: 1;
+  max-width: 520px;
+  width: 45%;
 }
 
 /* ─── Heading — each phrase stays on exactly one line ─── */
 .heading {
   margin: 0;
   font-family: var(--rm-font-heading);
-  font-size: 58px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.1;
   color: #1b3b31;
   letter-spacing: -0.5px;
-  white-space: nowrap; /* prevents mid-phrase wrapping */
-}
-
-.phrase {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 /* ─── "Hopeful" — gold italic ─── */
@@ -183,8 +181,12 @@
     height: 270px;
   }
 
+  .copy {
+    width: 52%;
+  }
+
   .heading {
-    font-size: 44px;
+    font-size: 36px;
   }
 
   .script {
@@ -235,6 +237,7 @@
 
   .copy {
     max-width: 100%;
+    width: 100%;
   }
 
   .heading {

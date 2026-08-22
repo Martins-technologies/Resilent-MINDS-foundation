@@ -6,7 +6,7 @@ const GetInvolvedHero = () => {
     <section
       className={styles.section}
       aria-label="Get Involved hero"
-      style={{ backgroundImage: "url('/getinvolvedhero.jpeg')" }}
+      style={{ backgroundImage: "url('/get%20involved/hero.webp')" }}
     >
       <div className={styles.overlay} />
 

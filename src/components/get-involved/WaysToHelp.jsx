@@ -1,17 +1,10 @@
 import Container from '../ui/Container';
 import { Link } from 'react-router-dom';
-import {
-  FaHandHoldingHeart,
-  FaUserFriends,
-  FaBullhorn,
-  FaHandshake,
-  FaGift,
-} from 'react-icons/fa';
 
 const WaysToHelp = () => {
   const ways = [
     {
-      icon: FaHandHoldingHeart,
+      icon: '/get%20involved/volunterr.svg',
       color: '#2E5D49',
       title: 'Volunteer',
       desc: 'Give your time and talents to support our programs, events, and initiatives.',
@@ -19,7 +12,7 @@ const WaysToHelp = () => {
       link: 'Volunteer With Us →',
     },
     {
-      icon: FaUserFriends,
+      icon: '/get%20involved/becomeamentor.svg',
       color: '#6E2839',
       title: 'Become a Mentor',
       desc: 'Inspire and guide individuals on their journey to resilience and personal growth.',
@@ -27,7 +20,7 @@ const WaysToHelp = () => {
       link: 'Learn More →',
     },
     {
-      icon: FaBullhorn,
+      icon: '/get%20involved/community.svg',
       color: '#C79949',
       title: 'Community Ambassador',
       desc: 'Help raise awareness and connect us with individuals, organizations, and resources.',
@@ -35,7 +28,7 @@ const WaysToHelp = () => {
       link: 'Become an Ambassador →',
     },
     {
-      icon: FaHandshake,
+      icon: '/get%20involved/partner.svg',
       color: '#2E5D49',
       title: 'Partner With Us',
       desc: 'Collaborate with us to expand programs, share resources, and strengthen our communities.',
@@ -43,7 +36,7 @@ const WaysToHelp = () => {
       link: 'Partner With Us →',
     },
     {
-      icon: FaGift,
+      icon: '/get%20involved/sponsor.svg',
       color: '#6E2839',
       title: 'Sponsor a Program',
       desc: 'Your sponsorship helps bring hope and healing to more individuals and families.',
@@ -61,6 +54,17 @@ const WaysToHelp = () => {
             Whether you give your time, share your expertise, or make a donation, you help us create lasting impact in the lives of those who need it most.
           </p>
         </div>
+
+        <div
+          className="w-full rounded-2xl mb-10 overflow-hidden"
+          style={{
+            backgroundImage: "url('/get%20involved/banner.webp')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            minHeight: '160px',
+          }}
+          aria-hidden="true"
+        />
         
         <div className="card bg-[#FEF9F2] involved-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 relative">
           {ways.map((way, index) => (
@@ -74,7 +78,7 @@ const WaysToHelp = () => {
                 className="w-14 h-14 rounded-full flex items-center justify-center mb-3.5"
                 style={{ backgroundColor: way.color }}
               >
-                <way.icon className="text-white text-xl" />
+                <img src={way.icon} alt="" aria-hidden="true" className="w-7 h-7 object-contain" />
               </div>
               <h4 className="mb-2 text-forest">{way.title}</h4>
               <p className="text-sm mb-3">{way.desc}</p>

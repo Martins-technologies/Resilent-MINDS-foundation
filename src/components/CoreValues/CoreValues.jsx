@@ -25,7 +25,7 @@ const VALUES = [
   {
     title: 'Hope',
     desc: 'We believe hope is the foundation for healing, transformation, and positive change.',
-    logo: '/hope.webp',
+    logo: '/hope.svg',
   },
   {
     title: 'Community',
