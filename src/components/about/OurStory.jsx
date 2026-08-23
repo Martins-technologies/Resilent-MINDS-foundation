@@ -31,7 +31,7 @@ const OurStory = () => {
         style={{
           backgroundImage: "url('/aboutourstory.jpeg')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: '65% center',
         }}
       />
     </section>

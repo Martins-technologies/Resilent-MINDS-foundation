@@ -9,7 +9,7 @@ const PROGRAMS = [
     desc: 'Education for emotional intelligence, confidence and wellbeing.',
     to: '/programs',
     cta: 'Learn More',
-    image: '/PROGRAME updated/mind.webp',
+    image: '/books.jpeg',
     alt: 'Students engaged in a classroom learning session',
   },
   {
@@ -17,7 +17,7 @@ const PROGRAMS = [
     desc: 'Mentorship and skills for a brighter tomorrow.',
     to: '/programs',
     cta: 'Learn More',
-    image: '/PROGRAME updated/youth.webp',
+    image: '/youth.webp',
     alt: 'Young people together mentoring outdoors',
   },
   {
@@ -33,7 +33,7 @@ const PROGRAMS = [
     desc: 'Healthier, more resilient workplaces and teams.',
     to: '/programs',
     cta: 'Learn More',
-    image: '/PROGRAME updated/workspace.webp',
+    image: '/laptop.jpeg',
     alt: 'Colleagues collaborating in a healthy workplace',
   },
   {
