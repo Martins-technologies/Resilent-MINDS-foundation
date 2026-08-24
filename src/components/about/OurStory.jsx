@@ -7,7 +7,7 @@ const OurStory = () => {
       style={{ background: '#F8F4ED' }}
     >
       {/* Content — left half */}
-      <div className="w-full max-w-[52%] min-h-[364px] flex items-center px-12 py-10">
+      <div className="relative z-10 w-full max-w-[52%] min-h-[364px] flex items-center px-12 py-10">
         <div className="max-w-[560px]">
           <Eyebrow>Our Story</Eyebrow>
           <h3 className="mb-4 mt-2 text-forest leading-snug">
@@ -25,13 +25,13 @@ const OurStory = () => {
         </div>
       </div>
 
-      {/* Right half — background image, no box overlays */}
+      {/* Background image across the full width */}
       <div
-        className="absolute top-0 right-0 w-[50%] h-full"
+        className="absolute top-0 left-0 w-full h-full z-0"
         style={{
-          backgroundImage: "url('/aboutourstory.jpeg')",
+          backgroundImage: "url('/updated.webp')",
           backgroundSize: 'cover',
-          backgroundPosition: '65% center',
+          backgroundPosition: 'right center',
         }}
       />
     </section>
