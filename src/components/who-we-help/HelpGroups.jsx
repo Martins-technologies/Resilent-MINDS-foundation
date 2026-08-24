@@ -15,6 +15,7 @@ const topGroups = [
     desc: "Helping young people build resilience, confidence, and emotional wellness skills so they can navigate life's challenges with strength.",
     points: ['Emotional resilience', 'Confidence building', 'Healthy coping strategies', 'Leadership & life skills'],
     image: '/whowehelp/youth.webp',
+    objectPosition: 'center 15%',
   },
   {
     icon: FaHome,
@@ -23,6 +24,7 @@ const topGroups = [
     desc: 'Providing education and resources that help families communicate, support one another, and thrive through challenging seasons.',
     points: ['Strengthening relationships', 'Communication tools', 'Parenting & guidance', 'Support during difficult times'],
     image: '/whowehelp/family.webp',
+    objectPosition: 'center 15%',
   },
   {
     icon: FaUser,
@@ -31,6 +33,7 @@ const topGroups = [
     desc: 'Supporting people experiencing loss, uncertainty, stress, change, or other significant life challenges.',
     points: ['Grief & loss support', 'Stress management', 'Life change navigation', 'Emotional wellness support'],
     image: '/whowehelp/girl.webp',
+    objectPosition: 'center 15%',
   },
 ];
 
@@ -50,17 +53,19 @@ const bottomGroups = [
     desc: 'Providing resources and education for those who give so much of themselves to care for and support others.',
     points: ['Caregiver support', 'Self-care resources', 'Support network guidance', 'Education & encouragement'],
     image: '/whowehelp/old.webp',
+    objectPosition: 'center 45%',
   },
 ];
 
 const GroupCard = ({ group, imgHeight = 'h-48' }) => (
   <div className="card overflow-hidden !p-0 flex flex-col h-full">
-    <div className={`relative w-full ${imgHeight} overflow-hidden bg-[#f0f0f0]`}>
+    <div className={`relative w-full ${imgHeight} overflow-hidden bg-white`}>
       <img
         src={group.image}
         alt={group.title}
         loading="lazy"
-        className="w-full h-full object-cover block"
+        className="w-full h-full object-cover block scale-90 rounded-lg"
+        style={{ objectPosition: group.objectPosition || 'center' }}
       />
       <div className="absolute bottom-0 left-0 p-3">
         <div
