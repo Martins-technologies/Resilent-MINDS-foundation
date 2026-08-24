@@ -1,5 +1,4 @@
 import Eyebrow from '../ui/Eyebrow';
-
 const OurStory = () => {
   return (
     <section
@@ -24,7 +23,6 @@ const OurStory = () => {
           </p>
         </div>
       </div>
-
       {/* Background image across the full width */}
       <div
         className="absolute top-0 left-0 w-full h-full z-0"
@@ -37,5 +35,4 @@ const OurStory = () => {
     </section>
   );
 };
-
 export default OurStory;
