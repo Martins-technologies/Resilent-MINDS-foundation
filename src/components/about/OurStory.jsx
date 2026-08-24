@@ -6,11 +6,13 @@ const OurStory = () => {
       style={{ background: '#F8F4ED' }}
     >
       {/* Content — left half */}
-      <div className="relative z-10 w-full max-w-[52%] min-h-[364px] flex items-center px-12 py-10">
+      <div className="relative z-10 w-full max-w-[48%] min-h-[364px] flex items-center pl-6 pr-6 md:pl-8 md:pr-8 lg:pl-10 lg:pr-12 py-10">
         <div className="max-w-[560px]">
           <Eyebrow>Our Story</Eyebrow>
           <h3 className="mb-4 mt-2 text-forest leading-snug">
-            Every journey has moments of struggle. But with the right support, people can rebuild, recover, and rise stronger.
+            Every journey has moments of struggle.<br />
+            But with the right support, people can<br />
+            rebuild, recover, and rise stronger.
           </h3>
           <p className="mb-4 text-gray-700">
             Our foundation works to create pathways of hope by offering education, community programs, emotional wellness resources, and resilience-building initiatives.
