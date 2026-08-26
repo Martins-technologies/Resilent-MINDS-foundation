@@ -5,7 +5,7 @@
   max-height: 560px;
   background: #faf7f2;
   overflow: hidden;
-  margin: calc(-90px - 5.4vh) 0 0;
+  margin: -1px 0 0;
   padding: 0;
   z-index: 1;
 }
@@ -29,13 +29,12 @@
 
 .image {
   display: block;
-  width: 105%;
-  height: 105%;
+  width: 100%;
+  height: 100%;
   max-width: none;
-  margin-left: -2.5%;
   object-fit: cover;
-  object-position: 50% 34%;
-  transform: translateY(7%);
+  object-position: 48% 8%;
+  transform: none;
   -webkit-mask-image: linear-gradient(
     to right,
     #000 48%,
@@ -124,10 +123,10 @@
 
   .image {
     width: 100%;
-    height: 105%;
+    height: 100%;
     margin-left: 0;
-    object-position: 50% 36%;
-    transform: translateY(5%);
+    object-position: 48% 8%;
+    transform: none;
     -webkit-mask-image: linear-gradient(#000 72%, transparent 100%);
     mask-image: linear-gradient(#000 72%, transparent 100%);
   }
