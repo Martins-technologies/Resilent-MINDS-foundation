@@ -12,11 +12,11 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 56px 0 40px;
+  padding: 0 40px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .logoLink {
@@ -26,8 +26,8 @@
 }
 
 .logo {
-  width: 200px;
-  height: 72px;
+  width: 188px;
+  height: 68px;
   object-fit: contain;
   object-position: left center;
 }
@@ -35,16 +35,15 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
-  flex: 1 1 0;
+  justify-content: center;
+  flex: 1 1 auto;
   min-width: 0;
-  margin-left: 0;
+  gap: clamp(10px, 1.15vw, 18px);
 }
 
 .link {
   font-family: var(--rm-font-body);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
   color: var(--rm-forest);
   text-decoration: none;
@@ -52,6 +51,7 @@
   padding: 4px 0 8px;
   border-bottom: 2px solid transparent;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -67,18 +67,17 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 12px;
   flex-shrink: 0;
-  position: relative;
-  z-index: 2;
-  margin-left: 20px;
-  transform: none;
+  gap: 10px;
+  margin-left: 8px;
 }
 
 .navBtn {
   border-radius: 8px !important;
   box-shadow: none !important;
   font-weight: 700;
+  padding: 8px 16px !important;
+  font-size: 13px !important;
 }
 
 .menuBtn {
@@ -86,14 +85,41 @@
   background: none;
   border: none;
   padding: 8px;
+  margin-left: auto;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .mobilePanel {
   display: none;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
+  .inner {
+    gap: 16px;
+    padding: 0 32px;
+  }
+
+  .logo {
+    width: 168px;
+    height: 60px;
+  }
+
+  .nav {
+    gap: 8px;
+  }
+
+  .link {
+    font-size: 12.5px;
+  }
+
+  .navBtn {
+    padding: 7px 14px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 1024px) {
   .header {
     height: auto;
     min-height: 80px;
@@ -113,6 +139,7 @@
   .inner {
     padding: 8px 24px;
     height: 80px;
+    gap: 16px;
   }
 
   .logo {
