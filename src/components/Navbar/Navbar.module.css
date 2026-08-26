@@ -7,14 +7,16 @@
 }
 
 .inner {
+  box-sizing: border-box;
   height: 100%;
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: flex-start;
+  gap: 28px;
 }
 
 .logoLink {
@@ -33,9 +35,11 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 24px;
-  flex: 1;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex: 0 1 auto;
+  min-width: 0;
+  margin-left: 0;
 }
 
 .link {
@@ -63,8 +67,9 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .navBtn {
