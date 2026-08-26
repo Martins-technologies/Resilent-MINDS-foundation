@@ -1,18 +1,21 @@
 .section {
-  background: var(--rm-ivory);
+  background: #faf7f2;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
+  margin-bottom: calc(-88px - 5.4vh);
+  position: relative;
+  z-index: 2;
 }
 
 .banner {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background-color: transparent;
   background-image: url('/GREEN%20VECTOR.webp');
-  background-size: 100% 100%;
+  background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: center;
-  padding: 72px 0 80px;
+  background-position: center bottom;
+  padding: 72px 0 56px;
 }
 
 .inner {

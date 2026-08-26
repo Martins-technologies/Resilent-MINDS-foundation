@@ -11,7 +11,7 @@ const FeaturedResources = () => {
       link: 'Read More →',
       to: '/contact-us',
       image: '/Resources/girl.webp',
-      imagePosition: 'center 60%',
+      imagePosition: 'center 38%',
       badgeIcon: '/Resources/articles.svg',
       badgeColor: '#6E2839',
     },
@@ -69,13 +69,17 @@ const FeaturedResources = () => {
             <div key={index} className="card overflow-hidden !p-0 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               
               {/* Image Wrapper - Full Width */}
-              <div className="relative w-full">
+              <div className="relative w-full overflow-hidden h-40">
                 <img 
                   src={res.image} 
                   alt={res.title}
                   loading="lazy"
-                  className="w-full h-40 object-cover block"
-                  style={res.imagePosition ? { objectPosition: res.imagePosition } : undefined}
+                  className="w-full h-full object-cover block"
+                  style={
+                    res.imagePosition
+                      ? { objectPosition: res.imagePosition }
+                      : undefined
+                  }
                 />
                 
                 <div className="absolute bottom-3 left-3 z-10">
