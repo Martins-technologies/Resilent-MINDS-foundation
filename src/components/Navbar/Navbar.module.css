@@ -12,11 +12,11 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 96px 0 40px;
+  padding: 0 56px 0 40px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 28px;
+  gap: 20px;
 }
 
 .logoLink {
@@ -36,8 +36,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 16px;
-  flex: 0 1 auto;
+  gap: 12px;
+  flex: 1 1 0;
   min-width: 0;
   margin-left: 0;
 }
@@ -69,8 +69,10 @@
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
-  margin-left: auto;
-  transform: translateX(12px);
+  position: relative;
+  z-index: 2;
+  margin-left: 20px;
+  transform: none;
 }
 
 .navBtn {
@@ -91,7 +93,7 @@
   display: none;
 }
 
-@media (max-width: 1179px) {
+@media (max-width: 1280px) {
   .header {
     height: auto;
     min-height: 80px;
