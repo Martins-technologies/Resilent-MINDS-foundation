@@ -1,7 +1,4 @@
-import { Link } from 'react-router-dom';
-import { FaHeart, FaArrowRight } from 'react-icons/fa';
-import { MdOutlineSupportAgent } from 'react-icons/md';
-import { RiMentalHealthLine } from 'react-icons/ri';
+import { FaArrowRight } from 'react-icons/fa';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
@@ -47,19 +44,17 @@ const Hero = () => {
               to="/get-involved"
               className="group px-3 sm:px-4 lg:px-5 py-1 sm:py-1.5 lg:py-2 bg-[#C9A84C] text-white rounded-xl hover:bg-[#B8973A] transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-1 text-[9px] sm:text-xs lg:text-sm"
             >
-              <FaHeart className="text-xs sm:text-sm lg:text-base group-hover:scale-110 transition-transform" />
-              Donate Today
               <FaArrowRight className="text-[9px] sm:text-xs lg:text-sm group-hover:translate-x-1 transition-transform" />
+              Join Our Movement
             </Button>
 
             <Button
               variant="outline"
-              to="/contact"
+              to="/our-programs"
               className="group px-3 sm:px-4 lg:px-5 py-1 sm:py-1.5 lg:py-2 outline outline-2 outline-green-950 text-green-950 hover:bg-green-900 hover:text-white rounded-xl flex items-center gap-1 text-[9px] sm:text-xs lg:text-sm transition-all duration-300 bg-transparent hover:outline-green-900"
             >
-              <MdOutlineSupportAgent className="text-xs sm:text-sm lg:text-base" />
-              Get Support
               <FaArrowRight className="text-[9px] sm:text-xs lg:text-sm group-hover:translate-x-1 transition-transform" />
+              Explore Programs
             </Button>
           </div>
 

@@ -27,7 +27,7 @@ const GetInvolvedCTA = () => {
                 Help us reach more people, expand programs and deliver resources where they're needed most.
               </p>
               <Link
-                to="/contact"
+                to="/contact-us"
                 className="inline-flex items-center gap-2 bg-[#C79949] text-white font-semibold px-7 py-3 rounded-full hover:opacity-90 transition-opacity shadow-md"
               >
                 <span aria-hidden="true">♡</span>
@@ -70,13 +70,6 @@ const GetInvolvedCTA = () => {
             <p className="mb-0 text-white/90">
               Together, we can build stronger minds and stronger communities.
             </p>
-
-            <Link
-              to="/get-involved"
-              className="rounded-xl bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#6E2839] transition-colors px-5 py-2 inline-block font-semibold whitespace-nowrap"
-            >
-              Donate Now →
-            </Link>
 
           </div>
         </Container>

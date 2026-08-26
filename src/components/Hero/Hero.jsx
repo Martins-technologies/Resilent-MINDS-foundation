@@ -1,4 +1,3 @@
-import Button from '../Button/Button';
 import IconLeafDecor from '../icons/IconLeafDecor';
 import styles from './Hero.module.css';
 
@@ -34,14 +33,6 @@ const Hero = () => {
             support. We provide education, resources, and community connections
             that help individuals build emotional resilience and thrive.
           </p>
-          <div className={styles.actions}>
-            <Button to="/get-involved" variant="primary" size="lg" heart arrow>
-              Donate Today
-            </Button>
-            <Button to="/contact" variant="outlineForest" size="lg" arrow>
-              Get Support
-            </Button>
-          </div>
         </div>
 
         {/* Script text — bottom right over the photo */}

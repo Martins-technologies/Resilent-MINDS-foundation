@@ -11,20 +11,20 @@ const COLUMNS = [
   {
     title: 'Foundation',
     links: [
-      { to: '/about', label: 'About Us' },
-      { to: '/about', label: 'Our Mission' },
-      { to: '/about', label: 'Why We Exist' },
+      { to: '/about-us', label: 'About Us' },
+      { to: '/about-us', label: 'Our Mission' },
+      { to: '/about-us', label: 'Why We Exist' },
       { to: '/impact', label: 'Our Impact' },
-      { to: '/about', label: 'Transparency' },
+      { to: '/about-us', label: 'Transparency' },
     ],
   },
   {
-    title: 'Programs',
+    title: 'Our Programs',
     links: [
-      { to: '/programs', label: 'All Programs' },
-      { to: '/programs', label: 'Youth Programs' },
-      { to: '/programs', label: 'Community Programs' },
-      { to: '/programs', label: 'Workplace Wellness' },
+      { to: '/our-programs', label: 'All Programs' },
+      { to: '/our-programs', label: 'Youth Programs' },
+      { to: '/our-programs', label: 'Community Programs' },
+      { to: '/our-programs', label: 'Workplace Wellness' },
       { to: '/resources', label: 'Hope Resource Hub' },
     ],
   },
@@ -41,10 +41,9 @@ const COLUMNS = [
   {
     title: 'Support',
     links: [
-      { to: '/contact', label: 'Find Support' },
+      { to: '/contact-us', label: 'Find Support' },
       { to: '/resources', label: 'Resources' },
-      { to: '/get-involved', label: 'Donate' },
-      { to: '/contact', label: 'Contact Us' },
+      { to: '/contact-us', label: 'Contact Us' },
     ],
   },
 ];
@@ -127,9 +126,9 @@ const Footer = () => {
               required
               className={styles.input}
             />
-            <button type="submit" className={styles.subscribe} aria-label="Subscribe to newsletter">
+            <Link to="/" className={styles.subscribe} aria-label="Go to home page">
               <span aria-hidden="true">→</span>
-            </button>
+            </Link>
           </form>
         </div>
       </div>

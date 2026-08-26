@@ -45,7 +45,7 @@ const StoriesSection = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  to="/contact"
+                  to="/contact-us"
                   className="rounded-xl outline outline-2 outline-green-900 text-green-900 hover:bg-green-900 hover:text-white transition-all duration-300 bg-transparent hover:outline-green-800"
                 >
                   Share Your Story →

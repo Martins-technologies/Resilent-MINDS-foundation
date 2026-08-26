@@ -6,17 +6,17 @@ import { BRAND_LOGO_ALT, BRAND_LOGO_SRC } from '../../assets/brandLogo';
 const Footer = () => {
   const footerLinks = {
     foundation: [
-      { to: '/about', label: 'About Us' },
-      { to: '/about#mission', label: 'Our Mission' },
-      { to: '/about', label: 'Why We Exist' },
+      { to: '/about-us', label: 'About Us' },
+      { to: '/about-us#mission', label: 'Our Mission' },
+      { to: '/about-us', label: 'Why We Exist' },
       { to: '/impact', label: 'Our Impact' },
-      { to: '/about', label: 'Transparency' },
+      { to: '/about-us', label: 'Transparency' },
     ],
     programs: [
-      { to: '/programs', label: 'All Programs' },
-      { to: '/programs', label: 'Youth Programs' },
-      { to: '/programs', label: 'Community Programs' },
-      { to: '/programs', label: 'Workplace Wellness' },
+      { to: '/our-programs', label: 'All Programs' },
+      { to: '/our-programs', label: 'Youth Programs' },
+      { to: '/our-programs', label: 'Community Programs' },
+      { to: '/our-programs', label: 'Workplace Wellness' },
       { to: '/resources', label: 'Hope Resource Hub' },
     ],
     getInvolved: [
@@ -80,7 +80,7 @@ const Footer = () => {
           {/* Programs Links */}
           <div>
             <div className="font-body text-sm tracking-[0.06em] uppercase text-white mb-3.5">
-              Programs
+              Our Programs
             </div>
             <ul className="space-y-2.5">
               {footerLinks.programs.map((link) => (

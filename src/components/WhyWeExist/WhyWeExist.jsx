@@ -43,7 +43,7 @@ const WhyWeExist = () => {
             support.
           </p>
 
-          <Button to="/about" variant="gold" arrow className={styles.cta}>
+          <Button to="/about-us" variant="gold" arrow className={styles.cta}>
             Learn About Our Mission
           </Button>
         </div>

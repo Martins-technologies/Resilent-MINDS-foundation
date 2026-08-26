@@ -127,7 +127,7 @@ const MeasureImpact = () => {
             </div>
             <Button
               variant="outlineLight"
-              to="/about"
+              to="/about-us"
               className="!rounded-xl !px-7 !py-3 !font-semibold !border-2 hover:!bg-white hover:!text-burgundy transition-colors duration-200 whitespace-nowrap flex-shrink-0"
             >
               Learn More &rarr;

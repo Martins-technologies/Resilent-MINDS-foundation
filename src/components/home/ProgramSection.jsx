@@ -8,25 +8,25 @@ const ProgramsSection = () => {
     {
       title: 'Resilient Minds Academy',
       desc: 'Education for emotional intelligence, confidence and wellbeing.',
-      link: '/programs',
+      link: '/our-programs',
       image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=300&fit=crop',
     },
     {
       title: 'Youth Strong Program',
       desc: 'Mentorship and skills for a brighter tomorrow.',
-      link: '/programs',
+      link: '/our-programs',
       image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=400&h=300&fit=crop',
     },
     {
       title: 'Community Healing Circles',
       desc: 'Safe spaces to connect, share and grow together.',
-      link: '/programs',
+      link: '/our-programs',
       image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=300&fit=crop',
     },
     {
       title: 'Workplace Wellness Initiative',
       desc: 'Healthier, more resilient workplaces and teams.',
-      link: '/programs',
+      link: '/our-programs',
       image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop',
     },
     {

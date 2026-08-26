@@ -44,8 +44,8 @@ const ResourcesCTA = () => {
                 someone else, these resources are here for you.
               </span>
             </p>
-            <Button variant="gold" to="/contact" className="rounded-xl !text-white">
-              Get Support Now →
+            <Button variant="gold" to="/contact-us" className="rounded-xl !text-white">
+              Contact Us →
             </Button>
           </div>
         </div>
@@ -65,7 +65,7 @@ const ResourcesCTA = () => {
             </div>
             <Button
               variant="outline"
-              to="/contact"
+              to="/contact-us"
               className="rounded-xl !border-2 !border-[#2E5D49] !text-[#2E5D49] bg-transparent hover:!bg-[#2E5D49] hover:!text-white transition-colors"
             >
               Contact Us →

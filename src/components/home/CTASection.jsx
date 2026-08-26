@@ -14,7 +14,7 @@ const CTASection = () => {
             <p className="text-[#f0dde0] mb-6 text-center">
               Help us reach more people, expand programs and deliver resources where they&rsquo;re needed most.
             </p>
-            <Button variant="gold" to="/get-involved" className='text-center mx-auto rounded-xl'>
+            <Button variant="gold" to="/contact-us" className='text-center mx-auto rounded-xl'>
               ♥ Give Hope Today →
             </Button>
           </div>
