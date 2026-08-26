@@ -4,7 +4,7 @@ import OurStory from '../components/about/OurStory';
 import MissionVision from '../components/about/MissionVission';
 import CoreValuesList from '../components/about/CoreValueList';
 
-const AboutPage = () => {
+const AboutUsPage = () => {
   return (
     <>
       <AboutHero />
@@ -16,4 +16,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default AboutUsPage;

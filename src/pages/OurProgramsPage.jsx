@@ -8,7 +8,7 @@ import Container from '../components/ui/Container';
 import Grid from '../components/ui/Grid';
 import img from '../assets/images/program-section.webp';
 
-const ProgramsPage = () => {
+const OurProgramsPage = () => {
   return (
     <>
       <ProgramsHero />
@@ -34,7 +34,7 @@ const ProgramsPage = () => {
             <div className="relative h-full min-h-[350px] w-full overflow-hidden rounded-lg shadow-lg">
               <img
                 src={img}
-                alt="Programs"
+                alt="Our Programs"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -49,4 +49,4 @@ const ProgramsPage = () => {
   );
 };
 
-export default ProgramsPage;
+export default OurProgramsPage;

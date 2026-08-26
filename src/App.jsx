@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ProgramsPage from './pages/programsPage';
+import AboutUsPage from './pages/AboutUsPage';
+import OurProgramsPage from './pages/OurProgramsPage';
 import WhoWeHelpPage from './pages/WhoWeHelpPage';
 import ImpactPage from './pages/ImpactPage';
 import ResourcesPage from './pages/ResourcesPage';
 import GetInvolvedPage from './pages/GetInvolvedPage';
-import ContactPage from './pages/ContactPage';
+import ContactUsPage from './pages/ContactUsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -16,13 +16,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="programs" element={<ProgramsPage />} />
+          <Route path="about-us" element={<AboutUsPage />} />
+          <Route path="our-programs" element={<OurProgramsPage />} />
           <Route path="who-we-help" element={<WhoWeHelpPage />} />
           <Route path="impact" element={<ImpactPage />} />
           <Route path="resources" element={<ResourcesPage />} />
           <Route path="get-involved" element={<GetInvolvedPage />} />
-          <Route path="contact" element={<ContactPage />} />
+          <Route path="contact-us" element={<ContactUsPage />} />
+          <Route path="about" element={<Navigate to="/about-us" replace />} />
+          <Route path="programs" element={<Navigate to="/our-programs" replace />} />
+          <Route path="contact" element={<Navigate to="/contact-us" replace />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

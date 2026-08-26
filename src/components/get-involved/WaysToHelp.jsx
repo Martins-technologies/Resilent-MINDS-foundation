@@ -57,29 +57,24 @@ const WaysToHelp = () => {
       icon: '/get%20involved/volunterr.svg',
       title: 'Volunteer',
       subtitle: 'Give your time',
-      to: '/contact',
+      to: '/contact-us',
     },
     {
       icon: '/get%20involved/becomeamentor.svg',
       title: 'Become a Mentor',
-      to: '/contact',
+      to: '/contact-us',
     },
     {
       icon: '/get%20involved/community.svg',
       iconComponent: Users,
       color: '#2E5D49',
       title: 'Be a Community Ambassador',
-      to: '/contact',
+      to: '/contact-us',
     },
     {
       icon: '/get%20involved/partner.svg',
       title: 'Partner With Us',
-      to: '/contact',
-    },
-    {
-      icon: '/get%20involved/donate.svg',
-      title: 'Donate Today',
-      to: '/contact',
+      to: '/contact-us',
     },
   ];
 
@@ -128,7 +123,7 @@ const WaysToHelp = () => {
               </ul>
               
               <Link 
-                to="/contact" 
+                to="/contact-us" 
                 className="text-xs font-bold text-burgundy hover:opacity-70 transition-opacity inline-block mt-auto"
               >
                 {way.link}
@@ -181,7 +176,7 @@ const WaysToHelp = () => {
             Choose the way that&rsquo;s right for you and start making an impact today.
           </p>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {actionLinks.map((action) => (
               <Link
                 key={action.title}

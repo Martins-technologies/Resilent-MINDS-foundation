@@ -24,10 +24,10 @@ const ImpactHero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button variant="primary" to="/contact" className="!rounded-xl">
+            <Button variant="primary" to="/contact-us" className="!rounded-xl">
               Share Your Story
             </Button>
-            <Button variant="outline" to="/programs" className="!rounded-xl">
+            <Button variant="outline" to="/our-programs" className="!rounded-xl">
               See How We Create Change
             </Button>
           </div>

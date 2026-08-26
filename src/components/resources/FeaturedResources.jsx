@@ -9,8 +9,9 @@ const FeaturedResources = () => {
       title: 'Building Emotional Resilience', 
       desc: 'Simple steps to strengthen your mind and navigate stress with confidence.', 
       link: 'Read More →',
-      to: '/contact',
+      to: '/contact-us',
       image: '/Resources/girl.webp',
+      imagePosition: 'center 38%',
       badgeIcon: '/Resources/articles.svg',
       badgeColor: '#6E2839',
     },
@@ -19,8 +20,8 @@ const FeaturedResources = () => {
       title: 'Self-Care Guide', 
       desc: 'A practical guide to daily habits that support your mental and emotional well-being.', 
       link: 'Download Guide →',
-      to: '/contact',
-      image: '/Resources/self.webp',
+      to: '/contact-us',
+      image: '/Resources/selfcareguide.webp',
       badgeIcon: '/Resources/guides.svg',
       badgeColor: '#2E5D49',
     },
@@ -29,8 +30,8 @@ const FeaturedResources = () => {
       title: 'Mindfulness Worksheet', 
       desc: 'A simple worksheet to help you stay present, manage anxiety, and reduce overwhelm.', 
       link: 'Use Worksheet →',
-      to: '/contact',
-      image: '/Resources/mindfulness.webp',
+      to: '/contact-us',
+      image: '/Resources/mindfullness.webp',
       badgeIcon: '/Resources/tools.svg',
       badgeColor: '#C79949',
     },
@@ -39,7 +40,7 @@ const FeaturedResources = () => {
       title: 'Understanding Stress & How to Manage It', 
       desc: 'Watch our expert-led webinar on understanding stress and building coping skills.', 
       link: 'Watch Now →',
-      to: '/contact',
+      to: '/contact-us',
       image: '/Resources/stress.webp',
       badgeIcon: '/Resources/video.svg',
       badgeColor: '#2E5D49',
@@ -49,8 +50,8 @@ const FeaturedResources = () => {
       title: 'Where to Get Help', 
       desc: 'A list of trusted hotlines, organizations, and local services for support.', 
       link: 'View Resources →',
-      to: '/contact',
-      image: '/Resources/Helo.webp',
+      to: '/contact-us',
+      image: '/Resources/help.webp',
       badgeIcon: '/Resources/support.svg',
       badgeColor: '#6E2839',
     },
@@ -68,12 +69,17 @@ const FeaturedResources = () => {
             <div key={index} className="card overflow-hidden !p-0 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               
               {/* Image Wrapper - Full Width */}
-              <div className="relative w-full">
+              <div className="relative w-full overflow-hidden h-40">
                 <img 
                   src={res.image} 
                   alt={res.title}
                   loading="lazy"
-                  className="w-full h-40 object-cover block"
+                  className="w-full h-full object-cover block"
+                  style={
+                    res.imagePosition
+                      ? { objectPosition: res.imagePosition }
+                      : undefined
+                  }
                 />
                 
                 <div className="absolute bottom-3 left-3 z-10">

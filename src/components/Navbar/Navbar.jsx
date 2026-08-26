@@ -8,13 +8,13 @@ import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/programs', label: 'Programs' },
+  { to: '/about-us', label: 'About Us' },
+  { to: '/our-programs', label: 'Our Programs' },
   { to: '/who-we-help', label: 'Who We Help' },
   { to: '/impact', label: 'Impact' },
   { to: '/resources', label: 'Resources' },
   { to: '/get-involved', label: 'Get Involved' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/contact-us', label: 'Contact Us' },
 ];
 
 const Navbar = () => {
@@ -58,7 +58,7 @@ const Navbar = () => {
         </nav>
 
         <div className={styles.actions}>
-          <Button to="/contact" variant="outlineForest" size="sm" className={styles.navBtn}>
+          <Button to="/contact-us" variant="outlineForest" size="sm" className={styles.navBtn}>
             Get Support
           </Button>
           <Button to="/get-involved" variant="primary" size="sm" className={styles.navBtn}>
@@ -99,7 +99,7 @@ const Navbar = () => {
             ))}
           </nav>
           <div className={styles.mobileActions}>
-            <Button to="/contact" variant="outlineForest" size="md" className={styles.navBtn} onClick={close}>
+            <Button to="/contact-us" variant="outlineForest" size="md" className={styles.navBtn} onClick={close}>
               Get Support
             </Button>
             <Button to="/get-involved" variant="primary" size="md" className={styles.navBtn} onClick={close}>

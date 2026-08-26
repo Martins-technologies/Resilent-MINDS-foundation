@@ -7,7 +7,7 @@ const PROGRAMS = [
   {
     title: 'Resilient Minds Academy',
     desc: 'Education for emotional intelligence, confidence and wellbeing.',
-    to: '/programs',
+    to: '/our-programs',
     cta: 'Learn More',
     image: '/books.jpeg',
     alt: 'Students engaged in a classroom learning session',
@@ -15,7 +15,7 @@ const PROGRAMS = [
   {
     title: 'Youth Strong Program',
     desc: 'Mentorship and skills for a brighter tomorrow.',
-    to: '/programs',
+    to: '/our-programs',
     cta: 'Learn More',
     image: '/youth.webp',
     alt: 'Young people together mentoring outdoors',
@@ -23,7 +23,7 @@ const PROGRAMS = [
   {
     title: 'Community Healing Circles',
     desc: 'Safe spaces to connect, share and grow together.',
-    to: '/programs',
+    to: '/our-programs',
     cta: 'Learn More',
     image: '/PROGRAME updated/community.webp',
     alt: 'People gathered in a healing circle conversation',
@@ -31,7 +31,7 @@ const PROGRAMS = [
   {
     title: 'Workplace Wellness Initiative',
     desc: 'Healthier, more resilient workplaces and teams.',
-    to: '/programs',
+    to: '/our-programs',
     cta: 'Learn More',
     image: '/laptop.jpeg',
     alt: 'Colleagues collaborating in a healthy workplace',

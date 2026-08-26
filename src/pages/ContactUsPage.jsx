@@ -8,7 +8,7 @@ import Card from '../components/ui/Card';
 import Eyebrow from '../components/ui/Eyebrow';
 import { HandHeart, Heart, ShieldCheck, UsersRound } from 'lucide-react';
 
-const ContactPage = () => {
+const ContactUsPage = () => {
   return (
     <>
       <ContactHero />
@@ -77,4 +77,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default ContactUsPage;

@@ -21,7 +21,7 @@ const NotFoundPage = () => {
             ← Back to Home
           </Link>
           <Link
-            to="/contact"
+            to="/contact-us"
             className="inline-flex items-center gap-2 border-2 border-[#2E5D49] text-[#2E5D49] px-6 py-3 rounded-full font-semibold hover:bg-[#2E5D49] hover:text-white transition-colors"
           >
             Contact Us

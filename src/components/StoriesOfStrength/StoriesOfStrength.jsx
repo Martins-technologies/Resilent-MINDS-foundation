@@ -29,7 +29,7 @@ const StoriesOfStrength = () => {
             <Button to="/impact" variant="primary" size="md" arrow>
               Read More Stories
             </Button>
-            <Button to="/contact" variant="outline" size="md" className={styles.shareBtn}>
+            <Button to="/contact-us" variant="outline" size="md" className={styles.shareBtn}>
               Share Your Story
             </Button>
           </div>

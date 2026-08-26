@@ -5,8 +5,8 @@ const ProgramsHero = () => {
   return (
     <section
       className={styles.section}
-      aria-label="Programs hero"
-      style={{ backgroundImage: "url('/PROGRAME updated/programhero.jpeg')" }}
+      aria-label="Our Programs hero"
+      style={{ backgroundImage: "url('/PROGRAME%20updated/hero.webp')" }}
     >
       <div className={styles.inner}>
         <div className={styles.copy}>

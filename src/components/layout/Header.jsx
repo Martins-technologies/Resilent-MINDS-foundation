@@ -22,13 +22,13 @@ const Header = () => {
 
   const navLinks = [
     { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
-    { to: '/programs', label: 'Programs' },
+    { to: '/about-us', label: 'About Us' },
+    { to: '/our-programs', label: 'Our Programs' },
     { to: '/who-we-help', label: 'Who We Help' },
     { to: '/impact', label: 'Impact' },
     { to: '/resources', label: 'Resources' },
     { to: '/get-involved', label: 'Get Involved' },
-    { to: '/contact', label: 'Contact' },
+    { to: '/contact-us', label: 'Contact Us' },
   ];
 
   return (
@@ -63,7 +63,7 @@ const Header = () => {
             
             <div className="hidden lg:flex items-center gap-4">
               <Link 
-                to="/contact" 
+                to="/contact-us" 
                 className="px-5 py-2.5 text-sm font-bold border border-[#2E5D49] text-[#2E5D49] bg-transparent hover:bg-[#2E5D49] hover:text-white transition-all duration-200 rounded-lg"
               >
                Get Support
@@ -110,7 +110,7 @@ const Header = () => {
               
               <div className="mt-4 pt-4 border-t border-line flex flex-col gap-3 px-4">
                 <Link 
-                  to="/contact" 
+                  to="/contact-us" 
                   className="w-full text-center px-5 py-2.5 text-sm font-bold border border-[#2E5D49] text-[#2E5D49] bg-transparent hover:bg-[#2E5D49] hover:text-white transition-all duration-200 rounded-lg"
                   onClick={closeMenu}
                 >

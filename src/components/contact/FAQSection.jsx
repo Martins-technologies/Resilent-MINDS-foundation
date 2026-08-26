@@ -7,7 +7,7 @@ const FAQSection = () => {
   const faqs = [
     {
       question: 'How can I get support for myself or someone I know?',
-      answer: 'Reach out through this contact form or the Get Support option in the header, and our team will follow up with next steps and resources.',
+      answer: 'Reach out through this contact form or use the Get Support button in the navigation bar, and our team will follow up with next steps and resources.',
     },
     {
       question: 'How do I get involved or volunteer?',

@@ -4,7 +4,7 @@ import styles from './HomeSupportBar.module.css';
 
 const HomeSupportBar = () => {
   return (
-    <section className={styles.section} aria-label="Get support">
+    <section className={styles.section} aria-label="Support message">
       <IconLeafDecor className={styles.leaf} color="#FEF9F2" opacity={0.14} />
 
       <div className={`rm-container ${styles.inner}`}>
@@ -21,10 +21,7 @@ const HomeSupportBar = () => {
         <span className={styles.divider} aria-hidden="true" />
 
         <div className={styles.actions}>
-          <Link to="/contact" className={styles.btn}>
-            Get Support
-          </Link>
-          <Link to="/programs" className={styles.link}>
+          <Link to="/our-programs" className={styles.link}>
             Explore Programs →
           </Link>
         </div>

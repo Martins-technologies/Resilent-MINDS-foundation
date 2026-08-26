@@ -28,7 +28,7 @@ const AboutHero = () => {
 
           <Button
             variant="primary"
-            to="/about"
+            to="/about-us"
             className="!rounded-xl"
           >
             Learn More About Our Journey →

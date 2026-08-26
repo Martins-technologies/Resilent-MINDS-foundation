@@ -1,7 +1,5 @@
-import Button from '../ui/Button';
 import Container from '../ui/Container';
 import { FaHands, FaHeart } from 'react-icons/fa';
-
 const ProgramsCTA = () => {
   return (
     <>
@@ -25,7 +23,7 @@ const ProgramsCTA = () => {
             {/* Vertical Divider Line (Hidden on mobile) */}
             <div className="hidden md:block w-[1px] h-12 bg-white opacity-30"></div>
 
-            {/* Right Side: Outline Heart Icon + Small Text + Button */}
+            {/* Right Side: Outline Heart Icon + Small Text */}
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 flex-shrink-0">
 
               {/* Outline Heart Icon & Text */}
@@ -41,19 +39,7 @@ const ProgramsCTA = () => {
                 </div>
               </div>
 
-              {/* White Button */}
-              <div className="flex justify-start">
-                <Button
-                  variant="white"
-                  to="/get-involved"
-                  className="whitespace-nowrap rounded-xl bg-white text-[#6E2839] font-semibold px-4 py-1.5 hover:bg-gray-100 transition-colors"
-                >
-                  Donate Today →
-                </Button>
-              </div>
-
-            </div>
-          </div>
+            </div>          </div>
         </Container>
       </section>
     </>

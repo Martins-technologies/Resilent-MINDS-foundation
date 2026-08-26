@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import Container from '../ui/Container';
 import Grid from '../ui/Grid';
 import img from '../../assets/images/hands-join.webp'
@@ -75,12 +74,9 @@ const WhoWeHelpCTA = () => {
               {/* ── Divider ── */}
               <div className="hidden md:block w-[1px] h-12 bg-white/40 flex-shrink-0" />
 
-              {/* ── Buttons ── */}
+              {/* ── Link ── */}
               <div className="flex flex-wrap items-center gap-5">
-                <Button to="/contact" variant="white" className="!rounded-xl font-semibold px-6">
-                  Get Support
-                </Button>
-                <Link to="/programs" className="text-white font-medium text-sm md:text-base hover:opacity-75 transition-opacity">
+                <Link to="/our-programs" className="text-white font-medium text-sm md:text-base hover:opacity-75 transition-opacity">
                   Explore Programs →
                 </Link>
               </div>

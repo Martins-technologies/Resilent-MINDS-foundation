@@ -32,11 +32,11 @@ const WaysToConnect = () => {
       desc: '1220 N. Market Street\nWilmington, DE 19801, USA\nBy appointment only', 
       bg: 'bg-[#C79949]' 
     },
-    { 
-      icon: FaCommentDots, 
-      title: 'Get Support', 
-      desc: 'If you or someone you know needs support, we\'re here to help.', 
-      bg: 'bg-[#2E5D49]' 
+    {
+      icon: FaCommentDots,
+      title: 'Reach Out',
+      desc: 'If you or someone you know needs support, we\'re here to help.',
+      bg: 'bg-[#2E5D49]'
     },
     { 
       icon: FaUsers, 
@@ -75,13 +75,13 @@ const WaysToConnect = () => {
                 {way.desc}
               </p>
 
-              {way.title === 'Get Support' && (
+              {way.title === 'Reach Out' && (
                 <a
                   href="#contact-form"
                   className="mt-1 inline-flex items-center gap-2 text-sm font-bold text-[#2E5D49] hover:text-[#6E2839] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C79949] transition-colors"
-                  aria-label="Get support through our contact form"
+                  aria-label="Reach out through our contact form"
                 >
-                  Get Support <span aria-hidden="true">→</span>
+                  Contact Us <span aria-hidden="true">→</span>
                 </a>
               )}
 

@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
 import IconCalendar from '../icons/IconCalendar';
 import IconHeartDove from '../icons/IconHeartDove';
+import IconLeafDecor from '../icons/IconLeafDecor';
 import IconPeople from '../icons/IconPeople';
 import styles from './Impact.module.css';
 
@@ -14,6 +15,7 @@ const Impact = () => {
   return (
     <section className={styles.section} aria-labelledby="impact-heading">
       <div className={styles.banner}>
+        <IconLeafDecor className={styles.leaf} color="#FEF9F2" opacity={0.16} />
         <div className={`rm-container ${styles.inner}`}>
           <div className={styles.top}>
             <div className={styles.copy}>
@@ -44,8 +46,18 @@ const Impact = () => {
             </div>
           </div>
         </div>
+        <svg
+          className={styles.wave}
+          viewBox="0 0 1440 90"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            fill="#faf7f2"
+            d="M0 48C160 18 280 78 460 58C640 38 760 8 960 28C1140 46 1280 22 1440 40V90H0Z"
+          />
+        </svg>
       </div>
-
     </section>
   );
 };

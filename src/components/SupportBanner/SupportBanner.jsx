@@ -16,7 +16,7 @@ const SupportBanner = () => {
             Help us reach more people, expand programs and deliver resources
             where they&rsquo;re needed most.
           </p>
-          <Button to="/get-involved" variant="gold" size="md" heart arrow>
+          <Button to="/contact-us" variant="gold" size="md" heart arrow>
             Give Hope Today
           </Button>
         </div>
