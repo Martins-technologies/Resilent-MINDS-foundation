@@ -4,20 +4,17 @@ import Container from '../ui/Container';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[420px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[500px] xl:min-h-[500px] 2xl:min-h-[600px] flex items-center overflow-hidden">
+    <section className="relative min-h-[420px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[550px] xl:min-h-[600px] 2xl:min-h-[650px] flex items-center overflow-hidden">
 
-      {/* Background Image */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      {/* Background Image - Full Width & Height */}
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+          alt="Background"
+          className="w-full h-full object-cover object-center"
+        />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
-
 
       {/* LEFT LIGHT BACKGROUND */}
       <div className="absolute left-0 top-0 bottom-0 w-[75%] sm:w-[65%] md:w-[55%] lg:w-[48%] bg-white/90 z-10">
@@ -27,10 +24,8 @@ const Hero = () => {
       
       </div>
 
-
       {/* TOP LEFT SOFT CURVE */}
       <div className="absolute top-0 left-0 w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%] h-[50px] sm:h-[60px] md:h-[70px] lg:h-[80px] bg-white/20 rounded-br-[100%] z-10"></div>
-
 
       {/* BACK / SECOND BOTTOM CURVE */}
       <div className="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
@@ -46,7 +41,6 @@ const Hero = () => {
         </svg>
       </div>
 
-
       {/* MAIN WHITE RESPONSIVE CURVE */}
       <div className="absolute bottom-0 left-0 w-full z-30 pointer-events-none">
         <svg
@@ -60,7 +54,6 @@ const Hero = () => {
           />
         </svg>
       </div>
-
 
       {/* CONTENT */}
       <Container className="relative z-20 w-full">
@@ -81,14 +74,12 @@ const Hero = () => {
             </span>
           </h1>
 
-
           {/* Description */}
           <p className="text-xs sm:text-sm md:text-base lg:text-base xl:text-lg text-green-950/80 mb-4 sm:mb-5 leading-relaxed max-w-xl mx-auto lg:mx-0">
             Every person has the ability to overcome challenges with the right support.
             We provide education, resources, and community connections that help individuals
             build emotional resilience and thrive.
           </p>
-
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
@@ -101,7 +92,6 @@ const Hero = () => {
               Donate Today
               <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>
-
 
             <Button
               variant="outline"
