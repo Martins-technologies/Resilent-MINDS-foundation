@@ -46,17 +46,6 @@ const Impact = () => {
             </div>
           </div>
         </div>
-        <svg
-          className={styles.wave}
-          viewBox="0 0 1440 90"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path
-            fill="#faf7f2"
-            d="M0 48C160 18 280 78 460 58C640 38 760 8 960 28C1140 46 1280 22 1440 40V90H0Z"
-          />
-        </svg>
       </div>
     </section>
   );

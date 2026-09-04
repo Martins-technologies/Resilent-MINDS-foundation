@@ -5,6 +5,18 @@ import styles from './StoriesOfStrength.module.css';
 const StoriesOfStrength = () => {
   return (
     <section className={styles.section} aria-labelledby="stories-heading">
+      {/* Forest wave from the Impact banner above, laid over this section so the two merge */}
+      <svg
+        className={styles.wave}
+        viewBox="0 0 1440 90"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          fill="#2E5D49"
+          d="M0 0H1440V40C1280 22 1140 46 960 28C760 8 640 38 460 58C280 78 160 18 0 48Z"
+        />
+      </svg>
       <div className={styles.layout}>
         <div className={styles.media}>
           <img
