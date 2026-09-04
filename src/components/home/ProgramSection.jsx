@@ -53,7 +53,7 @@ const ProgramsSection = () => {
               <img 
                 src={program.image} 
                 alt={program.title}
-                className="w-full h-[160px] object-cover m-0 p-0 block"
+                className="w-full h-[160px] object-cover object-center m-0 p-0 block"
               />
               <div className="p-4 flex flex-col flex-1">
                 <h4 className="font-body text-base font-bold text-ink mb-1">{program.title}</h4>

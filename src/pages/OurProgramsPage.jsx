@@ -35,7 +35,7 @@ const OurProgramsPage = () => {
               <img
                 src={img}
                 alt="Our Programs"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </Grid>

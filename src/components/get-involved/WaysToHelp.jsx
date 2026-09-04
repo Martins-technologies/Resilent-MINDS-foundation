@@ -91,7 +91,7 @@ const WaysToHelp = () => {
         <div className="card bg-[#FEF9F2] involved-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 relative">
           {ways.map((way, index) => (
             <div key={index} className="relative px-4 py-6 lg:py-8 flex flex-col h-full">
-              
+
               {index !== 0 && (
                 <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-80 bg-[#C79949] opacity-20"></div>
               )}
@@ -121,9 +121,9 @@ const WaysToHelp = () => {
                   </li>
                 ))}
               </ul>
-              
-              <Link 
-                to="/contact-us" 
+
+              <Link
+                to="/contact-us"
                 className="text-xs font-bold text-burgundy hover:opacity-70 transition-opacity inline-block mt-auto"
               >
                 {way.link}
@@ -132,41 +132,53 @@ const WaysToHelp = () => {
           ))}
         </div>
 
-        <div
-          className="mt-10 w-full overflow-hidden rounded-2xl px-5 py-7 sm:pl-[29%] sm:pr-8"
-          style={{
-            backgroundImage: "url('/get%20involved/banner.webp')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            minHeight: '220px',
-          }}
-        >
-          <h3 className="mb-5 text-center text-xl font-bold leading-tight !text-white sm:text-left md:text-2xl">
-            Your involvement creates real change.
-            <br />
-            Stronger minds. Brighter futures.
-          </h3>
+        <div className="relative mt-10 min-h-[220px] w-full overflow-hidden rounded-2xl bg-[#14543F]">
 
-          <div className="grid grid-cols-2 gap-y-5 sm:grid-cols-4 sm:gap-0">
-            {[
-              { icon: FaUsers, number: '1,000+', label: 'People Reached' },
-              { icon: FaChalkboardTeacher, number: '100+', label: 'Workshops Delivered' },
-              { icon: FaHandHoldingHeart, number: '50+', label: 'Community Volunteers' },
-              { icon: FaUsers, number: 'Countless', label: 'Lives Encouraged' },
-            ].map((stat, index) => (
-              <div
-                key={stat.label}
-                className={`flex flex-col items-center px-2 text-center ${
-                  index > 0 ? 'sm:border-l sm:border-white/30' : ''
-                }`}
-              >
-                <stat.icon className="mb-1 text-2xl text-[#C79949]" aria-hidden="true" />
-                <strong className="font-heading text-xl text-[#C79949] md:text-2xl">
-                  {stat.number}
-                </strong>
-                <span className="mt-1 text-xs leading-snug text-white">{stat.label}</span>
-              </div>
-            ))}
+          {/* Left Image */}
+          <img
+            src="/get%20involved/banner.webp"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-y-0 left-0 h-full w-[24%] object-cover object-left"
+          />
+
+          {/* Content */}
+          <div className="relative z-10 py-7 pl-[27%] pr-8">
+
+            <h3 className="mb-5 text-center text-xl font-bold leading-tight !text-white sm:text-left md:text-2xl">
+              Your involvement creates real change.
+              <br />
+              Stronger minds. Brighter futures.
+            </h3>
+
+            <div className="grid grid-cols-2 gap-y-5 sm:grid-cols-4 sm:gap-0">
+              {[
+                { icon: FaUsers, number: '1,000+', label: 'People Reached' },
+                { icon: FaChalkboardTeacher, number: '100+', label: 'Workshops Delivered' },
+                { icon: FaHandHoldingHeart, number: '50+', label: 'Community Volunteers' },
+                { icon: FaUsers, number: 'Countless', label: 'Lives Encouraged' },
+              ].map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className={`flex flex-col items-center px-2 text-center ${index > 0 ? 'sm:border-l sm:border-white/30' : ''
+                    }`}
+                >
+                  <stat.icon
+                    className="mb-1 text-2xl text-[#C79949]"
+                    aria-hidden="true"
+                  />
+
+                  <strong className="font-heading text-xl text-[#C79949] md:text-2xl">
+                    {stat.number}
+                  </strong>
+
+                  <span className="mt-1 text-xs leading-snug text-white">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+
           </div>
         </div>
 
