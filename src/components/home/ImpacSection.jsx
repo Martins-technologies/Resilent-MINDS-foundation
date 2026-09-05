@@ -27,7 +27,7 @@ const ImpactSection = () => {
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section className="relative pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -37,6 +37,27 @@ const ImpactSection = () => {
       ></div>
       <div className="absolute inset-0 bg-forest/85"></div>
       
+      {/* ====== BOTTOM CURVE (Naya Add Kiya Gaya Hai) ====== */}
+      <div className="absolute bottom-0 left-0 w-full z-[5] pointer-events-none">
+        <svg
+          viewBox="0 0 1440 160"
+          preserveAspectRatio="none"
+          className="block w-full h-[70px] sm:h-[90px] md:h-[120px] lg:h-[150px]"
+        >
+          <path
+            fill="#ffffff" // Yahan apna background color daalein jo section ke neeche hai
+            d="
+              M0,160
+              H1440
+              V120
+              C1200,10 960,0 720,50
+              C480,100 240,150 0,60
+              Z
+            "
+          />
+        </svg>
+      </div>
+
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left Side */}
