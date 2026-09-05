@@ -1,7 +1,7 @@
 .section {
-  background: #faf7f2;
+  background: var(--rm-forest);
   padding: 0;
-  margin: 0;
+  margin: 10vh 0 -1px;
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -11,7 +11,8 @@
   position: relative;
   overflow: hidden;
   background-color: var(--rm-forest);
-  padding: 72px 0 0;
+  padding: 106px 0 0;
+  min-height: 46vh;
 }
 
 .leaf {
@@ -24,19 +25,10 @@
   z-index: 0;
 }
 
-.wave {
-  display: block;
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 72px;
-  margin: 8px 0 -1px;
-}
-
 .inner {
   position: relative;
   z-index: 1;
-  padding-bottom: 12px;
+  padding-bottom: 32px;
 }
 
 .top {
@@ -139,13 +131,13 @@
 }
 
 @media (max-width: 768px) {
-  .banner {
-    padding: 64px 0 0;
+  .section {
+    margin-top: 8vh;
   }
 
-  .wave {
-    height: 56px;
-    margin: 24px 0 -1px;
+  .banner {
+    padding: 72px 0 24px;
+    min-height: 0;
   }
 
   .heading {
