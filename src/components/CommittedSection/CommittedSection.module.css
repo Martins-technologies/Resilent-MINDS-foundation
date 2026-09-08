@@ -196,7 +196,7 @@
 
   .left {
     align-items: flex-start;
-    padding-top: 18px;
+    padding-top: 15%;
   }
 
   .center {
@@ -221,6 +221,7 @@
   .heading {
     font-size: 11px;
     line-height: 1.3;
+    color: #ffffff;
   }
 
   .btn {
@@ -291,6 +292,7 @@
 
   .heading {
     font-size: 10px;
+    color: #ffffff;
   }
 
   .btn {

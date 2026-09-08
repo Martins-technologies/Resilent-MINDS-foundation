@@ -3,12 +3,8 @@ import styles from './OurStory.module.css';
 
 const OurStory = () => {
   return (
-    <section
-      className="relative w-full min-h-[640px] md:min-h-[720px] flex items-center overflow-hidden"
-      style={{ background: '#F8F4ED' }}
-    >
-      {/* Content — left half */}
-      <div className="relative z-10 w-full max-w-[42%] min-h-[640px] md:min-h-[720px] flex items-center pl-4 pr-4 md:pl-6 md:pr-6 lg:pl-8 lg:pr-8 py-12" style={{ marginLeft: 20 }}>
+    <section className={styles.section}>
+      <div className={styles.content}>
         <div className={styles.copy}>
           <p className={styles.label}>Our Story</p>
           <h3 className={styles.heading}>
@@ -31,12 +27,11 @@ const OurStory = () => {
           </div>
         </div>
       </div>
-      {/* Background image — contain keeps all subjects fully visible (zoom-out) */}
+
       <img
         src="/updated.webp"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 z-0 h-full w-full object-contain object-[right_60%] pointer-events-none select-none"
+        alt="People connecting through support, learning, and community programs"
+        className={styles.image}
       />
     </section>
   );

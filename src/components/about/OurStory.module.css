@@ -1,3 +1,37 @@
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #f8f4ed;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  width: 42%;
+  max-width: 42%;
+  min-height: 640px;
+  margin-left: 20px;
+  padding: 48px 24px 48px 32px;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right 60%;
+  pointer-events: none;
+  user-select: none;
+}
+
 .copy {
   max-width: 460px;
   text-align: left;
@@ -65,11 +99,100 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    display: block;
+    min-height: 0;
+    overflow: hidden;
+    background-color: #f8f4ed;
+    background-image: url('/updated.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  /* Ivory scrim so the collage reads as a soft background behind the copy */
+  .section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(248, 244, 237, 0.9) 0%,
+      rgba(248, 244, 237, 0.86) 50%,
+      rgba(248, 244, 237, 0.93) 100%
+    );
+    pointer-events: none;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 44px 24px 48px;
+    background: transparent;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .copy {
+    max-width: 100%;
+  }
+
   .heading {
     font-size: 30px !important;
+    margin-bottom: 24px;
+    line-height: 1.25 !important;
+  }
+
+  .body {
+    max-width: 100%;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 16px;
+  }
+
+  .callout {
+    margin-top: 24px;
+    align-items: flex-start;
   }
 
   .calloutText {
     font-size: 17px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 36px 16px 40px;
+  }
+
+  .heading {
+    font-size: 26px !important;
+    margin-bottom: 20px;
+  }
+
+  .body {
+    font-size: 14px !important;
+  }
+
+  .callout {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .iconWrap {
+    width: 46px;
+    height: 46px;
+  }
+
+  .calloutText {
+    font-size: 16px !important;
   }
 }
