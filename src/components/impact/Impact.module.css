@@ -15,16 +15,6 @@
   min-height: 46vh;
 }
 
-.leaf {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: auto;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .inner {
   position: relative;
   z-index: 1;
@@ -132,16 +122,22 @@
 
 @media (max-width: 768px) {
   .section {
-    margin-top: 8vh;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .banner {
-    padding: 72px 0 24px;
+    padding: 56px 0 28px;
     min-height: 0;
   }
 
   .heading {
-    font-size: 32px;
+    font-size: 30px;
+  }
+
+  .body {
+    font-size: 16px;
+    max-width: 100%;
   }
 
   .stats {
@@ -155,6 +151,6 @@
 
   .cta {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 32px;
   }
 }

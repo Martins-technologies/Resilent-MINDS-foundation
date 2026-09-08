@@ -1,7 +1,6 @@
 import Button from '../Button/Button';
 import IconCalendar from '../icons/IconCalendar';
 import IconHeartDove from '../icons/IconHeartDove';
-import IconLeafDecor from '../icons/IconLeafDecor';
 import IconPeople from '../icons/IconPeople';
 import styles from './Impact.module.css';
 
@@ -15,7 +14,6 @@ const Impact = () => {
   return (
     <section className={styles.section} aria-labelledby="impact-heading">
       <div className={styles.banner}>
-        <IconLeafDecor className={styles.leaf} color="#FEF9F2" opacity={0.16} />
         <div className={`rm-container ${styles.inner}`}>
           <div className={styles.top}>
             <div className={styles.copy}>
