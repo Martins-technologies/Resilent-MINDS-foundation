@@ -2,7 +2,7 @@ import PageHero from '../layout/PageHero';
 
 const WhoWeHelpHero = () => {
   return (
-    <PageHero image="/whowehelpshero.png" ariaLabel="Who We Help hero">
+    <PageHero image="/whowehelpshero.png" ariaLabel="Who We Help hero" imageShiftRight={5}>
       <span className="eyebrow block mb-5">
         Who We Help
       </span>
