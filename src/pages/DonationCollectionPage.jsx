@@ -16,6 +16,7 @@ import {
   Package,
   ShieldCheck,
   Shirt,
+  Sofa,
   Sprout,
   Truck,
   Users,
@@ -42,7 +43,7 @@ const HELP_ITEMS = [
   { icon: HeartHandshake, label: 'Support community drives and outreach campaigns' },
   {
     icon: Sprout,
-    label: 'Transport educational materials, hygiene products, clothing, food supplies and more',
+    label: 'Transport food, furniture, clothing, hygiene products, and other donated materials',
   },
   { icon: CalendarDays, label: 'Deliver program materials to events and workshops' },
   { icon: Users, label: 'Coordinate pickups and deliveries with partners' },
@@ -62,7 +63,8 @@ const COLLECTIBLE_ITEMS = [
   { icon: Backpack, label: 'School and educational supplies' },
   { icon: Shirt, label: 'Clothing and winter essentials' },
   { icon: Droplets, label: 'Hygiene and personal-care products' },
-  { icon: Apple, label: 'Non-perishable food items' },
+  { icon: Apple, label: 'Food and non-perishable groceries' },
+  { icon: Sofa, label: 'Furniture for our furniture bank' },
   { icon: Gift, label: 'Care packages' },
   { icon: House, label: 'Household essentials' },
   { icon: BookOpen, label: 'Program and workshop materials' },
@@ -172,8 +174,8 @@ const DonationCollectionPage = () => {
         </p>
 
         <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
-          At Resilient Minds Foundation, receiving a donation is only the beginning. Our goal is to
-          make sure donated items reach the individuals and communities who need them most.
+          Our material-donation program collects food, furniture, and other approved goods, then
+          delivers them to the individuals and communities who need them most.
         </p>
 
         <Button variant="primary" href="#pickup-request" className="!rounded-xl">
@@ -190,13 +192,15 @@ const DonationCollectionPage = () => {
                 Connecting Generosity with Greater Impact
               </h2>
               <p className={styles.programBody}>
-                Our Donation Collection &amp; Community Delivery Program helps us collect approved
-                donations from individuals, businesses, community partners, fundraising campaigns,
-                and designated collection locations.
+                Our Donation Collection &amp; Community Delivery Program is a material-donation
+                program. We collect food, furniture, household goods, and other approved donations
+                from individuals, businesses, community partners, fundraising campaigns, and
+                designated collection locations.
               </p>
               <p className={styles.programBody}>
-                Through this service, we help bridge the gap between generous donors and the people
-                who can benefit from their support.
+                In the same way a food collection or furniture bank connects donated goods with
+                people in need, this program bridges the gap between generous donors and the
+                communities who can benefit from their support.
               </p>
             </div>
             <div className={styles.programPhotos}>
@@ -270,8 +274,9 @@ const DonationCollectionPage = () => {
                 Need Us to Collect Your Donation?
               </h2>
               <p className={styles.requestBody}>
-                If you or your organization would like to donate approved goods but are unable to
-                deliver them to us, Resilient Minds Foundation may be able to arrange a collection.
+                If you or your organization would like to donate food, furniture, or other approved
+                materials but are unable to deliver them to us, Resilient Minds Foundation may be
+                able to arrange a collection.
               </p>
               <p className={styles.requestBody}>
                 Depending on availability, location, donation size, and program needs, our Donation

@@ -59,8 +59,8 @@ const WaysToHelp = () => {
       icon: '/get%20involved/donate.svg',
       color: '#2E5D49',
       title: 'Donation\u00A0Collection & Community Delivery',
-      desc: 'Donate approved goods and request collection when needed.',
-      points: ['Item collection', 'Community delivery', 'Support donation drives', 'Help those in need'],
+      desc: 'Our material-donation program collects food, furniture, and other approved goods for people in need.',
+      points: ['Food collection', 'Furniture bank items', 'Community delivery', 'Help those in need'],
       link: 'Learn More →',
       to: '/get-involved/donation-collection',
     },
@@ -93,7 +93,7 @@ const WaysToHelp = () => {
     {
       icon: '/get%20involved/donate.svg',
       title: 'Donation Collection & Delivery',
-      subtitle: 'Donate approved goods',
+      subtitle: 'Food, furniture, and goods',
       to: '/get-involved/donation-collection',
     },
   ];
