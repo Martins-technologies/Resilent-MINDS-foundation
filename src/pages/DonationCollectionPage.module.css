@@ -10,6 +10,45 @@
   padding: 0 24px;
 }
 
+/* On smaller screens, keep the copy on the cream side of the curve. */
+@media (max-width: 1024px) {
+  .donationHero > div:last-child > div {
+    width: 36% !important;
+    max-width: 36% !important;
+    min-width: 0 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .donationHero h1 {
+    font-size: 1.65rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .donationHero a,
+  .donationHero button {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 10px 12px !important;
+    font-size: 0.8125rem !important;
+    line-height: 1.3 !important;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .donationHero > div:last-child > div {
+    width: 36% !important;
+    max-width: 36% !important;
+  }
+
+  .donationHero h1 {
+    font-size: 1.15rem !important;
+  }
+}
+
 .crumbs {
   display: flex;
   flex-wrap: wrap;

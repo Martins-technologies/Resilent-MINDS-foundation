@@ -146,7 +146,7 @@ const DonationCollectionPage = () => {
 
   return (
     <article className={styles.page}>
-      <PageHero image="/hero.webp" ariaLabel="Donation Collection hero">
+      <PageHero image="/hero.webp" ariaLabel="Donation Collection hero" className={styles.donationHero}>
         <nav className={styles.crumbs} aria-label="Breadcrumb">
           <Link to="/">Home</Link>
           <span aria-hidden="true">›</span>
