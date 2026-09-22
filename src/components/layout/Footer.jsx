@@ -25,6 +25,7 @@ const Footer = () => {
       { to: '/get-involved', label: 'Community Ambassador' },
       { to: '/get-involved', label: 'Partner With Us' },
       { to: '/get-involved', label: 'Sponsor a Program' },
+      { to: '/get-involved/donation-collection', label: 'Donation Collection & Delivery' },
     ],
   };
 

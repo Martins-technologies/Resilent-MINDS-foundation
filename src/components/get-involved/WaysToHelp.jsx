@@ -16,6 +16,7 @@ const WaysToHelp = () => {
       desc: 'Give your time and talents to support our programs, events, and initiatives.',
       points: ['Program support', 'Event assistance', 'Administration help', 'Community outreach'],
       link: 'Volunteer With Us →',
+      to: '/contact-us',
     },
     {
       icon: '/get%20involved/becomeamentor.svg',
@@ -24,6 +25,7 @@ const WaysToHelp = () => {
       desc: 'Inspire and guide individuals on their journey to resilience and personal growth.',
       points: ['Youth mentoring', 'Career guidance', 'Life skills coaching', 'Peer support'],
       link: 'Learn More →',
+      to: '/contact-us',
     },
     {
       icon: '/get%20involved/community.svg',
@@ -33,6 +35,7 @@ const WaysToHelp = () => {
       desc: 'Help raise awareness and connect us with individuals, organizations, and resources.',
       points: ['Spread awareness', 'Share resources', 'Build partnerships', 'Host conversations'],
       link: 'Become an Ambassador →',
+      to: '/contact-us',
     },
     {
       icon: '/get%20involved/partner.svg',
@@ -41,6 +44,7 @@ const WaysToHelp = () => {
       desc: 'Collaborate with us to expand programs, share resources, and strengthen our communities.',
       points: ['Program partnerships', 'Corporate partnerships', 'School partnerships', 'Community collaborations'],
       link: 'Partner With Us →',
+      to: '/contact-us',
     },
     {
       icon: '/get%20involved/sponsor.svg',
@@ -49,6 +53,16 @@ const WaysToHelp = () => {
       desc: 'Your sponsorship helps bring hope and healing to more individuals and families.',
       points: ['Program sponsorships', 'Event sponsorships', 'In-kind support', 'Scholarship support'],
       link: 'Explore Sponsorships →',
+      to: '/contact-us',
+    },
+    {
+      icon: '/get%20involved/donate.svg',
+      color: '#2E5D49',
+      title: 'Donation\u00A0Collection & Community Delivery',
+      desc: 'Donate approved goods and request collection when needed.',
+      points: ['Item collection', 'Community delivery', 'Support donation drives', 'Help those in need'],
+      link: 'Learn More →',
+      to: '/get-involved/donation-collection',
     },
   ];
 
@@ -76,6 +90,12 @@ const WaysToHelp = () => {
       title: 'Partner With Us',
       to: '/contact-us',
     },
+    {
+      icon: '/get%20involved/donate.svg',
+      title: 'Donation Collection & Delivery',
+      subtitle: 'Donate approved goods',
+      to: '/get-involved/donation-collection',
+    },
   ];
 
   return (
@@ -88,46 +108,63 @@ const WaysToHelp = () => {
           </p>
         </div>
 
-        <div className="card bg-[#FEF9F2] involved-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 relative">
+        <div className="card bg-[#FEF9F2] involved-card grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0 relative">
           {ways.map((way, index) => (
-            <div key={index} className="relative px-4 py-6 lg:py-8 flex flex-col h-full">
-
+            <div key={index} className="relative px-2.5 sm:px-3 lg:px-3.5 py-6 lg:py-8 flex flex-col h-full">
+              
               {index !== 0 && (
-                <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-80 bg-[#C79949] opacity-20"></div>
+                <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-96 bg-[#C79949] opacity-20"></div>
               )}
 
-              {way.iconComponent ? (
-                <div
-                  className="mb-4 flex h-14 w-14 items-center justify-center rounded-full"
-                  style={{ backgroundColor: way.color }}
+              <div className="h-20 mb-4 flex items-center justify-start flex-shrink-0">
+                {way.iconComponent ? (
+                  <div
+                    className="flex h-14 w-14 items-center justify-center rounded-full"
+                    style={{ backgroundColor: way.color }}
+                  >
+                    <way.iconComponent className="h-7 w-7 text-white" aria-hidden="true" />
+                  </div>
+                ) : (
+                  <img
+                    src={way.icon}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-20 w-20 object-contain"
+                  />
+                )}
+              </div>
+
+              <div className="min-h-[4.75rem] lg:min-h-[5.5rem] flex items-start mb-2">
+                <h4 className="text-forest text-sm xl:text-base font-bold leading-tight mb-0">
+                  {way.title}
+                </h4>
+              </div>
+
+              <div className="min-h-[4.5rem] lg:min-h-[5.25rem] flex items-start mb-3">
+                <p className="text-xs text-ink-soft leading-snug mb-0">
+                  {way.desc}
+                </p>
+              </div>
+
+              <div className="min-h-[7rem] lg:min-h-[8rem] flex flex-col justify-start mb-3">
+                <ul className="space-y-1.5 mb-0">
+                  {way.points.map((point, i) => (
+                    <li key={i} className="text-xs text-ink-soft flex items-start gap-1.5">
+                      <span className="text-gold mt-0.5 flex-shrink-0">&bull;</span>
+                      <span className="leading-tight">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="mt-auto pt-2 min-h-[2rem] flex items-end">
+                <Link
+                  to={way.to}
+                  className="text-[11px] xl:text-xs font-bold text-burgundy hover:opacity-70 transition-opacity inline-block leading-tight whitespace-nowrap"
                 >
-                  <way.iconComponent className="h-7 w-7 text-white" aria-hidden="true" />
-                </div>
-              ) : (
-                <img
-                  src={way.icon}
-                  alt=""
-                  aria-hidden="true"
-                  className="mb-4 h-20 w-20 object-contain"
-                />
-              )}
-              <h4 className="mb-2 text-forest">{way.title}</h4>
-              <p className="text-sm mb-3">{way.desc}</p>
-              <ul className="space-y-1.5 mb-3 flex-grow">
-                {way.points.map((point, i) => (
-                  <li key={i} className="text-xs text-ink-soft flex items-start gap-2">
-                    <span className="text-gold mt-0.5">&bull;</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                to="/contact-us"
-                className="text-xs font-bold text-burgundy hover:opacity-70 transition-opacity inline-block mt-auto"
-              >
-                {way.link}
-              </Link>
+                  {way.link}
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -188,7 +225,7 @@ const WaysToHelp = () => {
             Choose the way that&rsquo;s right for you and start making an impact today.
           </p>
 
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {actionLinks.map((action) => (
               <Link
                 key={action.title}
@@ -207,13 +244,13 @@ const WaysToHelp = () => {
                     src={action.icon}
                     alt=""
                     aria-hidden="true"
-                    className="h-16 w-16 flex-shrink-0 object-contain"
+                    className="h-14 w-14 flex-shrink-0 object-contain"
                   />
                 )}
                 <span className="flex min-w-0 flex-col">
                   <strong className="text-sm leading-snug text-forest">{action.title}</strong>
                   {action.subtitle && (
-                    <span className="mt-1 text-sm text-forest">{action.subtitle}</span>
+                    <span className="mt-1 text-xs text-forest/80">{action.subtitle}</span>
                   )}
                   <span className="mt-1 font-bold text-forest" aria-hidden="true">→</span>
                 </span>

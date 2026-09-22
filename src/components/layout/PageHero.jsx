@@ -1,11 +1,11 @@
 import styles from '../../styles/PageHero.module.css';
 
-const PageHero = ({ image, ariaLabel, imageShiftRight = 0, children }) => {
+const PageHero = ({ image, ariaLabel, imageShiftRight = 0, className = '', children }) => {
   const shift = imageShiftRight ? `${imageShiftRight}%` : '0%';
 
   return (
     <section
-      className={styles.section}
+      className={`${styles.section} ${className}`}
       aria-label={ariaLabel}
       style={{
         backgroundImage: `url('${image}')`,

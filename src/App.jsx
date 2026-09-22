@@ -7,6 +7,7 @@ import WhoWeHelpPage from './pages/WhoWeHelpPage';
 import ImpactPage from './pages/ImpactPage';
 import ResourcesPage from './pages/ResourcesPage';
 import GetInvolvedPage from './pages/GetInvolvedPage';
+import DonationCollectionPage from './pages/DonationCollectionPage';
 import ContactUsPage from './pages/ContactUsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="impact" element={<ImpactPage />} />
           <Route path="resources" element={<ResourcesPage />} />
           <Route path="get-involved" element={<GetInvolvedPage />} />
+          <Route path="get-involved/donation-collection" element={<DonationCollectionPage />} />
           <Route path="contact-us" element={<ContactUsPage />} />
           <Route path="about" element={<Navigate to="/about-us" replace />} />
           <Route path="programs" element={<Navigate to="/our-programs" replace />} />
