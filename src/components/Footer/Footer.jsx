@@ -21,20 +21,20 @@ const COLUMNS = [
   {
     title: 'Our Programs',
     links: [
-      { to: '/our-programs', label: 'All Programs' },
-      { to: '/our-programs', label: 'Youth Programs' },
-      { to: '/our-programs', label: 'Community Programs' },
-      { to: '/our-programs', label: 'Workplace Wellness' },
-      { to: '/resources', label: 'Hope Resource Hub' },
+      { to: '/our-programs#mental-wellness', label: 'Mental Wellness Support' },
+      { to: '/our-programs#family-support', label: 'Family Support' },
+      { to: '/community-support', label: 'Community Support Services' },
+      { to: '/our-programs#youth-programs', label: 'Youth Programs' },
+      { to: '/get-involved', label: 'Volunteer / Get Involved' },
     ],
   },
   {
     title: 'Get Involved',
     links: [
-      { to: '/get-involved', label: 'Volunteer' },
+      { to: '/get-involved#volunteer', label: 'Volunteer' },
       { to: '/get-involved', label: 'Become a Mentor' },
       { to: '/get-involved', label: 'Community Ambassador' },
-      { to: '/get-involved', label: 'Partner With Us' },
+      { to: '/get-involved#partner-with-us', label: 'Partner With Us' },
       { to: '/get-involved', label: 'Sponsor a Program' },
       { to: '/get-involved/donation-collection', label: 'Donation Collection & Delivery' },
     ],

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Apple,
+  Baby,
   Backpack,
   BookOpen,
   CalendarDays,
@@ -16,11 +17,15 @@ import {
   Package,
   ShieldCheck,
   Shirt,
+  Sofa,
   Sprout,
   Truck,
   Users,
+  UtensilsCrossed,
 } from 'lucide-react';
+import CommunitySupportInvolve from '../components/community-support/CommunitySupportInvolve';
 import { DONATION_PICKUP_EMAIL, sendDonationPickupRequest } from '../config/donationPickupEmail';
+import { DONATION_OFFERINGS } from '../data/donationOfferings';
 import PageHero from '../components/layout/PageHero';
 import Button from '../components/ui/Button';
 import styles from './DonationCollectionPage.module.css';
@@ -42,7 +47,7 @@ const HELP_ITEMS = [
   { icon: HeartHandshake, label: 'Support community drives and outreach campaigns' },
   {
     icon: Sprout,
-    label: 'Transport educational materials, hygiene products, clothing, food supplies and more',
+    label: 'Transport food, furniture, clothing, hygiene products, and other donated materials',
   },
   { icon: CalendarDays, label: 'Deliver program materials to events and workshops' },
   { icon: Users, label: 'Coordinate pickups and deliveries with partners' },
@@ -59,10 +64,16 @@ const STEPS = [
 ];
 
 const COLLECTIBLE_ITEMS = [
+  { icon: Apple, label: 'Food collection' },
+  { icon: Sofa, label: 'Furniture bank' },
+  { icon: Package, label: 'Material-donation program' },
   { icon: Backpack, label: 'School and educational supplies' },
   { icon: Shirt, label: 'Clothing and winter essentials' },
   { icon: Droplets, label: 'Hygiene and personal-care products' },
-  { icon: Apple, label: 'Non-perishable food items' },
+  { icon: Apple, label: 'Food and non-perishable groceries' },
+  { icon: UtensilsCrossed, label: 'Prepared meals' },
+  { icon: Baby, label: 'Baby formula, diapers, wipes, and infant supplies' },
+  { icon: Sofa, label: 'Furniture for our furniture bank' },
   { icon: Gift, label: 'Care packages' },
   { icon: House, label: 'Household essentials' },
   { icon: BookOpen, label: 'Program and workshop materials' },
@@ -172,8 +183,8 @@ const DonationCollectionPage = () => {
         </p>
 
         <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
-          At Resilient Minds Foundation, receiving a donation is only the beginning. Our goal is to
-          make sure donated items reach the individuals and communities who need them most.
+          This material-donation program includes collecting food, our furniture bank, and other
+          approved goods, then delivers them to the individuals and communities who need them most.
         </p>
 
         <Button variant="primary" href="#pickup-request" className="!rounded-xl">
@@ -190,13 +201,15 @@ const DonationCollectionPage = () => {
                 Connecting Generosity with Greater Impact
               </h2>
               <p className={styles.programBody}>
-                Our Donation Collection &amp; Community Delivery Program helps us collect approved
-                donations from individuals, businesses, community partners, fundraising campaigns,
-                and designated collection locations.
+                Our Donation Collection &amp; Community Delivery Program is a material-donation
+                program. It includes collecting food, a furniture bank, and other approved
+                household goods from individuals, businesses, community partners, fundraising
+                campaigns, and designated collection locations.
               </p>
               <p className={styles.programBody}>
-                Through this service, we help bridge the gap between generous donors and the people
-                who can benefit from their support.
+                Food collection and the furniture bank connect donated goods with people in need,
+                bridging the gap between generous donors and the communities who can benefit from
+                their support.
               </p>
             </div>
             <div className={styles.programPhotos}>
@@ -210,6 +223,24 @@ const DonationCollectionPage = () => {
           </div>
         </div>
       </section>
+
+      <section className={styles.offerings} aria-labelledby="offerings-title">
+        <div className={styles.wrap}>
+          <h2 id="offerings-title" className={styles.offeringsTitle}>
+            What this donation program includes
+          </h2>
+          <div className={styles.offeringsGrid}>
+            {DONATION_OFFERINGS.map((item) => (
+              <article key={item.id} id={item.id} className={styles.offering}>
+                <h3>{item.label}</h3>
+                <p>{item.summary}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CommunitySupportInvolve variant="donate" />
 
       <section className={styles.helpsSection} aria-labelledby="helps-title">
         <div className={styles.wrap}>
@@ -270,8 +301,9 @@ const DonationCollectionPage = () => {
                 Need Us to Collect Your Donation?
               </h2>
               <p className={styles.requestBody}>
-                If you or your organization would like to donate approved goods but are unable to
-                deliver them to us, Resilient Minds Foundation may be able to arrange a collection.
+                If you or your organization would like to donate food, furniture, or other approved
+                materials but are unable to deliver them to us, Resilient Minds Foundation may be
+                able to arrange a collection.
               </p>
               <p className={styles.requestBody}>
                 Depending on availability, location, donation size, and program needs, our Donation

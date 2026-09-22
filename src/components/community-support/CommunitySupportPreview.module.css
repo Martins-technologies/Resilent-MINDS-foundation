@@ -1,0 +1,136 @@
+.section {
+  background: var(--rm-white);
+  padding: 28px 0 72px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.heading {
+  margin: 16px 0 0;
+  font-family: var(--rm-font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--rm-forest);
+}
+
+.sub {
+  margin: 12px auto 0;
+  max-width: 720px;
+  font-family: var(--rm-font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--rm-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--rm-card-gap);
+}
+
+.card {
+  background: var(--rm-ivory);
+  border-radius: var(--rm-radius-card);
+  overflow: hidden;
+  box-shadow: var(--rm-shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-family: var(--rm-font-ui);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--rm-forest);
+}
+
+.desc {
+  margin: 0 0 24px;
+  font-family: var(--rm-font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--rm-text-muted);
+  flex: 1;
+}
+
+.link,
+.moreLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: auto;
+  font-family: var(--rm-font-ui);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--rm-burgundy);
+  text-decoration: none;
+}
+
+.link:hover,
+.moreLink:hover {
+  text-decoration: underline;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 12px 0 40px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .heading {
+    font-size: 28px;
+    margin-top: 12px;
+  }
+
+  .sub {
+    font-size: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .body {
+    padding: 20px;
+  }
+}

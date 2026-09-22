@@ -19,7 +19,7 @@ const FAQSection = () => {
     },
     {
       question: 'How can I donate or sponsor a program?',
-      answer: 'You can give directly from the Get Involved page, or contact us to discuss sponsoring a specific program.',
+      answer: 'You can donate food, furniture, and other approved goods through our material-donation program on the Donation Collection page, or contact us to discuss sponsoring a specific program.',
     },
     {
       question: 'How do I stay updated on events and programs?',
