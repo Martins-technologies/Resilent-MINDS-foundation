@@ -516,7 +516,7 @@ Four link columns + newsletter signup + social icons.
 - Email: `info@resilientmindsfoundation.ca`
 - Phone: `403-404-9380`
 - Hours: Mon–Fri, 9:00 AM – 5:00 PM
-- Address: 1220 N. Market Street, Wilmington, DE 19801, USA
+- Address: 1835 Alberta Street
 
 ---
 

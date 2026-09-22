@@ -29,7 +29,7 @@ const WaysToConnect = () => {
     { 
       icon: FaMapMarkerAlt, 
       title: 'Visit Us', 
-      desc: '1220 N. Market Street\nWilmington, DE 19801, USA\nBy appointment only', 
+      desc: '1835 Alberta Street\nBy appointment only', 
       bg: 'bg-[#C79949]' 
     },
     {
