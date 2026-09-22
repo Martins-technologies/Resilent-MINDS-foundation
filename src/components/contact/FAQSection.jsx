@@ -31,7 +31,7 @@ const FAQSection = () => {
     <section className="section py-12 bg-[#FEF9F2]">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          
+
           {/* Left Side: FAQ Content */}
           <Card className="mt-0 p-6 md:p-8 shadow-sm !bg-[#F7F3EA] border border-[#DED7C9]">
             <Eyebrow>Frequently Asked Questions</Eyebrow>
@@ -48,7 +48,7 @@ const FAQSection = () => {
               src="/contact/cup.webp"
               alt="A comforting cup representing care and support"
               loading="lazy"
-              className="w-full h-full object-contain bg-[#F7F3EA]"
+              className="w-full h-full object-cover object-center"
             />
           </div>
 

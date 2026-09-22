@@ -39,7 +39,8 @@ const ProgramsCTA = () => {
                 </div>
               </div>
 
-            </div>          </div>
+            </div>
+          </div>
         </Container>
       </section>
     </>
