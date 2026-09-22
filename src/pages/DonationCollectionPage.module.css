@@ -10,19 +10,6 @@
   padding: 0 24px;
 }
 
-/* ── Hero ── */
-.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
-  align-items: stretch;
-  padding: 18px 0 8px;
-}
-
-.heroCopy {
-  padding: 10px 36px 36px max(24px, calc((100vw - 1180px) / 2 + 24px));
-  max-width: 760px;
-}
-
 .crumbs {
   display: flex;
   flex-wrap: wrap;
@@ -62,66 +49,6 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #6e2839;
-}
-
-.heroTitle {
-  margin: 0 0 12px;
-  max-width: 560px;
-  font-family: var(--rm-font-heading);
-  font-size: 46px;
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.4px;
-  color: #2e5d49;
-}
-
-.heroSubtitle {
-  margin: 0 0 14px;
-  font-family: var(--rm-font-heading);
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.35;
-  color: #6e2839;
-}
-
-.heroBody {
-  margin: 0 0 22px;
-  max-width: 490px;
-  font-family: var(--rm-font-body);
-  font-size: 15px;
-  line-height: 1.65;
-  color: #5b5148;
-}
-
-.cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 22px;
-  border: none;
-  border-radius: 999px;
-  background: #6e2839;
-  color: #ffffff;
-  font-family: var(--rm-font-body);
-  font-size: 14.5px;
-  font-weight: 600;
-  line-height: 1;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease;
-}
-
-.cta:hover {
-  background: #591f2d;
-  transform: translateY(-1px);
-}
-
-.heroPhoto {
-  min-height: 460px;
-  margin: 6px 0 18px;
-  border-radius: 36px 0 0 36px;
-  overflow: hidden;
 }
 
 .photo,
@@ -189,19 +116,30 @@
 
 .programPhotos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
 .programFrame {
-  height: 228px;
+  height: 250px;
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  background: #e7efe8;
 }
 
 .programFrame .placeholder,
 .programFrame .photo {
-  min-height: 228px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.programFrame:hover .photo {
+  transform: scale(1.025);
 }
 
 /* ── How the team helps ── */
@@ -558,10 +496,6 @@
 }
 
 @media (max-width: 1100px) {
-  .heroTitle {
-    font-size: 38px;
-  }
-
   .helpsGrid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -572,21 +506,9 @@
 }
 
 @media (max-width: 900px) {
-  .hero,
   .programGrid,
   .requestGrid {
     grid-template-columns: 1fr;
-  }
-
-  .heroCopy {
-    padding: 8px 24px 8px 24px;
-    max-width: none;
-  }
-
-  .heroPhoto {
-    min-height: 280px;
-    margin: 8px 24px 0;
-    border-radius: 24px;
   }
 
   .programPhotos {
@@ -608,10 +530,6 @@
 }
 
 @media (max-width: 640px) {
-  .heroTitle {
-    font-size: 32px;
-  }
-
   .programTitle,
   .helpsTitle,
   .processTitle,

@@ -21,6 +21,8 @@ import {
   Users,
 } from 'lucide-react';
 import { DONATION_PICKUP_EMAIL, sendDonationPickupRequest } from '../config/donationPickupEmail';
+import PageHero from '../components/layout/PageHero';
+import Button from '../components/ui/Button';
 import styles from './DonationCollectionPage.module.css';
 
 /**
@@ -29,9 +31,8 @@ import styles from './DonationCollectionPage.module.css';
  * Leave a value as '' to keep the placeholder in that frame.
  */
 const PHOTOS = {
-  hero: '',
-  collection: '',
-  delivery: '',
+  collection: '/img1up.webp',
+  delivery: '/img2up.webp',
 };
 
 const HELP_ITEMS = [
@@ -70,7 +71,7 @@ const COLLECTIBLE_ITEMS = [
 
 function PhotoFrame({ src, label, className }) {
   if (src) {
-    return <img src={src} alt="" className={`${styles.photo} ${className || ''}`} />;
+    return <img src={src} alt={label || ''} className={`${styles.photo} ${className || ''}`} />;
   }
 
   return (
@@ -145,38 +146,40 @@ const DonationCollectionPage = () => {
 
   return (
     <article className={styles.page}>
-      <section className={styles.hero} aria-labelledby="donation-hero-title">
-        <div className={styles.heroCopy}>
-          <nav className={styles.crumbs} aria-label="Breadcrumb">
-            <Link to="/">Home</Link>
-            <span aria-hidden="true">›</span>
-            <Link to="/get-involved">Get Involved</Link>
-            <span aria-hidden="true">›</span>
-            <span className={styles.crumbCurrent} aria-current="page">
-              Donation Collection & Community Delivery
-            </span>
-          </nav>
+      <PageHero image="/hero.webp" ariaLabel="Donation Collection hero">
+        <nav className={styles.crumbs} aria-label="Breadcrumb">
+          <Link to="/">Home</Link>
+          <span aria-hidden="true">›</span>
+          <Link to="/get-involved">Get Involved</Link>
+          <span aria-hidden="true">›</span>
+          <span className={styles.crumbCurrent} aria-current="page">
+            Donation Collection & Community Delivery
+          </span>
+        </nav>
 
-          <span className={styles.eyebrow}>Get Involved</span>
-          <h1 id="donation-hero-title" className={styles.heroTitle}>
-            Donation Collection &amp;
-            <br />
-            Community Delivery
-          </h1>
-          <p className={styles.heroSubtitle}>From generous donors to stronger communities.</p>
-          <p className={styles.heroBody}>
-            At Resilient Minds Foundation, receiving a donation is only the beginning. Our goal is
-            to make sure donated items reach the individuals and communities who need them most.
-          </p>
-          <a className={styles.cta} href="#pickup-request">
-            Request a Donation Pickup <span aria-hidden="true">→</span>
-          </a>
-        </div>
+        <span className="eyebrow block mb-5">Get Involved</span>
 
-        <div className={styles.heroPhoto}>
-          <PhotoFrame src={PHOTOS.hero} label="Hero image placeholder" />
-        </div>
-      </section>
+        <h1
+          id="donation-hero-title"
+          className="mb-4 font-heading font-bold text-forest leading-tight text-4xl md:text-5xl lg:text-[3.25rem]"
+        >
+          Donation Collection &amp;{' '}
+          <span className="text-burgundy">Community Delivery</span>
+        </h1>
+
+        <p className="mb-4 font-heading italic text-burgundy text-lg md:text-xl leading-snug">
+          From generous donors to stronger communities.
+        </p>
+
+        <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
+          At Resilient Minds Foundation, receiving a donation is only the beginning. Our goal is to
+          make sure donated items reach the individuals and communities who need them most.
+        </p>
+
+        <Button variant="primary" href="#pickup-request" className="!rounded-xl">
+          Request a Donation Pickup →
+        </Button>
+      </PageHero>
 
       <section className={styles.program} aria-labelledby="program-intro-title">
         <div className={styles.wrap}>
@@ -198,10 +201,10 @@ const DonationCollectionPage = () => {
             </div>
             <div className={styles.programPhotos}>
               <div className={styles.programFrame}>
-                <PhotoFrame src={PHOTOS.collection} label="Image placeholder" />
+                <PhotoFrame src={PHOTOS.collection} label="Volunteers packing donation boxes" />
               </div>
               <div className={styles.programFrame}>
-                <PhotoFrame src={PHOTOS.delivery} label="Image placeholder" />
+                <PhotoFrame src={PHOTOS.delivery} label="Volunteers delivering care package to family" />
               </div>
             </div>
           </div>
