@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { BRAND_LOGO_ALT, BRAND_LOGO_SRC } from '../../assets/brandLogo';
 import Button from '../Button/Button';
 import IconClose from '../icons/IconClose';
@@ -9,7 +9,6 @@ import styles from './Navbar.module.css';
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/about-us', label: 'About Us' },
-  { to: '/our-programs', label: 'Our Programs' },
   { to: '/who-we-help', label: 'Who We Help' },
   { to: '/impact', label: 'Impact' },
   { to: '/resources', label: 'Resources' },
@@ -17,8 +16,18 @@ const NAV_LINKS = [
   { to: '/contact-us', label: 'Contact Us' },
 ];
 
+const PROGRAM_MENU = [
+  { to: '/our-programs#mental-wellness', label: 'Mental Wellness Support' },
+  { to: '/our-programs#family-support', label: 'Family Support' },
+  { to: '/community-support', label: 'Community Support Services' },
+  { to: '/our-programs#youth-programs', label: 'Youth Programs' },
+  { to: '/get-involved', label: 'Volunteer / Get Involved' },
+];
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const programsActive = pathname === '/our-programs' || pathname === '/community-support';
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -28,6 +37,9 @@ const Navbar = () => {
   }, [open]);
 
   const close = () => setOpen(false);
+
+  const beforePrograms = NAV_LINKS.slice(0, 2);
+  const afterPrograms = NAV_LINKS.slice(2);
 
   return (
     <header className={styles.header}>
@@ -43,7 +55,7 @@ const Navbar = () => {
         </Link>
 
         <nav className={styles.nav} aria-label="Primary">
-          {NAV_LINKS.map((link) => (
+          {beforePrograms.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
@@ -55,13 +67,41 @@ const Navbar = () => {
               {link.label}
             </NavLink>
           ))}
+
+          <div className={styles.dropdownWrap}>
+            <NavLink
+              to="/our-programs"
+              className={`${styles.link} ${programsActive ? styles.active : ''}`}
+            >
+              Programs
+            </NavLink>
+            <div className={styles.dropdown}>
+              {PROGRAM_MENU.map((item) => (
+                <NavLink key={item.label} to={item.to} className={styles.dropdownLink}>
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+
+          {afterPrograms.map((link) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              className={({ isActive }) =>
+                `${styles.link} ${isActive ? styles.active : ''}`
+              }
+            >
+              {link.label}
+            </NavLink>
+          ))}
         </nav>
 
         <div className={styles.actions}>
           <Button to="/contact-us" variant="outlineForest" size="sm" className={styles.navBtn}>
             Get Support
           </Button>
-          <Button to="/get-involved" variant="primary" size="sm" className={styles.navBtn}>
+          <Button to="/get-involved#donate" variant="primary" size="sm" className={styles.navBtn}>
             Donate
           </Button>
         </div>
@@ -84,7 +124,7 @@ const Navbar = () => {
       {open && (
         <div className={styles.mobilePanel}>
           <nav className={styles.mobileNav} aria-label="Mobile">
-            {NAV_LINKS.map((link) => (
+            {beforePrograms.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
@@ -97,12 +137,43 @@ const Navbar = () => {
                 {link.label}
               </NavLink>
             ))}
+            <NavLink
+              to="/our-programs"
+              className={`${styles.mobileLink} ${programsActive ? styles.mobileActive : ''}`}
+              onClick={close}
+            >
+              Programs
+            </NavLink>
+            <div className={styles.mobileSub}>
+              {PROGRAM_MENU.map((item) => (
+                <NavLink
+                  key={item.label}
+                  to={item.to}
+                  className={styles.mobileSubLink}
+                  onClick={close}
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+            {afterPrograms.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  `${styles.mobileLink} ${isActive ? styles.mobileActive : ''}`
+                }
+                onClick={close}
+              >
+                {link.label}
+              </NavLink>
+            ))}
           </nav>
           <div className={styles.mobileActions}>
             <Button to="/contact-us" variant="outlineForest" size="md" className={styles.navBtn} onClick={close}>
               Get Support
             </Button>
-            <Button to="/get-involved" variant="primary" size="md" className={styles.navBtn} onClick={close}>
+            <Button to="/get-involved#donate" variant="primary" size="md" className={styles.navBtn} onClick={close}>
               Donate
             </Button>
           </div>

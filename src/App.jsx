@@ -6,6 +6,7 @@ import OurProgramsPage from './pages/OurProgramsPage';
 import WhoWeHelpPage from './pages/WhoWeHelpPage';
 import ImpactPage from './pages/ImpactPage';
 import ResourcesPage from './pages/ResourcesPage';
+import CommunitySupportPage from './pages/CommunitySupportPage';
 import GetInvolvedPage from './pages/GetInvolvedPage';
 import DonationCollectionPage from './pages/DonationCollectionPage';
 import ContactUsPage from './pages/ContactUsPage';
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="about-us" element={<AboutUsPage />} />
           <Route path="our-programs" element={<OurProgramsPage />} />
+          <Route path="community-support" element={<CommunitySupportPage />} />
           <Route path="who-we-help" element={<WhoWeHelpPage />} />
           <Route path="impact" element={<ImpactPage />} />
           <Route path="resources" element={<ResourcesPage />} />

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Apple,
+  Baby,
   Backpack,
   BookOpen,
   CalendarDays,
@@ -20,8 +21,11 @@ import {
   Sprout,
   Truck,
   Users,
+  UtensilsCrossed,
 } from 'lucide-react';
+import CommunitySupportInvolve from '../components/community-support/CommunitySupportInvolve';
 import { DONATION_PICKUP_EMAIL, sendDonationPickupRequest } from '../config/donationPickupEmail';
+import { DONATION_OFFERINGS } from '../data/donationOfferings';
 import PageHero from '../components/layout/PageHero';
 import Button from '../components/ui/Button';
 import styles from './DonationCollectionPage.module.css';
@@ -60,10 +64,15 @@ const STEPS = [
 ];
 
 const COLLECTIBLE_ITEMS = [
+  { icon: Apple, label: 'Food collection' },
+  { icon: Sofa, label: 'Furniture bank' },
+  { icon: Package, label: 'Material-donation program' },
   { icon: Backpack, label: 'School and educational supplies' },
   { icon: Shirt, label: 'Clothing and winter essentials' },
   { icon: Droplets, label: 'Hygiene and personal-care products' },
   { icon: Apple, label: 'Food and non-perishable groceries' },
+  { icon: UtensilsCrossed, label: 'Prepared meals' },
+  { icon: Baby, label: 'Baby formula, diapers, wipes, and infant supplies' },
   { icon: Sofa, label: 'Furniture for our furniture bank' },
   { icon: Gift, label: 'Care packages' },
   { icon: House, label: 'Household essentials' },
@@ -174,8 +183,8 @@ const DonationCollectionPage = () => {
         </p>
 
         <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
-          Our material-donation program collects food, furniture, and other approved goods, then
-          delivers them to the individuals and communities who need them most.
+          This material-donation program includes collecting food, our furniture bank, and other
+          approved goods, then delivers them to the individuals and communities who need them most.
         </p>
 
         <Button variant="primary" href="#pickup-request" className="!rounded-xl">
@@ -193,14 +202,14 @@ const DonationCollectionPage = () => {
               </h2>
               <p className={styles.programBody}>
                 Our Donation Collection &amp; Community Delivery Program is a material-donation
-                program. We collect food, furniture, household goods, and other approved donations
-                from individuals, businesses, community partners, fundraising campaigns, and
-                designated collection locations.
+                program. It includes collecting food, a furniture bank, and other approved
+                household goods from individuals, businesses, community partners, fundraising
+                campaigns, and designated collection locations.
               </p>
               <p className={styles.programBody}>
-                In the same way a food collection or furniture bank connects donated goods with
-                people in need, this program bridges the gap between generous donors and the
-                communities who can benefit from their support.
+                Food collection and the furniture bank connect donated goods with people in need,
+                bridging the gap between generous donors and the communities who can benefit from
+                their support.
               </p>
             </div>
             <div className={styles.programPhotos}>
@@ -214,6 +223,24 @@ const DonationCollectionPage = () => {
           </div>
         </div>
       </section>
+
+      <section className={styles.offerings} aria-labelledby="offerings-title">
+        <div className={styles.wrap}>
+          <h2 id="offerings-title" className={styles.offeringsTitle}>
+            What this donation program includes
+          </h2>
+          <div className={styles.offeringsGrid}>
+            {DONATION_OFFERINGS.map((item) => (
+              <article key={item.id} id={item.id} className={styles.offering}>
+                <h3>{item.label}</h3>
+                <p>{item.summary}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CommunitySupportInvolve variant="donate" />
 
       <section className={styles.helpsSection} aria-labelledby="helps-title">
         <div className={styles.wrap}>
