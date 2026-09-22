@@ -10,7 +10,7 @@
  * FormSubmit emails that inbox a one-time "Activate Form" link. Open it once.
  * After that, every submission arrives in this inbox with Reply-To set to the donor.
  */
-export const DONATION_PICKUP_EMAIL = 'minhaghulammuhammad@gmail.com';
+export const DONATION_PICKUP_EMAIL = 'info@resilientmindsfoundation.ca';
 
 const CONSENT_TEXT =
   'Yes. The donor confirms the items are approved charitable donations and understands that pickup is subject to Foundation availability and acceptance.';
