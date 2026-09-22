@@ -56,15 +56,14 @@ const bottomGroups = [
     objectPosition: 'center 45%',
   },
 ];
-
 const GroupCard = ({ group, imgHeight = 'h-48' }) => (
   <div className="card overflow-hidden !p-0 flex flex-col h-full">
-    <div className={`relative w-full ${imgHeight} overflow-hidden bg-white`}>
+    <div className={`relative w-full ${imgHeight} overflow-hidden`}>
       <img
         src={group.image}
         alt={group.title}
         loading="lazy"
-        className="w-full h-full object-cover block scale-90 rounded-lg"
+        className="w-full h-full object-cover object-center block"
         style={{ objectPosition: group.objectPosition || 'center' }}
       />
       <div className="absolute bottom-0 left-0 p-3">
@@ -90,6 +89,7 @@ const GroupCard = ({ group, imgHeight = 'h-48' }) => (
     </div>
   </div>
 );
+
 
 const HelpGroups = () => {
   return (
