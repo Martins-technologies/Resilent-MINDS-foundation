@@ -8,7 +8,6 @@ import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
-  { to: '/home-v1', label: 'Home V1' },
   { to: '/about-us', label: 'About Us' },
   { to: '/who-we-help', label: 'Who We Help' },
   { to: '/impact', label: 'Impact' },
@@ -39,8 +38,8 @@ const Navbar = () => {
 
   const close = () => setOpen(false);
 
-  const beforePrograms = NAV_LINKS.slice(0, 3);
-  const afterPrograms = NAV_LINKS.slice(3);
+  const beforePrograms = NAV_LINKS.slice(0, 2);
+  const afterPrograms = NAV_LINKS.slice(2);
 
   return (
     <header className={styles.header}>
