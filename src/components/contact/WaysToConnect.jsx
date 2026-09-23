@@ -29,7 +29,7 @@ const WaysToConnect = () => {
     { 
       icon: FaMapMarkerAlt, 
       title: 'Visit Us', 
-      desc: '1835 Alberta Street\nBy appointment only', 
+      desc: '1835 Albert St, Regina SK S4P 2S9\nBy appointment only', 
       bg: 'bg-[#C79949]' 
     },
     {
