@@ -6,6 +6,12 @@ const SupportBanner = () => {
   return (
     <section className={styles.section} aria-labelledby="support-heading">
       <div className={styles.banner}>
+        <img
+          src="/bottom.webp"
+          alt="Hands holding a small seedling, a symbol of hope and growth"
+          className={styles.photo}
+        />
+        <div className={styles.shade} aria-hidden="true" />
         <IconLeafDecor className={styles.leaf} color="#FEF9F2" opacity={0.12} />
 
         <div className={styles.copy}>
@@ -16,7 +22,7 @@ const SupportBanner = () => {
             Help us reach more people, expand programs and deliver resources
             where they&rsquo;re needed most.
           </p>
-          <Button to="/contact-us" variant="gold" size="md" heart arrow>
+          <Button to="/contact-us" variant="gold" size="lg" heart arrow>
             Give Hope Today
           </Button>
         </div>
