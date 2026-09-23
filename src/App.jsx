@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
+import HomeV1Page from './pages/HomeV1Page';
 import AboutUsPage from './pages/AboutUsPage';
 import OurProgramsPage from './pages/OurProgramsPage';
 import WhoWeHelpPage from './pages/WhoWeHelpPage';
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route path="home-v1" element={<HomeV1Page />} />
           <Route path="about-us" element={<AboutUsPage />} />
           <Route path="our-programs" element={<OurProgramsPage />} />
           <Route path="community-support" element={<CommunitySupportPage />} />

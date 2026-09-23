@@ -6,7 +6,7 @@ import ScrollToTop from './ScrollToTop';
 
 const Layout = () => {
   const { pathname } = useLocation();
-  const showBottomBanner = !['/about-us', '/contact-us', '/impact', '/who-we-help', '/our-programs', '/resources', '/community-support'].includes(pathname);
+  const showBottomBanner = !['/about-us', '/contact-us', '/impact', '/who-we-help', '/our-programs', '/resources', '/community-support', '/home-v1'].includes(pathname);
 
   return (
     <div>
