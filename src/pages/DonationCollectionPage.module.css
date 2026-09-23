@@ -3,22 +3,19 @@
   color: #5b5148;
 }
 
-/* The donation photo is 1920×640. A short fixed hero on a wide screen
-   scales it to the viewport width and cuts the top off, so the volunteer's
-   head meets the navbar. Keep the full photo height in frame, then leave
-   10% of that height as space under the navbar. */
+/* Same hero frame as Get Involved. On a wide screen, cover used to crop
+   the top of this photo, so the volunteer's head met the navbar. Pin the
+   photo 10px below the top of the frame so that strip stays visible. */
 .page .donationHero {
-  box-sizing: content-box;
-  height: auto;
-  aspect-ratio: 1920 / 640;
-  min-height: 580px;
-  padding-top: calc(100% * 64 / 1920);
-  background-color: #fef9f2;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  background-origin: content-box;
-  background-clip: content-box;
+  background-position: center 10px;
+}
+
+@media (max-width: 768px) {
+  .page .donationHero img {
+    top: 10px;
+    height: calc(100% - 10px);
+    object-position: center top;
+  }
 }
 
 .wrap {
@@ -30,10 +27,6 @@
 
 /* On smaller screens, keep the copy on the cream side of the curve. */
 @media (max-width: 1024px) {
-  .page .donationHero {
-    min-height: 500px;
-  }
-
   .donationHero > div:last-child > div {
     width: 36% !important;
     max-width: 36% !important;
@@ -61,22 +54,6 @@
 }
 
 @media (max-width: 768px) {
-  .page .donationHero {
-    aspect-ratio: auto;
-    height: auto;
-    min-height: 360px;
-    padding-top: 0;
-    background-origin: border-box;
-    background-clip: border-box;
-  }
-
-  .page .donationHero img {
-    object-fit: cover;
-    object-position: center top;
-    top: 10%;
-    height: 90%;
-  }
-
   .donationHero > div:last-child > div {
     width: 36% !important;
     max-width: 36% !important;
@@ -84,12 +61,6 @@
 
   .donationHero h1 {
     font-size: 1.15rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .page .donationHero {
-    min-height: 320px;
   }
 }
 
