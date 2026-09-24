@@ -14,7 +14,8 @@
 .section {
   position: relative;
   z-index: 1;
-  height: 580px;
+  /* Grows with viewport width so wide/high-res screens don't over-crop the photo */
+  height: clamp(580px, 36vw, 720px);
   min-height: 580px;
   overflow: hidden;
   background-size: cover;
@@ -110,7 +111,7 @@
     width: calc(100% + var(--hero-shift, 0%));
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center var(--hero-pos-y, center);
     transform: translateX(var(--hero-shift, 0%));
     z-index: 0;
   }

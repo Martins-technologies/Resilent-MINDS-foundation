@@ -1,7 +1,15 @@
 import styles from '../../styles/PageHero.module.css';
 
-const PageHero = ({ image, ariaLabel, imageShiftRight = 0, className = '', children }) => {
+const PageHero = ({
+  image,
+  ariaLabel,
+  imageShiftRight = 0,
+  imagePositionY = 'center',
+  className = '',
+  children,
+}) => {
   const shift = imageShiftRight ? `${imageShiftRight}%` : '0%';
+  const positionX = imageShiftRight ? `calc(50% + ${imageShiftRight}%)` : '50%';
 
   return (
     <section
@@ -10,9 +18,8 @@ const PageHero = ({ image, ariaLabel, imageShiftRight = 0, className = '', child
       style={{
         backgroundImage: `url('${image}')`,
         '--hero-shift': shift,
-        backgroundPosition: imageShiftRight
-          ? `calc(50% + ${imageShiftRight}%) center`
-          : undefined,
+        '--hero-pos-y': imagePositionY,
+        backgroundPosition: `${positionX} ${imagePositionY}`,
       }}
     >
       <img
