@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import PageHero from '../layout/PageHero';
 
 const AboutHero = () => {
@@ -16,17 +15,9 @@ const AboutHero = () => {
         Life challenges can affect anyone. Stress, loss, trauma, isolation, and uncertainty can impact mental wellbeing. We believe everyone deserves access to support, encouragement, and tools that help them move forward.
       </p>
 
-      <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
+      <p className="text-sm md:text-base text-ink-soft leading-relaxed">
         Resilient Minds Foundation Charity was created from a belief that mental wellness is essential to human wellbeing. Too many individuals silently carry emotional burdens without access to meaningful support.
       </p>
-
-      <Button
-        variant="primary"
-        to="/about-us"
-        className="!rounded-xl"
-      >
-        Learn More About Our Journey →
-      </Button>
     </PageHero>
   );
 };

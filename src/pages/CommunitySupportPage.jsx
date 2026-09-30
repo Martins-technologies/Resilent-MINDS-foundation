@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/layout/PageHero';
-import Button from '../components/ui/Button';
 import {
   COMMUNITY_DONATION_KINDS,
   COMMUNITY_SUPPORT_INTRO,
@@ -26,12 +25,9 @@ const CommunitySupportPage = () => {
         <h1 className="mb-4 font-heading font-bold text-forest leading-tight text-4xl md:text-5xl lg:text-[3.25rem]">
           Community Support <span className="text-burgundy">Services</span>
         </h1>
-        <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
+        <p className="text-sm md:text-base text-ink-soft leading-relaxed">
           {COMMUNITY_SUPPORT_INTRO}
         </p>
-        <Button variant="primary" href="#services" className="!rounded-xl">
-          Explore the services →
-        </Button>
       </PageHero>
 
       <section id="services" className={styles.services} aria-labelledby="services-heading">

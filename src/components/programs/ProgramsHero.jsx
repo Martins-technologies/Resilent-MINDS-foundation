@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import PageHero from '../layout/PageHero';
 
 const ProgramsHero = () => {
@@ -14,17 +13,9 @@ const ProgramsHero = () => {
         empower change.
       </h1>
 
-      <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
+      <p className="text-sm md:text-base text-ink-soft leading-relaxed">
         We create educational, emotional, and community-based programs that help individuals strengthen their mental wellness, build life skills, and thrive.
       </p>
-
-      <Button
-        variant="primary"
-        href="#programs-list"
-        className="!rounded-xl"
-      >
-        Explore Our Programs →
-      </Button>
     </PageHero>
   );
 };

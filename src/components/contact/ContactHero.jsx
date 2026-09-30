@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import PageHero from '../layout/PageHero';
 
 const ContactHero = () => {
@@ -13,17 +12,9 @@ const ContactHero = () => {
         <span className="text-burgundy">help, and connect.</span>
       </h1>
 
-      <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
+      <p className="text-sm md:text-base text-ink-soft leading-relaxed">
         Have a question, need support, or want to learn more about our programs? Reach out to us — we would love to hear from you.
       </p>
-
-      <Button
-        variant="primary"
-        href="#contact-form"
-        className="!rounded-xl"
-      >
-        Get in Touch →
-      </Button>
     </PageHero>
   );
 };

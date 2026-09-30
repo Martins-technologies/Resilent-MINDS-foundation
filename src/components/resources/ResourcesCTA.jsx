@@ -34,7 +34,7 @@ const ResourcesCTA = () => {
             </h2>
             <p
               style={{ color: '#FFFFFF' }}
-              className="text-sm md:text-[15px] leading-relaxed mb-6 drop-shadow-sm"
+              className="text-sm md:text-[15px] leading-relaxed drop-shadow-sm"
             >
               <span className="md:whitespace-nowrap">
                 Whether you&rsquo;re looking to learn, heal, or help
@@ -44,9 +44,6 @@ const ResourcesCTA = () => {
                 someone else, these resources are here for you.
               </span>
             </p>
-            <Button variant="gold" to="/contact-us" className="rounded-xl !text-white">
-              Contact Us →
-            </Button>
           </div>
         </div>
       </section>
