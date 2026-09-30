@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import PageHero from '../layout/PageHero';
 
 const GetInvolvedHero = () => {
@@ -13,17 +12,9 @@ const GetInvolvedHero = () => {
         <span className="text-burgundy">Together, we build resilience.</span>
       </h1>
 
-      <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
+      <p className="text-sm md:text-base text-ink-soft leading-relaxed">
         Your time, skills, and generosity help us empower individuals and communities to overcome challenges, grow stronger, and create brighter futures.
       </p>
-
-      <Button
-        variant="primary"
-        href="#ways-to-help"
-        className="!rounded-xl"
-      >
-        Find Your Way to Get Involved →
-      </Button>
     </PageHero>
   );
 };

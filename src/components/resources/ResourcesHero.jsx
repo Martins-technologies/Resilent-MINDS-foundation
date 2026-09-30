@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import PageHero from '../layout/PageHero';
 
 const ResourcesHero = () => {
@@ -15,17 +14,9 @@ const ResourcesHero = () => {
         </span>
       </h1>
 
-      <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
+      <p className="text-sm md:text-base text-ink-soft leading-relaxed">
         Explore our library of resources designed to educate, empower, and support individuals, families, and communities on their journey toward mental wellness and resilience.
       </p>
-
-      <Button
-        variant="primary"
-        href="#featured-resources"
-        className="!rounded-xl"
-      >
-        Browse All Resources →
-      </Button>
     </PageHero>
   );
 };

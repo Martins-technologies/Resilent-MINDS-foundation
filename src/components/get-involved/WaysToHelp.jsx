@@ -71,31 +71,26 @@ const WaysToHelp = () => {
       icon: '/get%20involved/volunterr.svg',
       title: 'Volunteer',
       subtitle: 'Meals, food, and deliveries',
-      to: '/get-involved#volunteer',
     },
     {
       icon: '/get%20involved/becomeamentor.svg',
       title: 'Become a Mentor',
-      to: '/contact-us',
     },
     {
       icon: '/get%20involved/community.svg',
       iconComponent: Users,
       color: '#2E5D49',
       title: 'Be a Community Ambassador',
-      to: '/contact-us',
     },
     {
       icon: '/get%20involved/partner.svg',
       title: 'Partner With Us',
       subtitle: 'Food, supplies, and furniture',
-      to: '/get-involved#partner-with-us',
     },
     {
       icon: '/get%20involved/donate.svg',
       title: 'Donation Collection & Delivery',
       subtitle: 'Food, meals, baby supplies, furniture',
-      to: '/get-involved/donation-collection',
     },
   ];
 
@@ -228,10 +223,9 @@ const WaysToHelp = () => {
 
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {actionLinks.map((action) => (
-              <Link
+              <div
                 key={action.title}
-                to={action.to}
-                className="flex min-h-28 items-center gap-3 rounded-xl border border-[#C79949]/25 bg-[#FEF9F2] px-4 py-4 text-left no-underline shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                className="flex min-h-28 items-center gap-3 rounded-xl border border-[#C79949]/25 bg-[#FEF9F2] px-4 py-4 text-left shadow-sm"
               >
                 {action.iconComponent ? (
                   <span
@@ -253,9 +247,8 @@ const WaysToHelp = () => {
                   {action.subtitle && (
                     <span className="mt-1 text-xs text-forest/80">{action.subtitle}</span>
                   )}
-                  <span className="mt-1 font-bold text-forest" aria-hidden="true">→</span>
                 </span>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
