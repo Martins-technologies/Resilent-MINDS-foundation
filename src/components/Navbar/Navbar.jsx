@@ -17,10 +17,7 @@ const NAV_LINKS = [
 ];
 
 const PROGRAM_MENU = [
-  { to: '/our-programs#mental-wellness', label: 'Mental Wellness Support' },
-  { to: '/our-programs#family-support', label: 'Family Support' },
   { to: '/community-support', label: 'Community Support Services' },
-  { to: '/our-programs#youth-programs', label: 'Youth Programs' },
   { to: '/get-involved', label: 'Volunteer / Get Involved' },
 ];
 
@@ -101,7 +98,7 @@ const Navbar = () => {
           <Button to="/contact-us" variant="outlineForest" size="sm" className={styles.navBtn}>
             Get Support
           </Button>
-          <Button to="/get-involved#donate" variant="primary" size="sm" className={styles.navBtn}>
+          <Button to="/get-involved/donation-collection" variant="primary" size="sm" className={styles.navBtn}>
             Donate
           </Button>
         </div>
@@ -173,7 +170,7 @@ const Navbar = () => {
             <Button to="/contact-us" variant="outlineForest" size="md" className={styles.navBtn} onClick={close}>
               Get Support
             </Button>
-            <Button to="/get-involved#donate" variant="primary" size="md" className={styles.navBtn} onClick={close}>
+            <Button to="/get-involved/donation-collection" variant="primary" size="md" className={styles.navBtn} onClick={close}>
               Donate
             </Button>
           </div>

@@ -1,4 +1,3 @@
-import Button from '../Button/Button';
 import styles from './WhyWeExist.module.css';
 
 const WhyWeExist = () => {
@@ -42,10 +41,6 @@ const WhyWeExist = () => {
             wellness education, resilience-building programs and compassionate
             support.
           </p>
-
-          <Button to="/about-us" variant="gold" arrow className={styles.cta}>
-            Learn About Our Mission
-          </Button>
         </div>
       </div>
     </section>

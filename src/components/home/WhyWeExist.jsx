@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
 
@@ -72,14 +71,6 @@ const WhyWeExist = () => {
               this, people continue to seek out ways of coping through various
               methods, including building bridges or connecting with support.
             </p>
-
-            <Button
-              variant="gold"
-              to="/about-us"
-              className="mt-2 rounded-xl"
-            >
-              Learn more for more →
-            </Button>
 
           </div>
 

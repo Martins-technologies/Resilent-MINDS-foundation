@@ -3,11 +3,11 @@ import Button from '../Button/Button';
 import styles from './GetInvolved.module.css';
 
 const WAYS = [
-  { label: 'Volunteer',          to: '/get-involved#volunteer', icon: '/volunteer.svg' },
-  { label: 'Become a Mentor',    to: '/get-involved', icon: '/becomea mentor.svg' },
-  { label: 'Partner With Us',    to: '/get-involved#partner-with-us', icon: '/partnerwithus.svg' },
-  { label: 'Sponsor a Program',  to: '/get-involved', icon: '/sponsoraprogram.svg' },
-  { label: 'Support Our Mission',to: '/get-involved', icon: '/supportourmission.svg' },
+  { label: 'Volunteer',          to: '/contact-us', icon: '/volunteer.svg' },
+  { label: 'Become a Mentor',    to: '/contact-us', icon: '/becomea mentor.svg' },
+  { label: 'Partner With Us',    to: '/contact-us', icon: '/partnerwithus.svg' },
+  { label: 'Sponsor a Program',  to: '/contact-us', icon: '/sponsoraprogram.svg' },
+  { label: 'Support Our Mission',to: '/get-involved/donation-collection', icon: '/supportourmission.svg' },
 ];
 
 const GetInvolved = () => {

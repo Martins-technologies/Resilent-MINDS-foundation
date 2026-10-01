@@ -27,7 +27,8 @@ const GetInvolvedCTA = () => {
                 Help us reach more people, expand programs and deliver resources where they're needed most.
               </p>
               <Link
-                to="/contact-us"
+                to="/get-involved/donation-collection"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="inline-flex items-center gap-2 bg-[#C79949] text-white font-semibold px-7 py-3 rounded-full hover:opacity-90 transition-opacity shadow-md"
               >
                 <span aria-hidden="true">♡</span>

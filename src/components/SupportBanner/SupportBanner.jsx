@@ -3,6 +3,10 @@ import IconLeafDecor from '../icons/IconLeafDecor';
 import styles from './SupportBanner.module.css';
 
 const SupportBanner = () => {
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section className={styles.section} aria-labelledby="support-heading">
       <div className={styles.banner}>
@@ -16,7 +20,14 @@ const SupportBanner = () => {
             Help us reach more people, expand programs and deliver resources
             where they&rsquo;re needed most.
           </p>
-          <Button to="/contact-us" variant="gold" size="lg" heart arrow>
+          <Button
+            to="/get-involved/donation-collection"
+            onClick={handleClick}
+            variant="gold"
+            size="lg"
+            heart
+            arrow
+          >
             Give Hope Today
           </Button>
         </div>

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import Eyebrow from '../ui/Eyebrow';
 
@@ -8,8 +7,6 @@ const FeaturedResources = () => {
       tag: 'Article', 
       title: 'Building Emotional Resilience', 
       desc: 'Simple steps to strengthen your mind and navigate stress with confidence.', 
-      link: 'Read More →',
-      to: '/contact-us',
       image: '/Resources/girl.webp',
       badgeIcon: '/Resources/articles.svg',
       badgeColor: '#6E2839',
@@ -18,8 +15,6 @@ const FeaturedResources = () => {
       tag: 'Guide', 
       title: 'Self-Care Guide', 
       desc: 'A practical guide to daily habits that support your mental and emotional well-being.', 
-      link: 'Download Guide →',
-      to: '/contact-us',
       image: '/Resources/selfcareguide.webp',
       badgeIcon: '/Resources/guides.svg',
       badgeColor: '#2E5D49',
@@ -28,8 +23,6 @@ const FeaturedResources = () => {
       tag: 'Tool', 
       title: 'Mindfulness Worksheet', 
       desc: 'A simple worksheet to help you stay present, manage anxiety, and reduce overwhelm.', 
-      link: 'Use Worksheet →',
-      to: '/contact-us',
       image: '/Resources/mindfullness.webp',
       badgeIcon: '/Resources/tools.svg',
       badgeColor: '#C79949',
@@ -38,8 +31,6 @@ const FeaturedResources = () => {
       tag: 'Video', 
       title: 'Understanding Stress & How to Manage It', 
       desc: 'Watch our expert-led webinar on understanding stress and building coping skills.', 
-      link: 'Watch Now →',
-      to: '/contact-us',
       image: '/Resources/stress.webp',
       badgeIcon: '/Resources/video.svg',
       badgeColor: '#2E5D49',
@@ -48,8 +39,6 @@ const FeaturedResources = () => {
       tag: 'Support', 
       title: 'Where to Get Help', 
       desc: 'A list of trusted hotlines, organizations, and local services for support.', 
-      link: 'View Resources →',
-      to: '/contact-us',
       image: '/Resources/help.webp',
       badgeIcon: '/Resources/support.svg',
       badgeColor: '#6E2839',
@@ -98,12 +87,9 @@ const FeaturedResources = () => {
                 <p className="text-xs text-gray-600 mb-3 flex-grow leading-relaxed">
                   {res.desc}
                 </p>
-                <Link
-                  to={res.to}
-                  className="text-xs font-bold text-[#5c1a2e] hover:opacity-70 transition-opacity"
-                >
-                  {res.link}
-                </Link>
+                <span className="text-xs font-bold text-[#5c1a2e] select-none">
+                  Coming Soon
+                </span>
               </div>
               
             </div>
