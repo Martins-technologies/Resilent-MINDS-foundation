@@ -36,10 +36,6 @@ const CommunitySupportPreview = () => {
               <div className={styles.body}>
                 <h3 className={styles.title}>{service.title}</h3>
                 <p className={styles.desc}>{service.summary}</p>
-                <Link to={`${COMMUNITY_SUPPORT_PATH}#${service.id}`} className={styles.link}>
-                  Learn More
-                  <IconArrowRight size={16} />
-                </Link>
               </div>
             </article>
           ))}

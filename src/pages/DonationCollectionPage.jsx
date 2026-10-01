@@ -27,7 +27,6 @@ import CommunitySupportInvolve from '../components/community-support/CommunitySu
 import { DONATION_PICKUP_EMAIL, sendDonationPickupRequest } from '../config/donationPickupEmail';
 import { DONATION_OFFERINGS } from '../data/donationOfferings';
 import PageHero from '../components/layout/PageHero';
-import Button from '../components/ui/Button';
 import styles from './DonationCollectionPage.module.css';
 
 /**
@@ -182,14 +181,10 @@ const DonationCollectionPage = () => {
           From generous donors to stronger communities.
         </p>
 
-        <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-8">
+        <p className="text-sm md:text-base text-ink-soft leading-relaxed">
           This material-donation program includes collecting food, our furniture bank, and other
           approved goods, then delivers them to the individuals and communities who need them most.
         </p>
-
-        <Button variant="primary" href="#pickup-request" className="!rounded-xl">
-          Request a Donation Pickup →
-        </Button>
       </PageHero>
 
       <section className={styles.program} aria-labelledby="program-intro-title">

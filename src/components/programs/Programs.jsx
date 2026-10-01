@@ -3,48 +3,35 @@ import IconArrowRight from '../icons/IconArrowRight';
 import SectionLabel from '../SectionLabel/SectionLabel';
 import styles from './Programs.module.css';
 
-const PROGRAMS = [
-  {
-    title: 'Resilient Minds Academy',
-    desc: 'Education for emotional intelligence, confidence and wellbeing.',
-    to: '/our-programs',
-    cta: 'Learn More',
-    image: '/books.jpeg',
-    alt: 'Students engaged in a classroom learning session',
-  },
+const COMMUNITY_PROGRAMS = [
   {
     title: 'Youth Strong Program',
     desc: 'Mentorship and skills for a brighter tomorrow.',
-    to: '/our-programs',
-    cta: 'Learn More',
     image: '/youth.webp',
     alt: 'Young people together mentoring outdoors',
   },
   {
     title: 'Community Healing Circles',
     desc: 'Safe spaces to connect, share and grow together.',
-    to: '/our-programs',
-    cta: 'Learn More',
     image: '/PROGRAME updated/community.webp',
     alt: 'People gathered in a healing circle conversation',
   },
   {
     title: 'Workplace Wellness Initiative',
     desc: 'Healthier, more resilient workplaces and teams.',
-    to: '/our-programs',
-    cta: 'Learn More',
     image: '/laptop.jpeg',
     alt: 'Colleagues collaborating in a healthy workplace',
   },
-  {
-    title: 'Hope Resource Hub',
-    desc: 'Guides, tools and resources for everyday resilience.',
-    to: '/resources',
-    cta: 'Explore Resources',
-    image: '/test.webp',
-    alt: 'A small green sprout growing in soil during golden hour',
-  },
 ];
+
+const RESOURCE_HUB = {
+  title: 'Hope Resource Hub',
+  desc: 'Guides, tools and resources for everyday resilience.',
+  to: '/resources',
+  cta: 'Explore Resources',
+  image: '/test.webp',
+  alt: 'A small green sprout growing in soil during golden hour',
+};
 
 const Programs = () => {
   return (
@@ -62,26 +49,57 @@ const Programs = () => {
           </p>
         </header>
 
-        <div className={styles.grid}>
-          {PROGRAMS.map((program) => (
-            <article key={program.title} className={styles.card}>
+        <div className={styles.layout}>
+          {/* Grouped Programs Area */}
+          <div className={styles.programsGroup}>
+            <div className={styles.programsGrid}>
+              {COMMUNITY_PROGRAMS.map((program) => (
+                <div key={program.title} className={styles.programItem}>
+                  <div className={styles.imageWrapper}>
+                    <img
+                      src={program.image}
+                      alt={program.alt}
+                      className={styles.image}
+                      width={400}
+                      height={300}
+                    />
+                  </div>
+                  <div className={styles.itemBody}>
+                    <h3 className={styles.title}>{program.title}</h3>
+                    <p className={styles.desc}>{program.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className={styles.groupFooter}>
+              <Link to="/our-programs" className={styles.groupCta}>
+                <span>Learn More</span>
+                <IconArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+
+          {/* Hope Resource Hub - Separate */}
+          <article className={styles.resourceCard}>
+            <div className={styles.imageWrapper}>
               <img
-                src={program.image}
-                alt={program.alt}
+                src={RESOURCE_HUB.image}
+                alt={RESOURCE_HUB.alt}
                 className={styles.image}
                 width={400}
                 height={300}
               />
-              <div className={styles.body}>
-                <h3 className={styles.title}>{program.title}</h3>
-                <p className={styles.desc}>{program.desc}</p>
-                <Link to={program.to} className={styles.link}>
-                  {program.cta}
-                  <IconArrowRight size={16} />
-                </Link>
-              </div>
-            </article>
-          ))}
+            </div>
+            <div className={styles.resourceBody}>
+              <h3 className={styles.title}>{RESOURCE_HUB.title}</h3>
+              <p className={styles.desc}>{RESOURCE_HUB.desc}</p>
+              <Link to={RESOURCE_HUB.to} className={styles.link}>
+                <span>{RESOURCE_HUB.cta}</span>
+                <IconArrowRight size={16} />
+              </Link>
+            </div>
+          </article>
         </div>
       </div>
     </section>

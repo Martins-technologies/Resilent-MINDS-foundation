@@ -16,7 +16,7 @@ const WaysToHelp = () => {
       desc: 'Give your time to programs, events, and community support — including meal delivery, food packing, and furniture moves.',
       points: ['Meal delivery support', 'Food and essentials packing', 'Baby supply sorting', 'Furniture and household help'],
       link: 'Volunteer With Us →',
-      to: '/get-involved#volunteer',
+      to: '/contact-us',
     },
     {
       icon: '/get%20involved/becomeamentor.svg',
@@ -44,7 +44,7 @@ const WaysToHelp = () => {
       desc: 'Collaborate with us on programs and on food, meals, baby supplies, furniture, and household essentials.',
       points: ['Food and meal partners', 'Baby supply drives', 'Furniture donations', 'Community collaborations'],
       link: 'Partner With Us →',
-      to: '/get-involved#partner-with-us',
+      to: '/contact-us',
     },
     {
       icon: '/get%20involved/sponsor.svg',

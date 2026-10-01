@@ -1,4 +1,3 @@
-import Button from '../ui/Button';
 import Container from '../ui/Container';
 import { FaShieldAlt } from 'react-icons/fa';
 import IconPeople from '../icons/IconPeople';
@@ -112,26 +111,17 @@ const MeasureImpact = () => {
         <div className="absolute inset-0 bg-burgundy/85 z-0" />
 
         <Container className="relative z-10">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="flex items-center gap-5">
-              {/* Circular gold medallion icon */}
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gold flex items-center justify-center shadow-lg ring-4 ring-gold/30">
-                <FaShieldAlt className="text-white text-2xl" />
-              </div>
-              <div>
-                <h3 className="text-white mb-1">Transparency builds trust.</h3>
-                <p className="mb-0 md:w-3/4">
-                  We are committed to reporting our program outcomes and the impact of your support with honesty and clarity.
-                </p>
-              </div>
+          <div className="flex items-center gap-5">
+            {/* Circular gold medallion icon */}
+            <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gold flex items-center justify-center shadow-lg ring-4 ring-gold/30">
+              <FaShieldAlt className="text-white text-2xl" />
             </div>
-            <Button
-              variant="outlineLight"
-              to="/about-us"
-              className="!rounded-xl !px-7 !py-3 !font-semibold !border-2 hover:!bg-white hover:!text-burgundy transition-colors duration-200 whitespace-nowrap flex-shrink-0"
-            >
-              Learn More &rarr;
-            </Button>
+            <div>
+              <h3 className="text-white mb-1">Transparency builds trust.</h3>
+              <p className="mb-0 md:w-3/4 text-white/90">
+                We are committed to reporting our program outcomes and the impact of your support with honesty and clarity.
+              </p>
+            </div>
           </div>
         </Container>
       </section>

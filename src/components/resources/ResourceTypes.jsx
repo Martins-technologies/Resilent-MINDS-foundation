@@ -1,13 +1,12 @@
-import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 
 const ResourceTypes = () => {
   const types = [
-    { icon: '/Resources/articles.svg', color: '#6E2839', title: 'Articles', desc: 'Informative reads on mental health, resilience, and personal growth.', link: 'Explore Articles', to: '/resources#featured-resources' },
-    { icon: '/Resources/guides.svg',   color: '#2E5D49', title: 'Guides & Toolkits', desc: 'Practical guides and toolkits to help you navigate life\u2019s challenges.', link: 'View Guides', to: '/resources#featured-resources' },
-    { icon: '/Resources/tools.svg',    color: '#C79949', title: 'Tools & Worksheets', desc: 'Self-help tools and worksheets to build skills and support well-being.', link: 'Access Tools', to: '/resources#featured-resources' },
-    { icon: '/Resources/video.svg',    color: '#2E5D49', title: 'Videos & Webinars', desc: 'Watch and learn from experts and real stories of hope.', link: 'Watch Now', to: '/resources#featured-resources' },
-    { icon: '/Resources/support.svg',  color: '#6E2839', title: 'Support Resources', desc: 'Find help, hotlines, and local services when you need support.', link: 'Find Support', to: '/contact-us' },
+    { icon: '/Resources/articles.svg', color: '#6E2839', title: 'Articles', desc: 'Informative reads on mental health, resilience, and personal growth.' },
+    { icon: '/Resources/guides.svg',   color: '#2E5D49', title: 'Guides & Toolkits', desc: 'Practical guides and toolkits to help you navigate life\u2019s challenges.' },
+    { icon: '/Resources/tools.svg',    color: '#C79949', title: 'Tools & Worksheets', desc: 'Self-help tools and worksheets to build skills and support well-being.' },
+    { icon: '/Resources/video.svg',    color: '#2E5D49', title: 'Videos & Webinars', desc: 'Watch and learn from experts and real stories of hope.' },
+    { icon: '/Resources/support.svg',  color: '#6E2839', title: 'Support Resources', desc: 'Find help, hotlines, and local services when you need support.' },
   ];
 
   return (
@@ -37,13 +36,9 @@ const ResourceTypes = () => {
               <h5 className="text-sm mb-1.5">{type.title}</h5>
               <p className="text-xs text-ink-soft mb-2 leading-relaxed min-h-[40px]">{type.desc}</p>
               
-              <Link
-                to={type.to}
-                className="text-xs font-bold text-burgundy no-underline flex items-center gap-1 whitespace-nowrap hover:opacity-70 transition-opacity"
-              >
-                {type.link}
-                <span>→</span>
-              </Link>
+              <span className="text-xs font-bold text-burgundy tracking-wide select-none">
+                Coming Soon
+              </span>
             </div>
           ))}
         </div>
