@@ -40,7 +40,15 @@ const CommunitySupportPage = () => {
           <div className={styles.list}>
             {COMMUNITY_SUPPORT_SERVICES.map((service) => (
               <article key={service.id} id={service.id} className={styles.service}>
-                <img src={service.image} alt={service.alt} className={styles.image} />
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  className={
+                    service.imageFit === 'contain'
+                      ? `${styles.image} ${styles.imageContain}`
+                      : styles.image
+                  }
+                />
                 <div>
                   <h3>{service.title}</h3>
                   <p>{service.summary}</p>

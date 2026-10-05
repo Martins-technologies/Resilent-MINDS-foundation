@@ -29,7 +29,11 @@ const CommunitySupportPreview = () => {
               <img
                 src={service.image}
                 alt={service.alt}
-                className={styles.image}
+                className={
+                  service.imageFit === 'contain'
+                    ? `${styles.image} ${styles.imageContain}`
+                    : styles.image
+                }
                 width={400}
                 height={300}
               />

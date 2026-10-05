@@ -1,7 +1,7 @@
 import IconLeafDecor from '../icons/IconLeafDecor';
 import styles from './Hero.module.css';
 
-const HERO_IMAGE = '/home%20banner.webp';
+const HERO_IMAGE = '/updatedimages/01_home_hero_support_circle.webp';
 
 const Hero = () => {
   return (

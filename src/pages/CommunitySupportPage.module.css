@@ -88,6 +88,11 @@
   border-radius: 12px;
 }
 
+.imageContain {
+  object-fit: contain;
+  background: #fff;
+}
+
 .service h3 {
   margin: 0 0 10px;
   font-family: var(--rm-font-ui);
