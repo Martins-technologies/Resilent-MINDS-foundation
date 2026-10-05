@@ -3,7 +3,7 @@ import PageHero from '../layout/PageHero';
 
 const ImpactHero = () => {
   return (
-    <PageHero image="/impact/hero.webp" ariaLabel="Impact hero">
+    <PageHero image="/updatedimages/3banner.webp" ariaLabel="Impact hero">
       <span className="eyebrow block mb-5">
         Impact
       </span>
