@@ -33,8 +33,9 @@ export const COMMUNITY_SUPPORT_SERVICES = [
     title: 'Prepared Meals & Baby Supplies',
     summary:
       'Supporting families with ready-to-eat meals, baby formula, diapers, wipes, and other infant necessities.',
-    image: '/child.jpeg',
-    alt: 'A young child, representing families who need infant supplies',
+    image: '/updatedimages/02_prepared_meals_baby_supplies.webp',
+    alt: 'A caregiver and family receiving diapers and other baby essentials',
+    imageFit: 'contain',
   },
   {
     id: 'food-furniture',

@@ -55,6 +55,11 @@
   display: block;
 }
 
+.imageContain {
+  object-fit: contain;
+  background: #fff;
+}
+
 .body {
   padding: 24px 20px;
   display: flex;
