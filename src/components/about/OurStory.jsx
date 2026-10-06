@@ -29,7 +29,7 @@ const OurStory = () => {
       </div>
 
       <img
-        src="/updated.webp"
+        src="/updatedimages/5%20(2).webp"
         alt="People connecting through support, learning, and community programs"
         className={styles.image}
       />
