@@ -2,7 +2,7 @@ import PageHero from '../layout/PageHero';
 
 const GetInvolvedHero = () => {
   return (
-    <PageHero image="/get%20involved/hero.webp" ariaLabel="Get Involved hero">
+    <PageHero image="/getinvoledbanner.png" ariaLabel="Get Involved hero">
       <span className="eyebrow block mb-5">
         Get Involved
       </span>
