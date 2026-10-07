@@ -7,13 +7,15 @@ const GetInvolvedHero = () => {
         Get Involved
       </span>
 
-      <h1 className="mb-4 font-heading font-bold text-forest leading-tight text-[31px] md:text-[43px] lg:text-[47px]">
+      <h1 className="mb-4 font-heading font-bold text-forest leading-tight text-[26px] md:text-[38px] lg:text-[42px]">
         Be part of the change.{' '}
         <span className="text-burgundy">Together, we build resilience.</span>
       </h1>
 
       <p className="text-sm md:text-base text-ink-soft leading-relaxed">
-        Your time, skills, and generosity help us empower individuals and communities to overcome challenges, grow stronger, and create brighter futures.
+        Your time, skills, and generosity help us empower individuals and
+        <br />
+        communities to overcome challenges, grow stronger, and create brighter futures.
       </p>
     </PageHero>
   );
