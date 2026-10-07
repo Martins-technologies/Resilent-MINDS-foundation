@@ -1,82 +1,63 @@
-/* ─── Hero: Full-bleed background image ─── */
+/* Homepage hero — photo background with a cream panel and gold curve */
 
 .hero {
   position: relative;
   z-index: 1;
-  height: 620px;
-  min-height: 620px;
+  height: clamp(460px, 34vw, 540px);
+  min-height: 460px;
   overflow: hidden;
-  margin-bottom: 0;
+  background: var(--rm-ivory);
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    to right,
-    rgba(248, 250, 252, 0.72) 0%,
-    rgba(245, 247, 250, 0.48) 28%,
-    rgba(240, 244, 248, 0.18) 48%,
-    transparent 72%
-  );
-}
-
-/* ─── Background image — natural fill, woman on right, face never clipped ─── */
 .bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right 12%;
+  object-position: 68% center;
   z-index: 0;
-  filter: saturate(0.88) brightness(1.03) contrast(1.02);
 }
 
-/* ─── Main content container — matches navbar max-width + padding ─── */
+/* Oversized circle, clipped by the hero, so only the right arc and gold edge show */
+.panel {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  width: max(980px, 86vw);
+  height: max(980px, 86vw);
+  transform: translate(-47%, -50%);
+  background: var(--rm-ivory);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.5px #d7c4a2;
+  pointer-events: none;
+}
+
 .inner {
   position: relative;
   z-index: 2;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 60px 40px 120px 40px;
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+  padding: 48px 48px 48px 56px;
 }
 
-/* ─── Leaf decoration ─── */
-.leaf {
-  position: absolute;
-  left: 80px;
-  top: 24px;
-  width: 260px;
-  height: 340px;
-  pointer-events: none;
-}
-
-/* ─── Text block — constrained to left ~55% so photo stays visible ─── */
 .copy {
-  position: relative;
-  z-index: 1;
-  transform: translateX(5%);
-  max-width: 520px;
-  width: 55%;
+  width: min(640px, 52%);
 }
 
-/* ─── Heading — each phrase stays on exactly one line ─── */
 .heading {
   margin: 0;
   font-family: var(--rm-font-heading);
-  font-size: 48px;
+  font-size: clamp(32px, 2.7vw, 42px);
   font-weight: 700;
-  line-height: 1.1;
-  color: var(--rm-forest);
-  letter-spacing: -0.5px;
+  line-height: 1.15;
+  color: #1e4a3a;
+  letter-spacing: -0.3px;
 }
 
 .line {
@@ -84,243 +65,176 @@
   white-space: nowrap;
 }
 
-/* ─── "Hopeful" — gold italic ─── */
 .accent {
   font-family: var(--rm-font-heading);
   font-style: italic;
   font-weight: 700;
-  color: var(--rm-gold);
+  color: #c4a15a;
 }
 
-/* ─── Body paragraph — own width cap for readable line length ─── */
 .body {
-  margin: 20px 0 0;
-  max-width: 520px;
+  margin: 18px 0 0;
+  max-width: 460px;
   font-family: var(--rm-font-body);
-  font-size: 16px;
+  font-size: 15.5px;
   font-weight: 400;
-  line-height: 1.65;
-  color: var(--rm-forest);
+  line-height: 1.6;
+  color: #3d3d3d;
 }
 
-/* ─── Button row ─── */
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 34px;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
 }
 
-.actions > a:last-child {
-  background: var(--rm-ivory);
-  color: var(--rm-forest);
+.supportBtn,
+.donateBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-family: var(--rm-font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.actions > a:last-child:hover {
-  background: var(--rm-forest);
-  color: var(--rm-white);
-  border-color: var(--rm-forest);
-}
-
-/* ─── Script text — bottom right ─── */
-.script {
-  position: absolute;
-  z-index: 3;
-  right: 80px;
-  bottom: 128px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  font-family: var(--rm-font-script);
-  font-size: 36px;
-  line-height: 1.15;
+.supportBtn {
+  background: #234739;
   color: #ffffff;
-  text-align: right;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.30);
-  pointer-events: none;
+  border: 1.5px solid #234739;
 }
 
-.scriptLine {
-  position: relative;
-  padding-bottom: 6px;
+.supportBtn:hover {
+  background: #1b382c;
+  border-color: #1b382c;
 }
 
-.scriptLine::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 86%;
-  height: 2px;
-  background: var(--rm-gold);
+.donateBtn {
+  background: #ffffff;
+  color: #7a3144;
+  border: 1.5px solid #d4aeb6;
 }
 
-/* ─── Double-layer wave divider ─── */
-.divider {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 140px;
-  pointer-events: none;
-  z-index: 4;
+.donateBtn:hover {
+  background: #fdf6f7;
+  border-color: #7a3144;
 }
 
-.waveBack,
-.waveFill {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 140px;
+.supportBtn:focus-visible,
+.donateBtn:focus-visible {
+  outline: 3px solid var(--rm-gold);
+  outline-offset: 2px;
 }
 
-.waveBack {
-  bottom: 10px;
+@media (max-width: 1200px) {
+  .panel {
+    width: 1040px;
+    height: 1040px;
+    transform: translate(-48%, -50%);
+  }
+
+  .copy {
+    width: min(560px, 54%);
+  }
 }
 
-/* ─── Tablet (≤ 1024px) ─── */
 @media (max-width: 1024px) {
   .hero {
-    height: 540px;
-    min-height: 540px;
+    height: 460px;
+    min-height: 460px;
   }
 
   .inner {
-    padding: 40px 40px 110px 48px;
+    padding: 36px 32px;
   }
 
-  .leaf {
-    left: 48px;
-    width: 200px;
-    height: 270px;
-  }
-
-  .copy {
-    width: 55%;
-  }
-
-  .heading {
-    font-size: 36px;
-  }
-
-  .script {
-    right: 36px;
-    bottom: 100px;
-    font-size: 28px;
-  }
-}
-
-/* ─── Mobile (≤ 768px) ─── */
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    min-height: 420px;
-    background-color: transparent;
-  }
-
-  .hero::before {
-    background: linear-gradient(
-      to bottom,
-      rgba(254, 249, 242, 0.35) 0%,
-      rgba(254, 249, 242, 0.12) 28%,
-      transparent 50%
-    );
-  }
-
-  .bg {
-    object-position: center 20%;
-    min-height: 100%;
-    filter: none;
-  }
-
-  .inner {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 20px 96px;
-    align-items: flex-start;
-  }
-
-  .leaf {
-    display: none;
-  }
-
-  .copy {
-    position: relative;
-    z-index: 2;
-    transform: none;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .heading {
-    font-size: 32px;
-    letter-spacing: 0;
-    text-shadow: 0 1px 12px rgba(254, 249, 242, 0.85);
+  .panel {
+    width: 920px;
+    height: 920px;
+    transform: translate(-50%, -50%);
   }
 
   .line {
     white-space: normal;
   }
 
-  .phrase {
+  .heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bg {
+    position: relative;
+    height: 240px;
+    object-position: center 30%;
+  }
+
+  .panel {
+    display: none;
+  }
+
+  .inner {
+    height: auto;
+    padding: 28px 20px 36px;
+    background: var(--rm-ivory);
+  }
+
+  .copy {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .line {
     white-space: normal;
+  }
+
+  .heading {
+    font-size: 32px;
   }
 
   .body {
     font-size: 15px;
-    margin-top: 16px;
     max-width: 100%;
-    line-height: 1.6;
-    text-shadow: 0 1px 10px rgba(254, 249, 242, 0.9);
+  }
+}
+
+@media (max-width: 480px) {
+  .bg {
+    height: 200px;
+  }
+
+  .inner {
+    padding: 24px 16px 32px;
+  }
+
+  .heading {
+    font-size: 28px;
   }
 
   .actions {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
-    margin-top: 26px;
   }
 
-  .script {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    align-self: flex-end;
-    margin-top: 28px;
-    font-size: 20px;
-    z-index: 2;
-    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
-  }
-
-  .divider {
-    bottom: 0;
-    height: 88px;
-  }
-
-  .waveBack,
-  .waveFill {
-    height: 88px;
-  }
-}
-
-/* ─── Small mobile (≤ 480px) ─── */
-@media (max-width: 480px) {
-  .inner {
-    padding: 32px 16px 88px;
-  }
-
-  .heading {
-    font-size: 26px;
-  }
-
-  .body {
-    font-size: 14px;
-  }
-
-  .script {
-    font-size: 17px;
-    margin-top: 22px;
+  .supportBtn,
+  .donateBtn {
+    width: 100%;
   }
 }

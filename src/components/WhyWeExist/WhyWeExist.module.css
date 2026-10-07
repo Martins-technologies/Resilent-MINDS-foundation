@@ -1,17 +1,7 @@
-/* ── Outer section — overlaps hero so the cream waves merge ── */
 .section {
   position: relative;
   background: #fef9f2;
   z-index: 2;
-  margin-top: -140px;
-  padding-top: 0;
-  clip-path: url(#whyWeExistWave);
-}
-
-.clipSvg {
-  position: absolute;
-  width: 0;
-  height: 0;
 }
 
 /* ── Two-column inner row — wave overlap + 30% taller content (180 → 234) ── */
@@ -56,7 +46,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  padding: 118px 42px 28px 30px;
+  padding: 40px 42px 36px 30px;
   background: #fef9f2;
   overflow: hidden;
 }
@@ -125,11 +115,6 @@
 
 /* ── Tablet ── */
 @media (max-width: 1024px) {
-  .section {
-    margin-top: -140px;
-    padding-top: 0;
-  }
-
   .inner {
     grid-template-columns: 1fr;
     height: auto;
@@ -167,9 +152,7 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .section {
-    margin-top: -88px;
-    padding-top: 0;
-    clip-path: none;
+    margin-top: 0;
   }
 
   .media,
