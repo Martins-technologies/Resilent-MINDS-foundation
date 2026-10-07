@@ -3,15 +3,6 @@ import styles from './WhyWeExist.module.css';
 const WhyWeExist = () => {
   return (
     <section className={styles.section} aria-labelledby="why-we-exist-heading">
-      {/* Same wave as hero — clips this block so the two sections merge */}
-      <svg className={styles.clipSvg} aria-hidden="true" width="0" height="0">
-        <defs>
-          <clipPath id="whyWeExistWave" clipPathUnits="objectBoundingBox">
-            <path d="M0 0.147C0.083 0.096 0.139 0.249 0.222 0.220C0.292 0.192 0.340 0.068 0.417 0.090C0.514 0.119 0.583 0.226 0.708 0.192C0.819 0.164 0.903 0.124 1 0.141V1H0Z" />
-          </clipPath>
-        </defs>
-      </svg>
-
       <div className={styles.inner}>
         {/* ── Left: image ── */}
         <div className={styles.media}>

@@ -1,26 +1,22 @@
-import IconLeafDecor from '../icons/IconLeafDecor';
+import { Link } from 'react-router-dom';
+import IconArrowRight from '../icons/IconArrowRight';
 import styles from './Hero.module.css';
 
-const HERO_IMAGE = '/updatedimages/01_home_hero_support_circle.webp';
+const HERO_IMAGE = '/homepagebanner.webp';
 
 const Hero = () => {
   return (
     <section className={styles.hero} aria-label="Homepage hero">
-
-      {/* Full-bleed background image */}
       <img
         src={HERO_IMAGE}
         alt=""
         aria-hidden="true"
         className={styles.bg}
-        width={1600}
-        height={700}
       />
 
-      {/* Content layer */}
-      <div className={styles.inner}>
-        <IconLeafDecor className={styles.leaf} color="#FEF9F2" opacity={0.18} />
+      <div className={styles.panel} aria-hidden="true" />
 
+      <div className={styles.inner}>
         <div className={styles.copy}>
           <h1 className={styles.heading}>
             <span className={styles.line}>Building Stronger Minds.</span>
@@ -33,27 +29,17 @@ const Hero = () => {
             support. We provide education, resources, and community connections
             that help individuals build emotional resilience and thrive.
           </p>
+          <div className={styles.actions}>
+            <Link to="/contact-us" className={styles.supportBtn}>
+              Get Support
+              <IconArrowRight size={16} />
+            </Link>
+            <Link to="/get-involved/donation-collection" className={styles.donateBtn}>
+              Donate
+              <IconArrowRight size={16} />
+            </Link>
+          </div>
         </div>
-
-        {/* Script text — bottom right over the photo */}
-        <p className={styles.script}>
-          <span>Strength Within.</span>
-          <span className={styles.scriptLine}>Hope Ahead.</span>
-        </p>
-      </div>
-
-      {/* Cream wave — merges into Why We Exist */}
-      <div className={styles.divider} aria-hidden="true">
-        <svg
-          className={styles.waveFill}
-          viewBox="0 0 1440 140"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="#FEF9F2"
-            d="M0 52C120 34 200 88 320 78C420 68 490 24 600 32C740 42 840 80 1020 68C1180 58 1300 44 1440 50V140H0Z"
-          />
-        </svg>
       </div>
     </section>
   );
