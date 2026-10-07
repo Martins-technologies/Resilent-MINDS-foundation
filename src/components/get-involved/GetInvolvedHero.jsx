@@ -7,7 +7,7 @@ const GetInvolvedHero = () => {
         Get Involved
       </span>
 
-      <h1 className="mb-4 font-heading font-bold text-forest leading-tight text-4xl md:text-5xl lg:text-[3.25rem]">
+      <h1 className="mb-4 font-heading font-bold text-forest leading-tight text-[31px] md:text-[43px] lg:text-[47px]">
         Be part of the change.{' '}
         <span className="text-burgundy">Together, we build resilience.</span>
       </h1>
