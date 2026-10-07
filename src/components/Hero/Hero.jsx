@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import IconArrowRight from '../icons/IconArrowRight';
 import styles from './Hero.module.css';
 
-const HERO_IMAGE = '/homepagebanner.webp';
+const HERO_IMAGE = '/home.png';
 
 const Hero = () => {
   return (
