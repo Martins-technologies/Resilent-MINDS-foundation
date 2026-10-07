@@ -9,12 +9,22 @@ const ProgramsHero = () => {
 
       <h1 className="mb-4 font-heading font-bold text-forest leading-tight text-[21px] md:text-[33px] lg:text-[37px]">
         Programs that{' '}
-        <span className="text-burgundy">build resilience and</span>{' '}
-        empower change.
+        <span className="text-burgundy">
+          build
+          <br />
+          resilience and
+        </span>{' '}
+        empower
+        <br />
+        change.
       </h1>
 
       <p className="text-sm md:text-base text-ink-soft leading-relaxed">
-        We create educational, emotional, and community-based programs that help individuals strengthen their mental wellness, build life skills, and thrive.
+        We create educational, emotional, and community-based
+        <br />
+        programs that help individuals strengthen their mental
+        <br />
+        wellness, build life skills, and thrive.
       </p>
     </PageHero>
   );
