@@ -6,7 +6,6 @@ import StrongerMindsBanner from '../components/programs/StrongerMindsBanner';
 import ProgramsCTA from '../components/programs/ProgramCTA';
 import Container from '../components/ui/Container';
 import Grid from '../components/ui/Grid';
-import img from '../assets/images/program-section.webp';
 
 const OurProgramsPage = () => {
   return (
@@ -33,7 +32,7 @@ const OurProgramsPage = () => {
             </div>
             <div className="relative h-full min-h-[350px] w-full overflow-hidden rounded-lg shadow-lg">
               <img
-                src={img}
+                src="/programresilientmind.jpeg"
                 alt="Our Programs"
                 className="w-full h-full object-cover object-center"
               />
