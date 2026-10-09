@@ -65,11 +65,63 @@
   display: none;
 }
 
+/* Full photograph beside the copy, at its real proportions, with no crop */
+.section.sectionContain {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  overflow: visible;
+  background-image: none !important;
+  background-color: #fef9f2;
+}
+
+.containLayout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.92fr) minmax(320px, 1.15fr);
+  align-items: center;
+  gap: 28px 36px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 40px 56px;
+}
+
+.containLayout > * {
+  min-width: 0;
+}
+
+.sectionContain .copy {
+  width: auto;
+  max-width: none;
+}
+
+.containImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 1594 / 987;
+  object-fit: contain;
+  object-position: center;
+}
+
 /* ─── Tablet (≤ 1024px) ─── */
 @media (max-width: 1024px) {
   .section {
     height: 500px;
     min-height: 500px;
+  }
+
+  .section.sectionContain {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  .containLayout {
+    padding: 32px 28px 40px;
+    gap: 20px 24px;
   }
 
   .inner {
@@ -102,6 +154,26 @@
     background-image: none !important;
     background-color: #fef9f2;
     overflow: hidden;
+  }
+
+  .section.sectionContain {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  .containLayout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px 16px 28px;
+  }
+
+  .containImage {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
   }
 
   .mobileImage {
@@ -194,6 +266,29 @@
     width: 100%;
     max-width: 100%;
   }
+
+  .sectionContain .copy :global(.eyebrow) {
+    font-size: 0.8rem !important;
+    letter-spacing: 0.14em;
+  }
+
+  .sectionContain .copy h1 {
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .sectionContain .copy p {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .mobileImageContain {
+    object-fit: contain;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+    transform: none;
+  }
 }
 
 /* ─── Small mobile (≤ 480px) ─── */
@@ -218,5 +313,13 @@
   .copy :is(a, button) {
     font-size: 8px !important;
     padding: 5px 6px !important;
+  }
+
+  .sectionContain .copy h1 {
+    font-size: 1.65rem !important;
+  }
+
+  .sectionContain .copy p {
+    font-size: 0.9rem !important;
   }
 }

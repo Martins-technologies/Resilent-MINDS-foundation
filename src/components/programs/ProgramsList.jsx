@@ -17,8 +17,11 @@ const GROUPS = [
       {
         title: 'Community Healing Circles',
         desc: 'Safe spaces to connect, share and grow together.',
-        image: '/PROGRAME%20updated/community.webp',
+        image: '/updated/05_Programs_Community_Healing_Circles.webp',
         link: '/contact-us',
+        full: true,
+        width: 1536,
+        height: 1024,
       },
       {
         title: 'Workplace Wellness Initiative',
@@ -88,7 +91,16 @@ const ProgramsList = () => {
                       src={program.image}
                       alt={program.title}
                       loading="lazy"
-                      className={styles.image}
+                      width={program.width}
+                      height={program.height}
+                      className={program.full ? `${styles.image} ${styles.imageFull}` : styles.image}
+                      style={program.full ? {
+                        width: '100%',
+                        height: 'auto',
+                        aspectRatio: `${program.width} / ${program.height}`,
+                        objectFit: 'contain',
+                        objectPosition: 'center',
+                      } : undefined}
                       onError={(e) => {
                         e.target.src = `https://via.placeholder.com/600x400/FEF9F2/2E5D49?text=${encodeURIComponent(program.title)}`;
                       }}

@@ -2,7 +2,10 @@ import PageHero from '../layout/PageHero';
 
 const AboutHero = () => {
   return (
-    <PageHero image="/aboutusbanner.png" ariaLabel="About Us hero" imageShiftRight={5} imagePositionY="20%">
+    <PageHero
+      image="/aboutusbanner.png"
+      ariaLabel="About Us hero"
+    >
       <h1 className="mb-2 font-heading font-bold text-forest leading-tight text-4xl md:text-5xl lg:text-[3.25rem]">
         About Us
       </h1>
