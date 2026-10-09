@@ -96,6 +96,14 @@
   display: block;
 }
 
+.image.imageFull {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  background: #fef9f2;
+}
+
 .body {
   padding: 24px;
   display: flex;
@@ -162,5 +170,9 @@
 
   .image {
     height: 220px;
+  }
+
+  .image.imageFull {
+    height: auto;
   }
 }

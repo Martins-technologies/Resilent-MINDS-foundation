@@ -1,0 +1,108 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/pages/DonationCollectionPage.module.css");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "D:/resilant-minds/Resilent-MINDS-foundation/src/pages/DonationCollectionPage.module.css"
+const __vite__css = "._page_vaxsb_1 {\r\n  background: #fef9f2;\r\n  color: #5b5148;\r\n}\r\n\r\n/* Same hero frame as Get Involved. On a wide screen, cover used to crop\r\n   the top of this photo, so the volunteer's head met the navbar. Pin the\r\n   photo 10px below the top of the frame so that strip stays visible. */\r\n._page_vaxsb_1 ._donationHero_vaxsb_17 {\r\n  background-position: center 10px;\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  ._page_vaxsb_1 ._donationHero_vaxsb_17 img {\r\n    top: 10px;\r\n    height: calc(100% - 10px);\r\n    object-position: center top;\r\n  }\r\n}\r\n\r\n._wrap_vaxsb_41 {\r\n  width: 100%;\r\n  max-width: 1180px;\r\n  margin: 0 auto;\r\n  padding: 0 24px;\r\n}\r\n\r\n/* On smaller screens, keep the copy on the cream side of the curve. */\r\n@media (max-width: 1024px) {\r\n  ._donationHero_vaxsb_17 > div:last-child > div {\r\n    width: 36% !important;\r\n    max-width: 36% !important;\r\n    min-width: 0 !important;\r\n    overflow-wrap: anywhere;\r\n  }\r\n\r\n  ._donationHero_vaxsb_17 h1 {\r\n    font-size: 1.65rem !important;\r\n    line-height: 1.15 !important;\r\n  }\r\n\r\n  ._donationHero_vaxsb_17 a,\r\n  ._donationHero_vaxsb_17 button {\r\n    box-sizing: border-box;\r\n    max-width: 100%;\r\n    height: auto;\r\n    justify-content: center;\r\n    padding: 10px 12px !important;\r\n    font-size: 0.8125rem !important;\r\n    line-height: 1.3 !important;\r\n    white-space: normal;\r\n    text-align: center;\r\n  }\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  ._donationHero_vaxsb_17 > div:last-child > div {\r\n    width: 36% !important;\r\n    max-width: 36% !important;\r\n  }\r\n\r\n  ._donationHero_vaxsb_17 h1 {\r\n    font-size: 1.15rem !important;\r\n  }\r\n}\r\n\r\n._crumbs_vaxsb_133 {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  align-items: center;\r\n  gap: 8px;\r\n  margin: 0 0 22px;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 12.5px;\r\n  line-height: 1.4;\r\n  color: #8d8378;\r\n}\r\n\r\n._crumbs_vaxsb_133 a,\r\n._crumbCurrent_vaxsb_159 {\r\n  min-width: 0;\r\n}\r\n\r\n._crumbs_vaxsb_133 a {\r\n  color: #c79949;\r\n  text-decoration: none;\r\n}\r\n\r\n._crumbs_vaxsb_133 a:hover {\r\n  color: #6e2839;\r\n}\r\n\r\n._crumbCurrent_vaxsb_159 {\r\n  color: #5b5148;\r\n}\r\n\r\n._eyebrow_vaxsb_193 {\r\n  display: block;\r\n  margin: 0 0 12px;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 12px;\r\n  font-weight: 700;\r\n  letter-spacing: 0.16em;\r\n  text-transform: uppercase;\r\n  color: #6e2839;\r\n}\r\n\r\n._photo_vaxsb_215,\r\n._placeholder_vaxsb_217 {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: inherit;\r\n}\r\n\r\n._photo_vaxsb_215 {\r\n  object-fit: cover;\r\n  object-position: center;\r\n}\r\n\r\n._placeholder_vaxsb_217 {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  padding: 16px;\r\n  background:\r\n    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.55), transparent 55%),\r\n    linear-gradient(145deg, #e7efe8 0%, #d5c4a8 100%);\r\n  color: #234739;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 13px;\r\n  font-weight: 600;\r\n  letter-spacing: 0.04em;\r\n  text-align: center;\r\n}\r\n\r\n/* ── Program ── */\r\n._program_vaxsb_273 {\r\n  padding: 42px 0 18px;\r\n}\r\n\r\n._programGrid_vaxsb_281 {\r\n  display: grid;\r\n  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);\r\n  gap: 36px;\r\n  align-items: center;\r\n}\r\n\r\n._programTitle_vaxsb_295 {\r\n  margin: 0 0 14px;\r\n  max-width: 460px;\r\n  font-family: var(--rm-font-heading);\r\n  font-size: 34px;\r\n  font-weight: 700;\r\n  line-height: 1.2;\r\n  color: #2e5d49;\r\n}\r\n\r\n._programBody_vaxsb_315 {\r\n  margin: 0 0 14px;\r\n  max-width: 540px;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 15px;\r\n  line-height: 1.7;\r\n  color: #5b5148;\r\n}\r\n\r\n._programBody_vaxsb_315:last-child {\r\n  margin-bottom: 0;\r\n}\r\n\r\n._programPhotos_vaxsb_341 {\r\n  display: grid;\r\n  grid-template-columns: repeat(2, 1fr);\r\n  gap: 16px;\r\n}\r\n\r\n._programFrame_vaxsb_353 {\r\n  height: 250px;\r\n  border-radius: 16px;\r\n  overflow: hidden;\r\n  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);\r\n  background: #e7efe8;\r\n}\r\n\r\n._programFrame_vaxsb_353 ._placeholder_vaxsb_217,\r\n._programFrame_vaxsb_353 ._photo_vaxsb_215 {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  object-position: center;\r\n  display: block;\r\n  transition: transform 0.35s ease;\r\n}\r\n\r\n._programFrame_vaxsb_353:hover ._photo_vaxsb_215 {\r\n  transform: scale(1.025);\r\n}\r\n\r\n/* ── How the team helps ── */\r\n._helpsSection_vaxsb_399 {\r\n  padding: 22px 0 10px;\r\n}\r\n\r\n._helps_vaxsb_399 {\r\n  padding: 34px 28px 30px;\r\n  border-radius: 22px;\r\n  background: #e7f2e9;\r\n}\r\n\r\n._helpsTitle_vaxsb_419 {\r\n  margin: 0 0 26px;\r\n  font-family: var(--rm-font-heading);\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 1.2;\r\n  color: #2e5d49;\r\n}\r\n\r\n._helpsGrid_vaxsb_437 {\r\n  display: grid;\r\n  grid-template-columns: repeat(5, minmax(0, 1fr));\r\n  gap: 26px 16px;\r\n}\r\n\r\n._helpItem_vaxsb_449 {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n  gap: 12px;\r\n}\r\n\r\n._iconCircle_vaxsb_465 {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 64px;\r\n  height: 64px;\r\n  border-radius: 50%;\r\n  background: #245743;\r\n  color: #ffffff;\r\n  flex-shrink: 0;\r\n}\r\n\r\n._helpLabel_vaxsb_489 {\r\n  margin: 0;\r\n  max-width: 168px;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  color: #3d4a44;\r\n}\r\n\r\n/* ── Process ── */\r\n._process_vaxsb_509 {\r\n  padding: 42px 0 12px;\r\n}\r\n\r\n._processTitle_vaxsb_517 {\r\n  margin: 0 0 6px;\r\n  font-family: var(--rm-font-heading);\r\n  font-size: 32px;\r\n  font-weight: 700;\r\n  line-height: 1.2;\r\n  color: #2e5d49;\r\n}\r\n\r\n._processSubtitle_vaxsb_535 {\r\n  margin: 0;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 15px;\r\n  color: #6a6158;\r\n}\r\n\r\n._processRow_vaxsb_549 {\r\n  display: flex;\r\n  align-items: flex-start;\r\n  justify-content: space-between;\r\n  max-width: 980px;\r\n  margin: 32px auto 0;\r\n}\r\n\r\n._step_vaxsb_565 {\r\n  width: 132px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n  gap: 12px;\r\n}\r\n\r\n._stepLabel_vaxsb_583 {\r\n  margin: 0;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 14px;\r\n  font-weight: 600;\r\n  line-height: 1.35;\r\n  color: #2e5d49;\r\n}\r\n\r\n._arrow_vaxsb_601 {\r\n  flex: 1;\r\n  margin-top: 22px;\r\n  color: #c79949;\r\n  font-size: 18px;\r\n  line-height: 1;\r\n  text-align: center;\r\n}\r\n\r\n._processNote_vaxsb_619 {\r\n  max-width: 820px;\r\n  margin: 28px auto 0;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 14.5px;\r\n  line-height: 1.65;\r\n  text-align: center;\r\n  color: #5b5148;\r\n}\r\n\r\n/* ── Request ── */\r\n._request_vaxsb_641 {\r\n  padding: 36px 0 72px;\r\n}\r\n\r\n._requestGrid_vaxsb_649 {\r\n  display: grid;\r\n  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);\r\n  gap: 28px;\r\n  align-items: start;\r\n}\r\n\r\n._requestTitle_vaxsb_663 {\r\n  margin: 0 0 12px;\r\n  font-family: var(--rm-font-heading);\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 1.25;\r\n  color: #2e5d49;\r\n}\r\n\r\n._requestBody_vaxsb_681 {\r\n  margin: 0 0 12px;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 14.5px;\r\n  line-height: 1.65;\r\n  color: #5b5148;\r\n}\r\n\r\n._itemsCard_vaxsb_697 {\r\n  margin-top: 18px;\r\n  padding: 18px 16px 16px;\r\n  border: 1px solid #e7dfd2;\r\n  border-radius: 16px;\r\n  background: #fffdf9;\r\n}\r\n\r\n._itemsTitle_vaxsb_713 {\r\n  margin: 0 0 14px;\r\n  font-family: var(--rm-font-heading);\r\n  font-size: 20px;\r\n  font-weight: 700;\r\n  color: #2e5d49;\r\n}\r\n\r\n._itemsGrid_vaxsb_729 {\r\n  display: grid;\r\n  grid-template-columns: repeat(4, minmax(0, 1fr));\r\n  gap: 10px;\r\n}\r\n\r\n._itemTile_vaxsb_741 {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: flex-start;\r\n  gap: 8px;\r\n  min-height: 112px;\r\n  padding: 16px 8px 12px;\r\n  border-radius: 14px;\r\n  background: #f7efe8;\r\n  text-align: center;\r\n  color: #6e2839;\r\n}\r\n\r\n._itemLabel_vaxsb_769 {\r\n  margin: 0;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 12px;\r\n  font-weight: 500;\r\n  line-height: 1.35;\r\n  color: #4a4038;\r\n}\r\n\r\n._formCard_vaxsb_787 {\r\n  padding: 26px 24px 22px;\r\n  border: 1px solid #e7dfd2;\r\n  border-radius: 18px;\r\n  background: #ffffff;\r\n  box-shadow: 0 10px 28px rgba(43, 36, 32, 0.06);\r\n  scroll-margin-top: 104px;\r\n}\r\n\r\n._formTitle_vaxsb_805 {\r\n  margin: 0 0 8px;\r\n  font-family: var(--rm-font-heading);\r\n  font-size: 26px;\r\n  font-weight: 700;\r\n  line-height: 1.25;\r\n  color: #2e5d49;\r\n}\r\n\r\n._formIntro_vaxsb_823 {\r\n  margin: 0 0 18px;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 13.5px;\r\n  line-height: 1.55;\r\n  color: #6a6158;\r\n}\r\n\r\n._formGrid_vaxsb_839 {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  gap: 14px 14px;\r\n}\r\n\r\n._field_vaxsb_851 {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 6px;\r\n  min-width: 0;\r\n}\r\n\r\n._span2_vaxsb_865 {\r\n  grid-column: 1 / -1;\r\n}\r\n\r\n._field_vaxsb_851 label {\r\n  font-family: var(--rm-font-body);\r\n  font-size: 12.5px;\r\n  font-weight: 700;\r\n  color: #2e5d49;\r\n}\r\n\r\n._req_vaxsb_641 {\r\n  color: #6e2839;\r\n}\r\n\r\n._field_vaxsb_851 input,\r\n._field_vaxsb_851 select,\r\n._field_vaxsb_851 textarea {\r\n  width: 100%;\r\n  box-sizing: border-box;\r\n  padding: 10px 12px;\r\n  border: 1px solid #e0d8cc;\r\n  border-radius: 8px;\r\n  background: #ffffff;\r\n  color: #2b2420;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 14px;\r\n  line-height: 1.4;\r\n}\r\n\r\n._field_vaxsb_851 textarea {\r\n  min-height: 88px;\r\n  resize: vertical;\r\n}\r\n\r\n._field_vaxsb_851 input::placeholder,\r\n._field_vaxsb_851 textarea::placeholder {\r\n  color: #b3aa9e;\r\n}\r\n\r\n._field_vaxsb_851 input:focus,\r\n._field_vaxsb_851 select:focus,\r\n._field_vaxsb_851 textarea:focus {\r\n  outline: none;\r\n  border-color: #c79949;\r\n  box-shadow: 0 0 0 3px rgba(199, 153, 73, 0.22);\r\n}\r\n\r\n._field_vaxsb_851 select {\r\n  appearance: none;\r\n  background-image: linear-gradient(45deg, transparent 50%, #2e5d49 50%),\r\n    linear-gradient(135deg, #2e5d49 50%, transparent 50%);\r\n  background-position: calc(100% - 16px) 16px, calc(100% - 11px) 16px;\r\n  background-size: 5px 5px, 5px 5px;\r\n  background-repeat: no-repeat;\r\n  padding-right: 28px;\r\n}\r\n\r\n._consent_vaxsb_981 {\r\n  display: flex;\r\n  align-items: flex-start;\r\n  gap: 10px;\r\n  margin: 16px 0 16px;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 12.5px;\r\n  line-height: 1.5;\r\n  color: #5b5148;\r\n  cursor: pointer;\r\n}\r\n\r\n._consent_vaxsb_981 input {\r\n  width: 16px;\r\n  height: 16px;\r\n  margin-top: 2px;\r\n  flex-shrink: 0;\r\n  accent-color: #2e5d49;\r\n}\r\n\r\n._submit_vaxsb_1021 {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  gap: 8px;\r\n  padding: 12px 22px;\r\n  border: none;\r\n  border-radius: 999px;\r\n  background: #6e2839;\r\n  color: #ffffff;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 14.5px;\r\n  font-weight: 600;\r\n  cursor: pointer;\r\n  transition: background 0.15s ease;\r\n}\r\n\r\n._submit_vaxsb_1021:hover:not(:disabled) {\r\n  background: #591f2d;\r\n}\r\n\r\n._submit_vaxsb_1021:disabled {\r\n  opacity: 0.7;\r\n  cursor: wait;\r\n}\r\n\r\n._status_vaxsb_1073 {\r\n  margin: 14px 0 0;\r\n  font-family: var(--rm-font-body);\r\n  font-size: 13.5px;\r\n  line-height: 1.5;\r\n}\r\n\r\n._statusOk_vaxsb_1087 {\r\n  color: #2e5d49;\r\n}\r\n\r\n._statusErr_vaxsb_1095 {\r\n  color: #6e2839;\r\n}\r\n\r\n@media (max-width: 1100px) {\r\n  ._helpsGrid_vaxsb_437 {\r\n    grid-template-columns: repeat(3, minmax(0, 1fr));\r\n  }\r\n\r\n  ._itemsGrid_vaxsb_729 {\r\n    grid-template-columns: repeat(2, minmax(0, 1fr));\r\n  }\r\n}\r\n\r\n@media (max-width: 900px) {\r\n  ._programGrid_vaxsb_281,\r\n  ._requestGrid_vaxsb_649 {\r\n    grid-template-columns: 1fr;\r\n  }\r\n\r\n  ._programPhotos_vaxsb_341 {\r\n    max-width: 640px;\r\n  }\r\n\r\n  ._processRow_vaxsb_549 {\r\n    flex-wrap: wrap;\r\n    row-gap: 18px;\r\n  }\r\n\r\n  ._formGrid_vaxsb_839 {\r\n    grid-template-columns: 1fr;\r\n  }\r\n\r\n  ._span2_vaxsb_865 {\r\n    grid-column: auto;\r\n  }\r\n}\r\n\r\n@media (max-width: 640px) {\r\n  ._programTitle_vaxsb_295,\r\n  ._helpsTitle_vaxsb_419,\r\n  ._processTitle_vaxsb_517,\r\n  ._requestTitle_vaxsb_663 {\r\n    font-size: 26px;\r\n  }\r\n\r\n  ._helps_vaxsb_399 {\r\n    padding: 24px 16px 20px;\r\n  }\r\n\r\n  ._helpsGrid_vaxsb_437 {\r\n    grid-template-columns: repeat(2, minmax(0, 1fr));\r\n    gap: 20px 12px;\r\n  }\r\n\r\n  ._programPhotos_vaxsb_341 {\r\n    grid-template-columns: 1fr;\r\n  }\r\n\r\n  ._programFrame_vaxsb_353,\r\n  ._programFrame_vaxsb_353 ._placeholder_vaxsb_217,\r\n  ._programFrame_vaxsb_353 ._photo_vaxsb_215 {\r\n    height: 200px;\r\n    min-height: 200px;\r\n  }\r\n\r\n  ._arrow_vaxsb_601 {\r\n    display: none;\r\n  }\r\n\r\n  ._step_vaxsb_565 {\r\n    width: 46%;\r\n  }\r\n}\r\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const page = "_page_vaxsb_1";
+export const donationHero = "_donationHero_vaxsb_17";
+export const wrap = "_wrap_vaxsb_41";
+export const crumbs = "_crumbs_vaxsb_133";
+export const crumbCurrent = "_crumbCurrent_vaxsb_159";
+export const eyebrow = "_eyebrow_vaxsb_193";
+export const photo = "_photo_vaxsb_215";
+export const placeholder = "_placeholder_vaxsb_217";
+export const program = "_program_vaxsb_273";
+export const programGrid = "_programGrid_vaxsb_281";
+export const programTitle = "_programTitle_vaxsb_295";
+export const programBody = "_programBody_vaxsb_315";
+export const programPhotos = "_programPhotos_vaxsb_341";
+export const programFrame = "_programFrame_vaxsb_353";
+export const helpsSection = "_helpsSection_vaxsb_399";
+export const helps = "_helps_vaxsb_399";
+export const helpsTitle = "_helpsTitle_vaxsb_419";
+export const helpsGrid = "_helpsGrid_vaxsb_437";
+export const helpItem = "_helpItem_vaxsb_449";
+export const iconCircle = "_iconCircle_vaxsb_465";
+export const helpLabel = "_helpLabel_vaxsb_489";
+export const process = "_process_vaxsb_509";
+export const processTitle = "_processTitle_vaxsb_517";
+export const processSubtitle = "_processSubtitle_vaxsb_535";
+export const processRow = "_processRow_vaxsb_549";
+export const step = "_step_vaxsb_565";
+export const stepLabel = "_stepLabel_vaxsb_583";
+export const arrow = "_arrow_vaxsb_601";
+export const processNote = "_processNote_vaxsb_619";
+export const request = "_request_vaxsb_641";
+export const requestGrid = "_requestGrid_vaxsb_649";
+export const requestTitle = "_requestTitle_vaxsb_663";
+export const requestBody = "_requestBody_vaxsb_681";
+export const itemsCard = "_itemsCard_vaxsb_697";
+export const itemsTitle = "_itemsTitle_vaxsb_713";
+export const itemsGrid = "_itemsGrid_vaxsb_729";
+export const itemTile = "_itemTile_vaxsb_741";
+export const itemLabel = "_itemLabel_vaxsb_769";
+export const formCard = "_formCard_vaxsb_787";
+export const formTitle = "_formTitle_vaxsb_805";
+export const formIntro = "_formIntro_vaxsb_823";
+export const formGrid = "_formGrid_vaxsb_839";
+export const field = "_field_vaxsb_851";
+export const span2 = "_span2_vaxsb_865";
+export const req = "_req_vaxsb_641";
+export const consent = "_consent_vaxsb_981";
+export const submit = "_submit_vaxsb_1021";
+export const status = "_status_vaxsb_1073";
+export const statusOk = "_statusOk_vaxsb_1087";
+export const statusErr = "_statusErr_vaxsb_1095";
+export default {
+	page: page,
+	donationHero: donationHero,
+	wrap: wrap,
+	crumbs: crumbs,
+	crumbCurrent: crumbCurrent,
+	eyebrow: eyebrow,
+	photo: photo,
+	placeholder: placeholder,
+	program: program,
+	programGrid: programGrid,
+	programTitle: programTitle,
+	programBody: programBody,
+	programPhotos: programPhotos,
+	programFrame: programFrame,
+	helpsSection: helpsSection,
+	helps: helps,
+	helpsTitle: helpsTitle,
+	helpsGrid: helpsGrid,
+	helpItem: helpItem,
+	iconCircle: iconCircle,
+	helpLabel: helpLabel,
+	process: process,
+	processTitle: processTitle,
+	processSubtitle: processSubtitle,
+	processRow: processRow,
+	step: step,
+	stepLabel: stepLabel,
+	arrow: arrow,
+	processNote: processNote,
+	request: request,
+	requestGrid: requestGrid,
+	requestTitle: requestTitle,
+	requestBody: requestBody,
+	itemsCard: itemsCard,
+	itemsTitle: itemsTitle,
+	itemsGrid: itemsGrid,
+	itemTile: itemTile,
+	itemLabel: itemLabel,
+	formCard: formCard,
+	formTitle: formTitle,
+	formIntro: formIntro,
+	formGrid: formGrid,
+	field: field,
+	span2: span2,
+	req: req,
+	consent: consent,
+	submit: submit,
+	status: status,
+	statusOk: statusOk,
+	statusErr: statusErr
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

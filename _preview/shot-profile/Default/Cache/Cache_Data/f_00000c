@@ -1,0 +1,108 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/pages/HomeV1Page.module.css");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "D:/resilant-minds/Resilent-MINDS-foundation/src/pages/HomeV1Page.module.css"
+const __vite__css = "._page_mfd1h_1 {\r\n  background: #fff;\r\n  color: #2b2420;\r\n  font-family: var(--rm-font-body);\r\n}\r\n\r\n._hero_mfd1h_13 {\r\n  position: relative;\r\n  height: 500px;\r\n  overflow: hidden;\r\n  background: #cfc8bc;\r\n}\r\n\r\n._heroPhoto_mfd1h_27 {\r\n  position: absolute;\r\n  inset: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  object-position: 62% center;\r\n}\r\n\r\n._heroFade_mfd1h_45 {\r\n  position: absolute;\r\n  inset: 0;\r\n  background: linear-gradient(\r\n    90deg,\r\n    rgba(255, 255, 255, 0.78) 0%,\r\n    rgba(255, 255, 255, 0.58) 24%,\r\n    rgba(255, 255, 255, 0.16) 42%,\r\n    rgba(255, 255, 255, 0) 54%\r\n  );\r\n  pointer-events: none;\r\n}\r\n\r\n._heroCopy_mfd1h_71 {\r\n  position: relative;\r\n  z-index: 1;\r\n  max-width: 560px;\r\n  padding: 54px 48px 64px 56px;\r\n  background: transparent;\r\n}\r\n\r\n._heroTitle_mfd1h_87 {\r\n  margin: 0;\r\n  max-width: 460px;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 52px;\r\n  font-weight: 700;\r\n  line-height: 1.05;\r\n  letter-spacing: -0.02em;\r\n  color: var(--rm-gold);\r\n  text-shadow: 0 0 16px rgba(255, 255, 255, 0.95);\r\n}\r\n\r\n._heroKicker_mfd1h_111 {\r\n  margin: 14px 0 0;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 34px;\r\n  font-weight: 800;\r\n  letter-spacing: -0.02em;\r\n  line-height: 1.1;\r\n  color: #1c1c1c;\r\n  text-shadow: 0 0 16px rgba(255, 255, 255, 0.95);\r\n}\r\n\r\n._heroBody_mfd1h_133 {\r\n  margin: 18px 0 0;\r\n  max-width: 460px;\r\n  font-size: 16px;\r\n  line-height: 1.55;\r\n  color: #222;\r\n  text-shadow: 0 0 14px rgba(255, 255, 255, 0.95);\r\n}\r\n\r\n._heroBtn_mfd1h_151 {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-top: 28px;\r\n  min-width: 210px;\r\n  padding: 14px 28px;\r\n  border-radius: 999px;\r\n  background: var(--rm-forest);\r\n  color: #fff;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  line-height: 1.25;\r\n  text-align: center;\r\n  text-decoration: none;\r\n  box-shadow: 0 8px 18px rgba(46, 93, 73, 0.22);\r\n}\r\n\r\n._heroBtn_mfd1h_151:hover {\r\n  background: var(--rm-forest-dark);\r\n}\r\n\r\n._mission_mfd1h_197 {\r\n  padding: 28px 28px 8px;\r\n}\r\n\r\n._missionCard_mfd1h_205 {\r\n  max-width: 1180px;\r\n  margin: 0 auto;\r\n  padding: 54px 48px 46px;\r\n  border-radius: 28px;\r\n  background: #f6f4f1;\r\n  text-align: center;\r\n}\r\n\r\n._missionLabel_mfd1h_223 {\r\n  margin: 0;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 13px;\r\n  font-weight: 700;\r\n  letter-spacing: 0.16em;\r\n  color: #1a1a1a;\r\n}\r\n\r\n._missionText_mfd1h_241 {\r\n  max-width: 640px;\r\n  margin: 14px auto 0;\r\n  font-size: 20px;\r\n  line-height: 1.45;\r\n  color: #2a2a2a;\r\n}\r\n\r\n._motto_mfd1h_257 {\r\n  margin: 22px 0 0;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 42px;\r\n  font-weight: 800;\r\n  letter-spacing: 0.01em;\r\n  line-height: 1.1;\r\n  color: var(--rm-gold);\r\n}\r\n\r\n._actions_mfd1h_277 {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  gap: 22px;\r\n  max-width: 1240px;\r\n  margin: 0 auto;\r\n  padding: 28px 28px 8px;\r\n}\r\n\r\n._actionCard_mfd1h_295 {\r\n  position: relative;\r\n  min-height: 430px;\r\n  border-radius: 28px;\r\n  overflow: hidden;\r\n  background: #cfc8bc;\r\n}\r\n\r\n._actionCard_mfd1h_295 img {\r\n  position: absolute;\r\n  inset: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n}\r\n\r\n._actionShade_mfd1h_327 {\r\n  position: absolute;\r\n  inset: 0;\r\n  background: linear-gradient(\r\n    180deg,\r\n    rgba(46, 93, 73, 0) 38%,\r\n    rgba(46, 93, 73, 0.55) 62%,\r\n    rgba(35, 71, 57, 0.92) 100%\r\n  );\r\n}\r\n\r\n._actionShadeSoft_mfd1h_349 {\r\n  position: absolute;\r\n  inset: 0;\r\n  background: linear-gradient(\r\n    180deg,\r\n    rgba(0, 0, 0, 0) 45%,\r\n    rgba(20, 20, 20, 0.35) 100%\r\n  );\r\n}\r\n\r\n._actionCopy_mfd1h_369 {\r\n  position: absolute;\r\n  left: 28px;\r\n  right: 28px;\r\n  bottom: 26px;\r\n  color: #fff;\r\n}\r\n\r\n._actionCopy_mfd1h_369 p {\r\n  margin: 0;\r\n  font-size: 22px;\r\n  font-weight: 600;\r\n}\r\n\r\n._actionCopy_mfd1h_369 h2 {\r\n  margin: 2px 0 16px;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 1.05;\r\n  color: #fff;\r\n}\r\n\r\n._actionStack_mfd1h_415 {\r\n  position: absolute;\r\n  right: 22px;\r\n  bottom: 22px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 12px;\r\n  width: 210px;\r\n}\r\n\r\n._pillLight_mfd1h_435,\r\n._pillGold_mfd1h_437 {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  min-height: 48px;\r\n  padding: 10px 22px;\r\n  border-radius: 999px;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  text-decoration: none;\r\n}\r\n\r\n._pillLight_mfd1h_435 {\r\n  width: fit-content;\r\n  background: #fff;\r\n  color: #1c1c1c;\r\n}\r\n\r\n._pillGold_mfd1h_437 {\r\n  background: var(--rm-gold);\r\n  color: #fff;\r\n}\r\n\r\n._pillLight_mfd1h_435:hover,\r\n._pillGold_mfd1h_437:hover {\r\n  filter: brightness(0.96);\r\n}\r\n\r\n._weekWrap_mfd1h_495 {\r\n  padding: 28px 28px 8px;\r\n}\r\n\r\n._week_mfd1h_495 {\r\n  display: grid;\r\n  grid-template-columns: 1.05fr repeat(5, 1fr);\r\n  max-width: 1240px;\r\n  margin: 0 auto;\r\n  border-radius: 22px;\r\n  overflow: hidden;\r\n  background: #fff7ef;\r\n}\r\n\r\n._day_mfd1h_523 {\r\n  min-height: 210px;\r\n  padding: 22px 18px 26px;\r\n  background: #fff8f2;\r\n  color: var(--rm-gold-dark);\r\n}\r\n\r\n._day_mfd1h_523:nth-child(even) {\r\n  background: #fff3e8;\r\n}\r\n\r\n._day_mfd1h_523 h3 {\r\n  margin: 0 0 12px;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 22px;\r\n  font-weight: 700;\r\n  color: inherit;\r\n}\r\n\r\n._day_mfd1h_523 p {\r\n  margin: 0 0 10px;\r\n  font-size: 15px;\r\n  font-weight: 600;\r\n  line-height: 1.35;\r\n}\r\n\r\n._dayOn_mfd1h_575 {\r\n  background: var(--rm-gold) !important;\r\n  color: #fff;\r\n}\r\n\r\n._story_mfd1h_585 {\r\n  padding: 28px;\r\n}\r\n\r\n._storyCard_mfd1h_593 {\r\n  display: grid;\r\n  grid-template-columns: 0.92fr 1.2fr;\r\n  max-width: 1240px;\r\n  margin: 0 auto;\r\n  border-radius: 28px;\r\n  overflow: hidden;\r\n  background: #f7f5f2;\r\n  min-height: 360px;\r\n}\r\n\r\n._storyCard_mfd1h_593 img {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 360px;\r\n  object-fit: cover;\r\n}\r\n\r\n._storyCopy_mfd1h_629 {\r\n  padding: 42px 40px 36px 36px;\r\n}\r\n\r\n._storyCopy_mfd1h_629 p {\r\n  margin: 0 0 18px;\r\n  font-size: 16.5px;\r\n  line-height: 1.65;\r\n  color: #2c2c2c;\r\n}\r\n\r\n._storyCopy_mfd1h_629 p:last-child {\r\n  margin-bottom: 0;\r\n}\r\n\r\n._gallery_mfd1h_659 {\r\n  padding: 18px 0 36px;\r\n}\r\n\r\n._handle_mfd1h_667 {\r\n  margin: 0 0 18px;\r\n  text-align: center;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 42px;\r\n  font-weight: 700;\r\n  color: var(--rm-gold);\r\n}\r\n\r\n._galleryRow_mfd1h_685 {\r\n  display: grid;\r\n  grid-auto-flow: column;\r\n  grid-auto-columns: minmax(240px, 280px);\r\n  gap: 16px;\r\n  padding: 0 28px 8px;\r\n  overflow-x: auto;\r\n  scroll-snap-type: x mandatory;\r\n}\r\n\r\n._tile_mfd1h_705 {\r\n  scroll-snap-align: start;\r\n  height: 360px;\r\n  border-radius: 8px;\r\n  overflow: hidden;\r\n  position: relative;\r\n}\r\n\r\n._tileQuote_mfd1h_721 {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  padding: 22px 18px 16px;\r\n  background: linear-gradient(180deg, #f3a24a 0%, var(--rm-gold) 100%);\r\n  color: #fff;\r\n}\r\n\r\n._quoteMark_mfd1h_739 {\r\n  font-family: Georgia, serif;\r\n  font-size: 64px;\r\n  line-height: 0.6;\r\n}\r\n\r\n._tileQuote_mfd1h_721 p {\r\n  margin: 8px 0 0;\r\n  font-size: 15px;\r\n  line-height: 1.45;\r\n}\r\n\r\n._tileQuote_mfd1h_721 footer,\r\n._tileFeature_mfd1h_765 footer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 2px;\r\n  font-size: 13px;\r\n}\r\n\r\n._tilePhoto_mfd1h_779 img {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n}\r\n\r\n._tileCaption_mfd1h_791 {\r\n  position: absolute;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 2px;\r\n  padding: 28px 14px 12px;\r\n  background: linear-gradient(180deg, transparent, rgba(20, 16, 12, 0.82));\r\n  color: #fff;\r\n  font-size: 13px;\r\n}\r\n\r\n._tileCaption_mfd1h_791 strong {\r\n  font-size: 16px;\r\n}\r\n\r\n._tileFeature_mfd1h_765 {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  padding: 22px 18px 16px;\r\n  background: var(--rm-forest);\r\n  color: #fff;\r\n}\r\n\r\n._tileKicker_mfd1h_845 {\r\n  margin: 0;\r\n  font-size: 12px;\r\n  font-weight: 700;\r\n  letter-spacing: 0.12em;\r\n  color: #fff;\r\n}\r\n\r\n._tileFeature_mfd1h_765 h3,\r\n._tileFeature_mfd1h_765 p,\r\n._tileFeature_mfd1h_765 span,\r\n._tileFeature_mfd1h_765 strong,\r\n._tileFeature_mfd1h_765 footer {\r\n  color: #fff;\r\n}\r\n\r\n._tileFeature_mfd1h_765 h3 {\r\n  margin: 10px 0 8px;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 28px;\r\n  line-height: 1.1;\r\n}\r\n\r\n._tileFeature_mfd1h_765 p {\r\n  margin: 0;\r\n  font-size: 15px;\r\n  line-height: 1.45;\r\n  color: #fff;\r\n}\r\n\r\n._stats_mfd1h_905 {\r\n  display: grid;\r\n  grid-template-columns: repeat(4, 1fr);\r\n  gap: 12px;\r\n  padding: 42px 36px 48px;\r\n  background: #1c3d31;\r\n  color: #fff;\r\n  text-align: center;\r\n}\r\n\r\n._stat_mfd1h_905 h3 {\r\n  margin: 8px 0 6px;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 22px;\r\n  font-weight: 800;\r\n  color: #fff;\r\n}\r\n\r\n._stat_mfd1h_905 p {\r\n  max-width: 220px;\r\n  margin: 0 auto;\r\n  font-size: 15px;\r\n  line-height: 1.4;\r\n  color: rgba(255, 255, 255, 0.88);\r\n}\r\n\r\n._statIcon_mfd1h_957 {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 86px;\r\n  height: 86px;\r\n}\r\n\r\n._connect_mfd1h_973 {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  gap: 48px;\r\n  max-width: 1100px;\r\n  margin: 0 auto;\r\n  padding: 56px 40px 72px;\r\n}\r\n\r\n._connect_mfd1h_973 h2 {\r\n  margin: 0 0 10px;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 28px;\r\n  font-weight: 700;\r\n  color: #2a2a2a;\r\n}\r\n\r\n._connect_mfd1h_973 h3 {\r\n  margin: 28px 0 12px;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 22px;\r\n  font-weight: 700;\r\n  color: #2a2a2a;\r\n}\r\n\r\n._proud_mfd1h_1023 {\r\n  margin: 0 0 12px;\r\n  color: var(--rm-gold);\r\n  font-weight: 700;\r\n  font-size: 18px;\r\n}\r\n\r\n._connect_mfd1h_973 ul {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\n._connect_mfd1h_973 li {\r\n  padding: 8px 0;\r\n  border-bottom: 1px solid #e6e0d6;\r\n  font-weight: 700;\r\n  letter-spacing: 0.04em;\r\n  text-transform: uppercase;\r\n  font-size: 14px;\r\n  color: #333;\r\n}\r\n\r\n._socials_mfd1h_1069 {\r\n  display: flex;\r\n  gap: 14px;\r\n}\r\n\r\n._socials_mfd1h_1069 a {\r\n  display: inline-flex;\r\n  width: 34px;\r\n  height: 34px;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-radius: 50%;\r\n  background: #f3efe8;\r\n  text-decoration: none;\r\n}\r\n\r\n._news_mfd1h_1101 {\r\n  display: flex;\r\n  align-items: center;\r\n  max-width: 520px;\r\n  margin-top: 8px;\r\n  border: 1px solid #e4ddd2;\r\n  border-radius: 999px;\r\n  overflow: hidden;\r\n  background: #fff;\r\n}\r\n\r\n._news_mfd1h_1101 input {\r\n  flex: 1;\r\n  min-width: 0;\r\n  border: 0;\r\n  padding: 14px 18px;\r\n  font: inherit;\r\n  font-size: 15px;\r\n  outline: none;\r\n  background: transparent;\r\n}\r\n\r\n._news_mfd1h_1101 button {\r\n  border: 0;\r\n  padding: 14px 22px;\r\n  background: var(--rm-gold);\r\n  color: #fff;\r\n  font-family: var(--rm-font-ui);\r\n  font-size: 14px;\r\n  font-weight: 800;\r\n  letter-spacing: 0.04em;\r\n  cursor: pointer;\r\n}\r\n\r\n._news_mfd1h_1101 button:hover {\r\n  background: var(--rm-gold-dark);\r\n}\r\n\r\n._thanks_mfd1h_1177 {\r\n  margin: 12px 0 0;\r\n  color: var(--rm-forest);\r\n  font-weight: 600;\r\n}\r\n\r\n._volunteerHead_mfd1h_1189 {\r\n  margin-top: 36px !important;\r\n}\r\n\r\n._volunteerLink_mfd1h_1197 {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  gap: 8px;\r\n  color: #333;\r\n  font-weight: 600;\r\n  text-decoration: none;\r\n}\r\n\r\n._volunteerLink_mfd1h_1197:hover {\r\n  color: var(--rm-forest);\r\n}\r\n\r\n._sr_mfd1h_1223 {\r\n  position: absolute;\r\n  width: 1px;\r\n  height: 1px;\r\n  padding: 0;\r\n  margin: -1px;\r\n  overflow: hidden;\r\n  clip: rect(0, 0, 0, 0);\r\n  border: 0;\r\n}\r\n\r\n@media (max-width: 980px) {\r\n  ._heroCopy_mfd1h_71 {\r\n    padding: 40px 24px 48px;\r\n  }\r\n\r\n  ._heroTitle_mfd1h_87 {\r\n    font-size: 40px;\r\n  }\r\n\r\n  ._heroKicker_mfd1h_111,\r\n  ._motto_mfd1h_257,\r\n  ._handle_mfd1h_667,\r\n  ._actionCopy_mfd1h_369 h2 {\r\n    font-size: 30px;\r\n  }\r\n\r\n  ._actions_mfd1h_277,\r\n  ._storyCard_mfd1h_593,\r\n  ._connect_mfd1h_973,\r\n  ._stats_mfd1h_905 {\r\n    grid-template-columns: 1fr;\r\n  }\r\n\r\n  ._week_mfd1h_495 {\r\n    grid-template-columns: 1fr 1fr;\r\n  }\r\n\r\n  ._actionCard_mfd1h_295 {\r\n    min-height: 360px;\r\n  }\r\n\r\n  ._storyCard_mfd1h_593 img {\r\n    min-height: 240px;\r\n  }\r\n}\r\n\r\n@media (max-width: 640px) {\r\n  ._hero_mfd1h_13 {\r\n    height: 560px;\r\n  }\r\n\r\n  ._heroPhoto_mfd1h_27 {\r\n    object-position: center 30%;\r\n  }\r\n\r\n  ._heroFade_mfd1h_45 {\r\n    background: linear-gradient(\r\n      180deg,\r\n      rgba(255, 255, 255, 0.9) 0%,\r\n      rgba(255, 255, 255, 0.72) 38%,\r\n      rgba(255, 255, 255, 0.15) 58%,\r\n      rgba(255, 255, 255, 0) 72%\r\n    );\r\n  }\r\n\r\n  ._heroTitle_mfd1h_87 {\r\n    font-size: 34px;\r\n  }\r\n\r\n  ._mission_mfd1h_197,\r\n  ._actions_mfd1h_277,\r\n  ._weekWrap_mfd1h_495,\r\n  ._story_mfd1h_585 {\r\n    padding-left: 16px;\r\n    padding-right: 16px;\r\n  }\r\n\r\n  ._week_mfd1h_495 {\r\n    grid-template-columns: 1fr;\r\n  }\r\n\r\n  ._connect_mfd1h_973 {\r\n    padding: 40px 20px 56px;\r\n  }\r\n}\r\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const page = "_page_mfd1h_1";
+export const hero = "_hero_mfd1h_13";
+export const heroPhoto = "_heroPhoto_mfd1h_27";
+export const heroFade = "_heroFade_mfd1h_45";
+export const heroCopy = "_heroCopy_mfd1h_71";
+export const heroTitle = "_heroTitle_mfd1h_87";
+export const heroKicker = "_heroKicker_mfd1h_111";
+export const heroBody = "_heroBody_mfd1h_133";
+export const heroBtn = "_heroBtn_mfd1h_151";
+export const mission = "_mission_mfd1h_197";
+export const missionCard = "_missionCard_mfd1h_205";
+export const missionLabel = "_missionLabel_mfd1h_223";
+export const missionText = "_missionText_mfd1h_241";
+export const motto = "_motto_mfd1h_257";
+export const actions = "_actions_mfd1h_277";
+export const actionCard = "_actionCard_mfd1h_295";
+export const actionShade = "_actionShade_mfd1h_327";
+export const actionShadeSoft = "_actionShadeSoft_mfd1h_349";
+export const actionCopy = "_actionCopy_mfd1h_369";
+export const actionStack = "_actionStack_mfd1h_415";
+export const pillLight = "_pillLight_mfd1h_435";
+export const pillGold = "_pillGold_mfd1h_437";
+export const weekWrap = "_weekWrap_mfd1h_495";
+export const week = "_week_mfd1h_495";
+export const day = "_day_mfd1h_523";
+export const dayOn = "_dayOn_mfd1h_575";
+export const story = "_story_mfd1h_585";
+export const storyCard = "_storyCard_mfd1h_593";
+export const storyCopy = "_storyCopy_mfd1h_629";
+export const gallery = "_gallery_mfd1h_659";
+export const handle = "_handle_mfd1h_667";
+export const galleryRow = "_galleryRow_mfd1h_685";
+export const tile = "_tile_mfd1h_705";
+export const tileQuote = "_tileQuote_mfd1h_721";
+export const quoteMark = "_quoteMark_mfd1h_739";
+export const tileFeature = "_tileFeature_mfd1h_765";
+export const tilePhoto = "_tilePhoto_mfd1h_779";
+export const tileCaption = "_tileCaption_mfd1h_791";
+export const tileKicker = "_tileKicker_mfd1h_845";
+export const stats = "_stats_mfd1h_905";
+export const stat = "_stat_mfd1h_905";
+export const statIcon = "_statIcon_mfd1h_957";
+export const connect = "_connect_mfd1h_973";
+export const proud = "_proud_mfd1h_1023";
+export const socials = "_socials_mfd1h_1069";
+export const news = "_news_mfd1h_1101";
+export const thanks = "_thanks_mfd1h_1177";
+export const volunteerHead = "_volunteerHead_mfd1h_1189";
+export const volunteerLink = "_volunteerLink_mfd1h_1197";
+export const sr = "_sr_mfd1h_1223";
+export default {
+	page: page,
+	hero: hero,
+	heroPhoto: heroPhoto,
+	heroFade: heroFade,
+	heroCopy: heroCopy,
+	heroTitle: heroTitle,
+	heroKicker: heroKicker,
+	heroBody: heroBody,
+	heroBtn: heroBtn,
+	mission: mission,
+	missionCard: missionCard,
+	missionLabel: missionLabel,
+	missionText: missionText,
+	motto: motto,
+	actions: actions,
+	actionCard: actionCard,
+	actionShade: actionShade,
+	actionShadeSoft: actionShadeSoft,
+	actionCopy: actionCopy,
+	actionStack: actionStack,
+	pillLight: pillLight,
+	pillGold: pillGold,
+	weekWrap: weekWrap,
+	week: week,
+	day: day,
+	dayOn: dayOn,
+	story: story,
+	storyCard: storyCard,
+	storyCopy: storyCopy,
+	gallery: gallery,
+	handle: handle,
+	galleryRow: galleryRow,
+	tile: tile,
+	tileQuote: tileQuote,
+	quoteMark: quoteMark,
+	tileFeature: tileFeature,
+	tilePhoto: tilePhoto,
+	tileCaption: tileCaption,
+	tileKicker: tileKicker,
+	stats: stats,
+	stat: stat,
+	statIcon: statIcon,
+	connect: connect,
+	proud: proud,
+	socials: socials,
+	news: news,
+	thanks: thanks,
+	volunteerHead: volunteerHead,
+	volunteerLink: volunteerLink,
+	sr: sr
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

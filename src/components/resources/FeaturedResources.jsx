@@ -31,7 +31,8 @@ const FeaturedResources = () => {
       tag: 'Video', 
       title: 'Understanding Stress & How to Manage It', 
       desc: 'Watch our expert-led webinar on understanding stress and building coping skills.', 
-      image: '/Resources/stress.webp',
+      image: '/updated/11_Resources_Understanding_Stress_and_How_to_Manage_It.webp',
+      imageClass: 'object-contain object-center',
       badgeIcon: '/Resources/video.svg',
       badgeColor: '#2E5D49',
     },
@@ -39,7 +40,7 @@ const FeaturedResources = () => {
       tag: 'Support', 
       title: 'Where to Get Help', 
       desc: 'A list of trusted hotlines, organizations, and local services for support.', 
-      image: '/Resources/help.webp',
+      image: '/updated/12_Resources_Where_to_Get_Help.webp',
       badgeIcon: '/Resources/support.svg',
       badgeColor: '#6E2839',
     },
@@ -56,35 +57,32 @@ const FeaturedResources = () => {
           {resources.map((res, index) => (
             <div key={index} className="card overflow-hidden !p-0 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               
-              {/* Image Wrapper - Full Width, No Padding */}
-              <div className="relative w-full overflow-hidden h-48 bg-gray-100 flex-shrink-0">
+              <div className="relative h-48 w-full shrink-0 overflow-hidden bg-[#FFF5E1]">
                 <img 
                   src={res.image} 
                   alt={res.title}
                   loading="lazy"
-                  className="w-full h-full object-cover object-center block"
+                  className={`block h-full w-full ${res.imageClass || 'object-cover object-center'}`}
                 />
                 
-                {/* Badge Icon - Bottom Left */}
                 <div className="absolute bottom-3 left-3 z-10">
                   <div
                     className="w-11 h-11 rounded-full flex items-center justify-center shadow-md"
                     style={{ backgroundColor: res.badgeColor }}
                   >
-                    <img src={res.badgeIcon} alt={res.tag} className="w-7 h-7 object-contain" />
+                    <img src={res.badgeIcon} alt="" className="w-7 h-7 object-contain" />
                   </div>
                 </div>
               </div>
               
-              {/* Content */}
               <div className="p-4 flex flex-col flex-grow">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#C79949]">
                   {res.tag}
                 </span>
-                <h5 className="text-sm mt-1 mb-1.5 font-semibold text-[#0f4c3a]">
+                <h5 className="text-sm mt-1 mb-1.5 min-h-10 font-semibold leading-5 text-[#0f4c3a]">
                   {res.title}
                 </h5>
-                <p className="text-xs text-gray-600 mb-3 flex-grow leading-relaxed">
+                <p className="text-xs text-gray-600 mb-3 min-h-[3.75rem] flex-grow leading-relaxed">
                   {res.desc}
                 </p>
                 <span className="text-xs font-bold text-[#5c1a2e] select-none">

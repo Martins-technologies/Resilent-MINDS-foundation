@@ -73,9 +73,22 @@
   transition: transform 0.3s ease;
 }
 
-.programItem:hover .image,
+.image.imageFull {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  background: #fef9f2;
+}
+
 .resourceCard:hover .image {
   transform: scale(1.03);
+}
+
+.programItem:hover .imageFull {
+  transform: none;
 }
 
 .itemBody {

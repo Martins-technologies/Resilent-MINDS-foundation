@@ -7,20 +7,29 @@ const COMMUNITY_PROGRAMS = [
   {
     title: 'Youth Strong Program',
     desc: 'Mentorship and skills for a brighter tomorrow.',
-    image: '/youth.webp',
-    alt: 'Young people together mentoring outdoors',
+    image: '/updated/01_Home_Youth_Strong_Program.webp',
+    alt: 'Students collaborating around a table in a library classroom',
+    width: 1473,
+    height: 1068,
+    full: true,
   },
   {
     title: 'Community Healing Circles',
     desc: 'Safe spaces to connect, share and grow together.',
-    image: '/PROGRAME updated/community.webp',
-    alt: 'People gathered in a healing circle conversation',
+    image: '/updated/02_Home_Community_Healing_Circles.webp',
+    alt: 'People gathered in a community healing circle',
+    width: 1536,
+    height: 1024,
+    full: true,
   },
   {
     title: 'Workplace Wellness Initiative',
     desc: 'Healthier, more resilient workplaces and teams.',
-    image: '/laptop.jpeg',
-    alt: 'Colleagues collaborating in a healthy workplace',
+    image: '/updated/03_Home_Workplace_Wellness_Initiative.webp',
+    alt: 'Colleagues in a workplace wellness session',
+    width: 1536,
+    height: 1024,
+    full: true,
   },
 ];
 
@@ -59,9 +68,16 @@ const Programs = () => {
                     <img
                       src={program.image}
                       alt={program.alt}
-                      className={styles.image}
-                      width={400}
-                      height={300}
+                      width={program.width}
+                      height={program.height}
+                      style={program.full ? {
+                        width: '100%',
+                        height: 'auto',
+                        aspectRatio: `${program.width} / ${program.height}`,
+                        objectFit: 'contain',
+                        objectPosition: 'center',
+                      } : undefined}
+                      className={program.full ? `${styles.image} ${styles.imageFull}` : styles.image}
                     />
                   </div>
                   <div className={styles.itemBody}>
