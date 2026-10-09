@@ -14,12 +14,24 @@ const AboutHero = () => {
         Why We Exist
       </span>
 
-      <p className="text-sm md:text-base text-ink-soft leading-relaxed mb-4">
-        Life challenges can affect anyone. Stress, loss, trauma, isolation, and uncertainty can impact mental wellbeing. We believe everyone deserves access to support, encouragement, and tools that help them move forward.
+      <p className="!text-[9px] md:!text-[11px] text-ink-soft leading-relaxed mb-4">
+        Life challenges can affect anyone. Stress, loss, trauma,
+        <br />
+        isolation, and uncertainty can impact mental wellbeing. We believe
+        <br />
+        everyone deserves access to support, encouragement, and tools that
+        <br />
+        help them move forward.
       </p>
 
-      <p className="text-sm md:text-base text-ink-soft leading-relaxed">
-        Resilient Minds Foundation Charity was created from a belief that mental wellness is essential to human wellbeing. Too many individuals silently carry emotional burdens without access to meaningful support.
+      <p className="!text-[9px] md:!text-[11px] text-ink-soft leading-relaxed">
+        Resilient Minds Foundation Charity was created from a belief that
+        <br />
+        mental wellness is essential to human wellbeing. Too many
+        <br />
+        individuals silently carry emotional burdens without access to
+        <br />
+        meaningful support.
       </p>
     </PageHero>
   );
