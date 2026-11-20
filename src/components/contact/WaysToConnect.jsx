@@ -29,7 +29,7 @@ const WaysToConnect = () => {
     { 
       icon: FaMapMarkerAlt, 
       title: 'Visit Us', 
-      desc: '1835 Albert St, Regina SK S4P 2S9\nBy appointment only', 
+      desc: '330 5 Ave SW, Calgary, AB T2P 0L4\nBy appointment only', 
       bg: 'bg-[#C79949]' 
     },
     {
