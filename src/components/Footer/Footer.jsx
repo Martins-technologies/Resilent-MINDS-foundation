@@ -212,6 +212,11 @@ const LOCATIONS = [
     address: '1835 Albert St, Regina, SK S4P 2S9',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=1835+Albert+St+Regina+SK+S4P+2S9',
   },
+  {
+  city: 'Moncton, New Brunswick',
+  address: '331 Elmwood Dr, Moncton, NB E1A 1X6',
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=331+Elmwood+Dr+Moncton+NB+E1A+1X6',
+},
 ];
 
 const SOCIAL = [
